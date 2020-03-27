@@ -1,0 +1,36 @@
+function update_color_callback(new_obj, bag, color)
+    new_obj.setColorTint(color)
+    bag.putObject(new_obj)
+end
+
+function do_recolor()
+  local guids = { ["5e94a3"] = "Pink", ["8eadd3"] = "Pink",
+                  ["6d6ded"] = "Orange", ["4f40a8"] = "Orange" }
+  for guid, color in pairs(guids) do
+    local bag = getObjectFromGUID(guid)
+    local pos = {x = -55.0, y = 2.0, z = -44}
+    for i, obj in pairs(bag.getObjects()) do
+      if not (obj.name == "Chooser" or obj.name == "Board") then
+        bag.takeObject({
+          position = pos,
+          smooth = false,
+          guid = obj.guid,
+          callback_function = function(new_obj) update_color_callback(new_obj, bag, color) end
+        })
+      end
+    end
+  end
+end
+
+
+function onLoad(save_state)
+  self.createButton({
+    click_function = "do_recolor",
+    function_owner = self,
+    label          = "",
+    position       = {0, -0.2, 0},
+    width          = 3000,
+    height         = 1000,
+    color          = {1, 1, 1, 0}
+  })
+end
