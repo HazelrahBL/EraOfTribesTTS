@@ -1,0 +1,172 @@
+<Defaults>
+   <Button color="#00000000"/>
+   <Toggle fontStyle="Bold" resizeTextForBestFit="true"/>
+   <Image preserveAspect="true" outline="#00000000" outlineSize="10 10"/>
+   <Panel class="RulesBook" width="756" height="1028" color="#141414" active="false" showAnimation="Grow" hideAnimation="Shrink" outline="#141414" outlineSize="5 5"/>
+   <Button class="RulesTopButtons" color="#D0D0D0" width="35" height="35" rectAlignment="UpperLeft" offsetXY="0 0"/>
+   <Text class="RulesText" fontSize="20" fontStyle="Bold" color="rgb(0.51, 0.51, 0.51)"/>
+   <InputField class="RulesInputField" width="50" height="33" fontSize="18" fontStyle="Bold" colors="#D0D0D0|#FFFFFF|#C8C8C8|rgba(0.78,0.78,0.78,0.5)"/>
+   <Button class="RulesBottomButtons" color="#D0D0D0" width="35" height="35" rectAlignment="LowerLeft" showAnimation="Grow" hideAnimation="Shrink"/>
+   <HorizontalScrollView class="RulesScroll" scrollbarBackgroundColor="#141414" scrollbarColors="rgb(0.51, 0.51, 0.51)" color="rgba(0,0,0,0.95)" scrollSensitivity="30" vertical="true" verticalScrollbarVisibility="AutoHide" raycastTarget="false"/>
+   <Button class="RulesControlButtons" height="80" width="45" color="#141414"/>
+</Defaults>
+
+<Image id="menu" image="Background" width="661" height="992" active="false" showAnimation="Grow" hideAnimation="Shrink">
+   <Panel rectAlignment="UpperCenter" color="#00000090"/>
+   <VerticalLayout rectAlignment="UpperCenter" height="70" width="400" offsetXY="0 -30">
+      <Text text="Aktive Player:" fontSize="30" fontStyle="Bold" color="#000000"/>
+      <HorizontalLayout minHeight="30">
+         <Toggle id="Yellow" textColor="#CCC600" onValueChanged="checkPlayer">Yellow</Toggle>
+         <Toggle id="Blue" textColor="#192195" onValueChanged="checkPlayer">Blue</Toggle>
+         <Toggle id="Red" textColor="#C33017" onValueChanged="checkPlayer">Red</Toggle>
+         <Toggle id="Green" textColor="#178715" onValueChanged="checkPlayer">Green</Toggle>
+      </HorizontalLayout>
+   </VerticalLayout>
+   <VerticalLayout rectAlignment="UpperCenter" height="80" width="600" offsetXY="0 -90">
+      <Text text="Duration:" fontSize="30" fontStyle="Bold" color="#000000"/>
+      <ToggleGroup>
+         <HorizontalLayout minHeight="30">
+            <Toggle id="normal" textColor="#178715" onValueChanged="checkDuration">Normal (30min/Player)</Toggle>
+            <Toggle id="long" textColor="#CCC600" onValueChanged="checkDuration">Long (45min/Player)</Toggle>
+            <Toggle id="epic" textColor="#C33017" onValueChanged="checkDuration">Epic (60min/Player)</Toggle>
+         </HorizontalLayout>
+      </ToggleGroup>
+   </VerticalLayout>
+   <VerticalLayout rectAlignment="UpperCenter" height="600" width="600" offsetXY="0 -170">
+      <Text text="Map Setup:" minHeight="40" fontSize="30" fontStyle="Bold" color="#000000"/>
+      <Text text="2 Player:" minHeight="30" fontSize="20" color="#000000"/>
+      <HorizontalLayout minHeight="120">
+         <Image id="two1" Image="2 Spieler 1"><Button onClick="checkMap(two1)"/></Image>
+         <Image id="two2" Image="2 Spieler 2"><Button onClick="checkMap(two2)"/></Image>
+         <Image id="two3" Image="2 Spieler 3"><Button onClick="checkMap(two3)"/></Image>
+      </HorizontalLayout>
+      <HorizontalLayout minHeight="10"></HorizontalLayout>
+      <HorizontalLayout minHeight="120">
+         <Image id="two4" Image="2 Spieler 4"><Button onClick="checkMap(two4)"/></Image>
+         <Image id="two5" Image="2 Spieler 5"><Button onClick="checkMap(two5)"/></Image>
+         <Image id="two6" Image="2 Spieler 6"><Button onClick="checkMap(two6)"/></Image>
+      </HorizontalLayout>
+      <Text text="3 Player:" minHeight="30" fontSize="20" color="#000000"/>
+      <HorizontalLayout minHeight="120">
+         <Image id="three1" Image="3 Spieler 1"><Button onClick="checkMap(three1)"/></Image>
+         <Image id="three2" Image="3 Spieler 2"><Button onClick="checkMap(three2)"/></Image>
+         <Image id="three3" Image="3 Spieler 3"><Button onClick="checkMap(three3)"/></Image>
+         <Image id="three4" Image="3 Spieler 4"><Button onClick="checkMap(three4)"/></Image>
+      </HorizontalLayout>
+      <Text text="4 Player:" minHeight="30" fontSize="20" color="#000000"/>
+      <HorizontalLayout minHeight="140">
+         <Image id="four1" Image="4 Spieler 1"><Button onClick="checkMap(four1)"/></Image>
+         <Image id="four2" Image="4 Spieler 2"><Button onClick="checkMap(four2)"/></Image>
+         <Image id="four3" Image="4 Spieler 3"><Button onClick="checkMap(four3)"/></Image>
+         <Image id="four4" Image="4 Spieler 4"><Button onClick="checkMap(four4)"/></Image>
+      </HorizontalLayout>
+   </VerticalLayout>
+   <Button id="five" text="Whole Map" rectAlignment="LowerCenter" offsetXY="0 120" color="#917251" fontSize="30" outline="#00000000" outlineSize="10 10" fontStyle="Bold" width="600" height="40" onClick="checkMap(five)"/>
+   <Button text="Start Setup" rectAlignment="LowerCenter" offsetXY="-130 40" color="#604024" fontSize="30" fontStyle="Bold" width="200" height="40" onClick="gameSetup"/>
+   <Button text="Close" rectAlignment="LowerCenter" offsetXY="130 40" color="#604024" fontSize="30" fontStyle="Bold" width="200" height="40" onClick="show(menu)"/>
+</Image>
+
+<Panel id="PreView" height="95%" rectAlignment="LowerCenter" active="false">
+   <Panel rectAlignment="UpperCenter" height="75%" width="1080">
+      <Panel id="P1" visibility="Yellow|Blue|Red|Green">
+         <Button id="closeButton" class="RulesTopButtons" rectAlignment="UpperRight" offsetXY="35 35" onClick="show(PreView)">
+            <Image image="X Sign"></Image>
+         </Button>
+         <Button id="nextPage" class="RulesControlButtons" offsetXY="42 0" onClick="changePage(P1|P2)" rectAlignment="MiddleRight">
+            <Image image="ArrowRight"></Image>
+         </Button>
+         <VerticalLayout>
+            <HorizontalLayout>
+               <Image id="Britons" image="Britons"/>
+               <Image id="Carthaginians" image="Carthaginians"/>
+            </HorizontalLayout>
+            <HorizontalLayout>
+               <Image id="Egyptians" image="Egyptians"/>
+               <Image id="Gauls" image="Gauls"/>
+            </HorizontalLayout>
+         </VerticalLayout>
+      </Panel>
+      <Panel id="P2" active="false">
+         <Button id="closeButton" class="RulesTopButtons" rectAlignment="UpperRight" offsetXY="35 35" onClick="show(PreView)">
+            <Image image="X Sign"></Image>
+         </Button>
+         <Button id="previousPage" class="RulesControlButtons" offsetXY="-43 0" onClick="changePage(P2|P1)" rectAlignment="MiddleLeft">
+            <Image image="ArrowLeft"></Image>
+         </Button>
+         <Button id="nextPage" class="RulesControlButtons" offsetXY="42 0" onClick="changePage(P2|P3)" rectAlignment="MiddleRight">
+            <Image image="ArrowRight"></Image>
+         </Button>
+         <VerticalLayout>
+            <HorizontalLayout>
+               <Image id="Germanics" image="Germanics"/>
+               <Image id="Greek" image="Greek"/>
+            </HorizontalLayout>
+            <HorizontalLayout>
+               <Image id="Iberians" image="Iberians"/>
+               <Image id="Norsemen" image="Norsemen"/>
+            </HorizontalLayout>
+         </VerticalLayout>
+      </Panel>
+      <Panel id="P3" active="false">
+         <Button id="closeButton" class="RulesTopButtons" rectAlignment="MiddleRight" offsetXY="35 210" onClick="show(PreView)">
+            <Image image="X Sign"></Image>
+         </Button>
+         <Button id="previousPage" class="RulesControlButtons" offsetXY="-43 0" onClick="changePage(P3|P2)" rectAlignment="MiddleLeft">
+            <Image image="ArrowLeft"></Image>
+         </Button>
+         <VerticalLayout>
+            <HorizontalLayout>
+               <Image id="Romans" image="Romans"/>
+               <Image id="Slavs" image="Slavs"/>
+            </HorizontalLayout>
+         </VerticalLayout>
+      </Panel>
+   </Panel>
+</Panel>
+
+<!-- Main rules Panel -->
+<Panel id="RulesPanel" class="RulesBook">
+   <Text id="RulesText" class="RulesText" fontSize="35" rectAlignment="UpperCenter" height="40" text="Rulebook"></Text>
+   <Button id="zoomInButton" class="RulesTopButtons" onClick="RulesClicked">
+      <Image image="ZoomIn"></Image>
+   </Button>
+   <Button id="zoomOutButton" class="RulesTopButtons" offsetXY="40 0" onClick="RulesClicked">
+      <Image image="ZoomOut"></Image>
+   </Button>
+   <InputField
+      id="InputZoomMultiplier"
+      class="RulesInputField"
+      characterValidation="Decimal"
+      tooltip="Percentage by which zooming and resizing happens. Must be above 100."
+      tooltipPosition="Above"
+      rectAlignment="UpperLeft"
+      textAlignment="MiddleCenter"
+      text="120"
+      offsetXY="80 -1"
+      onEndEdit="onEndEditZoomPercentage"></InputField>
+   <Image rectAlignment="UpperLeft" width="20" height="20" offsetXY="135 -7" image="Percentage" preserveAspect="true"></Image>
+   <Button id="closeButton" class="RulesTopButtons" rectAlignment="UpperRight" onClick="show(RulesPanel)">
+      <Image image="X Sign"></Image>
+   </Button>
+
+   <HorizontalScrollView class="RulesScroll" id="imageScroll" width="760" height="948">
+      <Image id="RulesImage" rectAlignment="MiddleCenter" image="1" raycastTarget="false" preserveAspect="true" width="756" height="930"></Image>
+   </HorizontalScrollView>
+   <Button id="previousPage" class="RulesControlButtons" onClick="RulesClicked" rectAlignment="MiddleLeft" active="false">
+      <Image image="ArrowLeft"></Image>
+   </Button>
+   <Button id="nextPage" class="RulesControlButtons" onClick="RulesClicked" rectAlignment="MiddleRight">
+      <Image image="ArrowRight"></Image>
+   </Button>
+
+   <Button id="widenButton" class="RulesBottomButtons" onClick="RulesClicked">
+      <Image image="Widen"></Image>
+   </Button>
+
+   <InputField id="CurrentPageCount" class="RulesInputField" characterValidation="Integer" text="1" rectAlignment="LowerCenter" textAlignment="LowerRight" offsetXY="-33 1" onEndEdit="onEndEditCurrentPage"></InputField>
+   <Text id="MaxPageCount" class="RulesText" text="/ 28" alignment="LowerCenter" offsetXY="12 6"></Text>
+
+   <Button id="narrowButton" class="RulesBottomButtons" rectAlignment="LowerRight" onClick="RulesClicked">
+      <Image image="Narrow"></Image>
+   </Button>
+</Panel>

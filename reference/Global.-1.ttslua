@@ -1,0 +1,1030 @@
+selected = ""
+duration = ""
+map = "223852"
+playerSelected = true
+
+function onload(save_state)
+   for i = 1, 28 do
+      table.insert(ruleBook["Rulebook"], i)
+   end
+   for _, obj in pairs(getAllObjects()) do
+      if obj.getDescription() == "uninteractable" then
+         obj.interactable = false
+      end
+   end
+   Player.White.changeColor("Red")
+end
+
+function showGameSetup(obj, player_clicker_color, alt_click)
+   show(Player[player_clicker_color], "menu")
+end
+
+function showPreview(obj, player_clicker_color, alt_click)
+   show(Player[player_clicker_color], "PreView")
+end
+
+function showRules(obj, player_clicker_color, alt_click)
+   Global.UI.setAttribute("RulesImage", "image", ruleBook[ruleBook.selectedBook][ruleBook.currentPage])
+   Global.UI.setAttribute("RulesText", "text", ruleBook[ruleBook.selectedBook].title)
+   show(Player[player_clicker_color], "RulesPanel")
+end
+
+function changePage(player, value, id)
+   show(player, value:sub(1, 2), id)
+   show(player, value:sub(4, 5), id)
+end
+
+function show(player, value, id)
+   if player == "" then
+      self.UI.setAttribute(value, "visibility", "")
+      self.UI.setAttribute(value, "active", "false")
+      return
+   end
+   local opened = self.UI.getAttribute(value, "visibility")
+   if opened == nil then opened = "" end
+   if opened:find(player.color) then
+      opened = opened:gsub("|" .. player.color, "")
+      opened = opened:gsub(player.color .. "|", "")
+      opened = opened:gsub(player.color, "")
+      self.UI.setAttribute(value, "visibility", opened)
+      if opened == "" then
+         self.UI.setAttribute(value, "active", "false")
+      end
+   else
+      if opened == "" then
+         self.UI.setAttribute(value, "active", "true")
+         self.UI.setAttribute(value, "visibility", player.color)
+      else
+         self.UI.setAttribute(value, "visibility", opened .. "|" .. player.color)
+      end
+   end
+end
+
+function checkMap(player, value, id)
+   if selected ~= "" and selected ~= value then
+      self.UI.setAttribute(selected, "outline", "#00000000")
+   end
+   self.UI.setAttribute(value, "outline", "#000000")
+   selected = value
+end
+
+function checkDuration(player, value, id)
+   duration = id
+end
+
+function checkPlayer(player, value, id)
+   playerTable[id].playing = not playerTable[id].playing
+end
+
+function gameSetup(player, value, id)
+   local players = {}
+   local numbers = {}
+   for k, v in pairs(playerTable) do
+      if v.playing == true then
+         table.insert(players, k)
+      end
+   end
+
+   if #players < 1 then
+      broadcastToAll("Select min. 1 Player first!", {1, 0, 0})
+      return
+   end
+   if duration == "" then
+      broadcastToAll("Select a Duration first!", {1, 0, 0})
+      return
+   end
+   if selected == "" then
+      broadcastToAll("Select a Map Setup first!", {1, 0, 0})
+      return
+   end
+
+   if limiter[selected].url then
+      getObjectFromGUID(map).setCustomObject({image = limiter[selected].url})
+      getObjectFromGUID(map).reload()
+   end
+
+   for i = 1, #players do
+      local ran = math.random(#players)
+      table.insert(numbers, players[ran])
+      table.remove(players, ran)
+   end
+
+   for k, v in pairs(numbers) do
+      Wait.condition(function() setupPlayer(k - 1, v, (duration ~= "normal") and true or false, #numbers, limiter[selected].nations) end, function() return playerSelected end)
+   end
+
+   setupMap(selected)
+   show("", "menu")
+   getObjectFromGUID(map).setDescription(selected)
+end
+
+function setupMap(selected)
+   bags = {
+      limiter = getObjectFromGUID("acc51c"),
+      horse = getObjectFromGUID("2fc48c"),
+      ore = getObjectFromGUID("b6abb2"),
+      gold = getObjectFromGUID("0655d1"),
+      cloth = getObjectFromGUID("5acf4a"),
+      wine = getObjectFromGUID("31353f"),
+      beer = getObjectFromGUID("1efdad"),
+      diamonds = getObjectFromGUID("b1e503"),
+      ivory = getObjectFromGUID("4b543b"),
+      fur = getObjectFromGUID("e6aa2f"),
+      spices = getObjectFromGUID("6ef5fd"),
+      food = getObjectFromGUID("4704ee"),
+      barbarianGreen = getObjectFromGUID("a4e39b"),
+      barbarianRed = getObjectFromGUID("4fe34c")
+   }
+   if selected ~= "five" then
+      for k, v in pairs(limiter[selected]) do
+         if k ~= "nations" then
+            bags.limiter.takeObject({position = v.pos, rotation = v.rot, smooth = false}).lock()
+         end
+      end
+   end
+   for k, v in pairs(token) do
+      for _, pos in pairs(v) do
+         bags[k].shuffle()
+         bags[k].takeObject({position = pos, rotation = (k == "food") and {0, 180, 0} or {0, 180, 180}, smooth = false})
+      end
+      if k ~= "food" and k ~= "barbarianGreen" and k ~= "barbarianRed" then
+         bags[k].destruct()
+      end
+   end
+   broadcastToAll("Choose one card to hold on, then a nation.", {0, 1, 0})
+end
+
+function setupPlayer(player, color, long, playerNumber, availableNations)
+   playerSelected = false
+   local bag = getObjectFromGUID(playerTable[color].guid)
+   local matPos = playerTable[color].pos
+   local coin1 = getObjectFromGUID("52539a")
+   local coin3 = getObjectFromGUID("ce49c7")
+   local deck = getObjectFromGUID("3cfcd2")
+   local influence = {start = {x = - 40.75, y = 2.35, z = 35.57}, step = -1.62}
+   local order = {start = {x = - 24.78, y = 2.34, z = - 32.62}, step = 2.45}
+   local leaderBA = {start = {x = -11.30, y = 3.09, z = 29.50}, step = 1}
+   local leaderAT = {start = {x = 14.00, y = 3.05, z = 27.90}, step = 1}
+   local rotations = {
+      Vasalls = {0.00, 0.00, 0.00},
+      Town = {0.00, 90.00, 0.00},
+      Leader = {0.00, 180.00, 0.00},
+      Marker = {0.00, 0.00, 0.00},
+      Board = {0.00, 180.00, 0.00},
+      Britons = {0.00, 180.00, 0.00},
+      Chooser = {0.00, 180.00, 0.00},
+      Triumphal = {
+         (long == true) and triumphalPositions[playerNumber].long[player + 1].rot[1] or triumphalPositions[playerNumber].short[player + 1].rot[1],
+         (long == true) and triumphalPositions[playerNumber].long[player + 1].rot[2] or triumphalPositions[playerNumber].short[player + 1].rot[2],
+         (long == true) and triumphalPositions[playerNumber].long[player + 1].rot[3] or triumphalPositions[playerNumber].short[player + 1].rot[3]
+      }
+   }
+   local positions = {
+      Vasalls = {{x = 7.69, y = 0.7, z = 7.3}, lock = true},
+      Moral = {{46.27, 1.81 + 3, 22.07}},
+      Era = {{ - 18.78, 1.81 + 3, 32.20}},
+      Farming = {{ - 29.44, 1.81 + 3, 6.57}},
+      Culture = {{ - 27.76, 1.81 + 3, - 11.03}},
+      Navigation = {{ - 32.06, 1.81 + 3, - 15.62}},
+      Commerce = {{ - 44.80, 1.81 + 3, - 13.99}},
+      Mechanics = {{ - 44.67, 1.81 + 3, 6.69}},
+      Architecture = {{ - 41.44, 1.81 + 3, 7.89}},
+      Town = {
+         {x = 12.75, y = 0.08, z = -7.45}, {x = 10.13, y = 0.08, z = -7.45}, {x = 7.49, y = 0.08, z = -7.45}, {x = 4.8, y = 0.08, z = -7.45},
+         {x = 2.28, y = 0.08, z = -7.45}, {x = -0.37, y = 0.08, z = -7.45}, {x = -3.15, y = 0.08, z = -7.45}, {x = -5.79, y = 0.08, z = -7.45}
+      },
+      Leader = {
+         {leaderAT.start.x, leaderAT.start.y, leaderAT.start.z + player * leaderAT.step},
+         {leaderBA.start.x, leaderBA.start.y, leaderBA.start.z + player * leaderBA.step},
+         {x = 11.25, y = 1.47, z = 16}, {x = 11.25, y = 1.47, z = 13}
+      },
+      Board = {{x = 0, y = 0, z = 16.5}, lock = true},
+      Chooser = {{x = 0, y = 0, z = 0}, lock = true},
+      Order = {{order.start.x + player * order.step, order.start.y, order.start.z}},
+      Influence = {{influence.start.x + player * influence.step, influence.start.y, influence.start.z}},
+      Coins = {{x = -4, y = 0.09, z = 16}, {x = -4, y = 0.09, z = 13}, {x = -1, y = 0.09, z = 14.5}},
+      Triumphal = {
+         {
+            (long == true) and triumphalPositions[playerNumber].long[player + 1].pos.x or triumphalPositions[playerNumber].short[player + 1].pos.x,
+            (long == true) and triumphalPositions[playerNumber].long[player + 1].pos.y or triumphalPositions[playerNumber].short[player + 1].pos.y,
+            (long == true) and triumphalPositions[playerNumber].long[player + 1].pos.z or triumphalPositions[playerNumber].short[player + 1].pos.z
+         }
+      }
+   }
+
+   for _, obj in pairs(bag.getObjects()) do
+      if obj.name == "Chooser" then
+         playerTable[color].Chooser = obj.guid
+         local objPos = positions[obj.name][#positions[obj.name]]
+         local pos = (objPos.x ~= nil) and {matPos.x + objPos.x, matPos.y + objPos.y, matPos.z + objPos.z} or objPos
+         bag.takeObject({
+            position = pos,
+            rotation = rotations[obj.name],
+            smooth = false,
+            guid = obj.guid
+         }).setLock((positions[obj.name].lock == true) and true or false)
+      end
+   end
+   deck.shuffle()
+   deck.deal((player == (playerNumber - 1)) and 4 or 2, color)
+
+   Wait.frames(function()
+      local chooser = getObjectFromGUID(playerTable[color].Chooser)
+      local vasallFrame = 0
+      Wait.condition(
+         function()
+            local nations = {"Britons", "Carthaginians", "Egyptians", "Gauls", "Germanics", "Greek", "Iberians", "Norsemen", "Romans", "Slavs"}
+            for _, nation in pairs(nations) do
+               if not availableNations[nation] then
+                  chooser.UI.setAttribute(nation, "color", "#303030F0")
+                  Global.UI.setAttribute(nation, "color", "#303030")
+               end
+            end
+
+            Wait.condition(
+               function()
+                  for i, obj in pairs(bag.getObjects()) do
+                     Wait.frames(
+                        function()
+                           if positions[obj.name] then
+                              if not (obj.name == "Leader" and #positions[obj.name] == 1 and not long) then
+                                 local objPos = positions[obj.name][#positions[obj.name]]
+                                 local pos = (objPos.x ~= nil) and {matPos.x + objPos.x, matPos.y + objPos.y, matPos.z + objPos.z} or objPos
+                                 bag.takeObject({
+                                    position = pos,
+                                    rotation = rotations[obj.name],
+                                    smooth = false,
+                                    guid = obj.guid
+                                 }).setLock((positions[obj.name].lock == true) and true or false)
+                                 table.remove(positions[obj.name])
+                                 if obj.name == "Town" then
+                                    table.insert(playerTable[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + 0.74})
+                                    table.insert(playerTable[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 0.27})
+                                    table.insert(playerTable[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 1.28})
+                                 elseif obj.name == "Vasalls" then
+                                    playerTable[color].Vasall.obj = obj.guid
+                                    vasallFrame = i
+                                 end
+                              end
+                           end
+                        end,
+                     i)
+                  end
+
+                  coin1.takeObject({position = {matPos.x + positions.Coins[1].x, matPos.y + positions.Coins[1].y, matPos.z + positions.Coins[1].z}, rotation = {0, 180, 0}, smooth = false})
+                  coin1.takeObject({position = {matPos.x + positions.Coins[2].x, matPos.y + positions.Coins[2].y, matPos.z + positions.Coins[2].z}, rotation = {0, 180, 0}, smooth = false})
+                  coin3.takeObject({position = {matPos.x + positions.Coins[3].x, matPos.y + positions.Coins[3].y, matPos.z + positions.Coins[3].z}, rotation = {0, 180, 0}, smooth = false})
+
+                  Wait.frames(function()
+                     local vasalls = getObjectFromGUID(playerTable[color].Vasall.obj)
+                     Wait.condition(
+                        function()
+                           local nationSelected = ""
+                           Wait.condition(
+                              function()
+                                 nationSelected = getSelectedNation(matPos)
+                                 for _, v in pairs(nationsPreview[nationSelected].starter) do
+                                    vasalls.takeObject({position = v, smooth = false})
+                                 end
+                                 limiter[selected].nations[nationSelected] = false
+                                 playerSelected = true
+                              end,
+                              function()
+                                 if getSelectedNation(matPos) ~= nil then return true else return false end
+                              end
+                           )
+                           for _, v in pairs(playerTable[color].Vasall.positions) do
+                              vasalls.takeObject({position = v, smooth = false})
+                           end
+                        end,
+                        function()
+                           vasalls = getObjectFromGUID(playerTable[color].Vasall.obj)
+                           return checkLoaded(vasalls)
+                        end
+                     )
+                  end, vasallFrame + 1)
+
+               end,
+               function()
+                  if chooser == nil then return true else return false end
+               end)
+            end,
+            function() return checkLoaded(chooser) end
+         )
+      end,
+   1)
+end
+
+function getSelectedNation(matPos)
+   local hitlist = Physics.cast({
+      origin = matPos,
+      direction = {0, 1, 0},
+      type = 3,
+      size = {1, 1, 1},
+      max_distance = 0,
+      debug = false
+   })
+
+   for _, hit in pairs(hitlist) do
+      if limiter[selected].nations[hit.hit_object.getName()] then
+         return hit.hit_object.getName()
+      end
+   end
+   return nil
+end
+
+function cleanUp(playerColor, value, id)
+   local bag = getObjectFromGUID("38a791")
+   if #bag.getObjects() == 0 then
+      local hitlist = Physics.cast({
+         origin = {0, 1, - 100},
+         direction = {0, 1, 0},
+         type = 3,
+         size = {150, 1, 30},
+         max_distance = 0,
+         debug = false
+      })
+
+      for _, hit in pairs(hitlist) do
+         bag.putObject(hit.hit_object)
+      end
+      self.UI.setAttribute(id, "text", "Preview Nations")
+   else
+      for _, obj in pairs(bag.getObjects()) do
+         bag.takeObject({
+            position = nationsPreview[obj.name].pos,
+            rotation = nationsPreview[obj.name].rot,
+            smooth = false,
+            guid = obj.guid
+         }).lock()
+      end
+      self.UI.setAttribute(id, "text", "CleanUp Preview")
+   end
+end
+
+function onObjectDrop(player_color, dropped_object)
+   local token = {
+      Farming = {"Add two new food tokens.", "Add two new food tokens.", "Add two new food tokens.\nYou are now allowed to have two vasalls in one area.", "Add three new food tokens."},
+      Culture = {"Get one influence and two moral.", "Get two influence and +1 for Bread&Circuses.", "Get two influence and +2 (now 3) for Bread&Circuses.", "Get four influence."},
+      Navigation = {
+         "Movement with fleet is 2. Fleet costs 2 Thalers.\nYou get a free fleet. Place it immediately.", "Movement with fleet is 4. Fleet costs 3 Thalers.\nYou get a free fleet. Place it immediately.",
+         "Movement with fleet is 6. Fleet costs 4 Thalers.\nYou get a free fleet. Place it immediately.", "Movement with fleet is 10. Fleet costs 6 Thalers.\nYou get a free fleet. Place it immediately."
+      },
+      Commerce = {"Get +1 for Trade.", "Get +2 (now 3) for Trade.", "Get +3 (now 6) for Trade.", "Get +5 (now 11) for Trade."},
+      Mechanics = {
+         "Movement with vasalls is 1. Army costs 1 Thaler.\nYou get a free Army. Place it in your regular Army area.", "Movement with vasalls is 1. Army costs 2 Thalers.\nYou get a free Army. Place it in your regular Army area.",
+         "Movement with vasalls is 2. Army costs 3 Thalers.\nYou get a free Army. Place it in your regular Army area.", "Movement with vasalls is 3. Army costs 4 Thalers.\nYou get a free Army. Place it in your regular Army area."
+      },
+      Architecture = {"You are allowed to have 2 towns.", "You are allowed to have 4 towns.", "You are allowed to have 6 towns.", "You are allowed to have 8 towns."}
+   }
+
+   local extra = {
+      Commerce = {
+         "c156fc", "c60f98", "4cb3ec", "300ddd"
+      },
+      Culture = {
+         false, "8220d8", "8cf20a", "8cf20a"
+      },
+      Farming = {
+         "4704ee", "4704ee", "4704ee", "4704ee"
+      }
+   }
+
+   local positions = {
+      Commerce = {
+         Yellow = { - 48.94, 1.58, - 54.14},
+         Blue = { - 8.97, 1.58, - 54.14},
+         Red = {31.02, 1.58, - 54.14},
+         Green = {71.00, 1.58, - 54.14}
+      },
+      Culture = {
+         Yellow = { - 53.75, 1.58, - 63.52},
+         Blue = { - 13.73, 1.58, - 63.52},
+         Red = {26.26, 1.58, - 63.52},
+         Green = {66.24, 1.58, - 63.52}
+      },
+      Farming = {
+         Yellow = { - 70.00, 5, - 53.52},
+         Blue = { - 30.00, 5, - 53.52},
+         Red = {10.00, 5, - 53.52},
+         Green = {50.00, 5, - 53.52}
+      }
+   }
+
+   if token[dropped_object.getName()] then
+      broadcastToAll(token[dropped_object.getName()][getRing(dropped_object.getPosition())], player_color)
+   end
+
+   if extra[dropped_object.getName()] then
+      if extra[dropped_object.getName()][getRing(dropped_object.getPosition())] then
+         local hitlist = Physics.cast({
+            origin = positions[dropped_object.getName()][dropped_object.getDescription()],
+            direction = {0, 1, 0},
+            type = 3,
+            size = {1, 1, 1},
+            max_distance = 0,
+            debug = true
+         })
+
+         for _, hit in pairs(hitlist) do
+            if hit.hit_object.getName() == "Bread" or hit.hit_object.getName() == "Trade" then
+               hit.hit_object.destruct()
+            end
+         end
+         if dropped_object.getName() == "Farming" then
+            getObjectFromGUID(extra[dropped_object.getName()][getRing(dropped_object.getPosition())]).takeObject({
+               position = positions[dropped_object.getName()][dropped_object.getDescription()], smooth = false
+            })
+            getObjectFromGUID(extra[dropped_object.getName()][getRing(dropped_object.getPosition())]).takeObject({
+               position = positions[dropped_object.getName()][dropped_object.getDescription()], smooth = false
+            })
+         else
+            getObjectFromGUID(extra[dropped_object.getName()][getRing(dropped_object.getPosition())]).takeObject({
+               position = positions[dropped_object.getName()][dropped_object.getDescription()], smooth = false
+            }).lock()
+         end
+      end
+   end
+end
+
+
+function getDistance(pos)
+   local center = {x = -36.95, y = 1.61, z = -3.65}
+   return math.sqrt(math.abs(pos.x - center.x)^2 + math.abs(pos.z - center.z)^2)
+end
+
+function getRing(pos)
+   local rings = {
+      {min = 8.5, max = 12},
+      {min = 6.3, max = 8.5},
+      {min = 4, max = 6.3},
+      {min = 0, max = 4}
+   }
+   local distance = getDistance(pos)
+   for k, v in pairs(rings) do
+      if distance < v.max and distance >= v.min then
+         return k
+      end
+   end
+end
+
+function checkLoaded(obj)
+   if obj ~= nil then
+      if not obj.loading_custom and not obj.spawning then
+         return true
+      end
+   end
+   return false
+end
+
+nationsPreview = {
+   Britons = {pos = { - 55.75, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{ - 6.82, 2.09, 9.51}, { - 6.48, 2.09, 6.91}, { - 7.75, 2.09, 5.05}}},
+   Carthaginians = {pos = { - 27.90, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{7.57, 2.09, - 22.99}, {10.78, 2.09, - 28.01}, {12.84, 2.09, - 30.09}}},
+   Egyptians = {pos = { - 0.03, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{35.56, 2.09, - 31.97}, {37.36, 2.09, - 30.46}, {39.64, 2.09, - 29.36}}},
+   Gauls = {pos = {27.83, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{ - 3.22, 2.09, - 0.39}, {2.11, 2.09, 1.01}, {0.78, 2.09, 3.92}}},
+   Germanics = {pos = {55.69, 1.06, - 87.58}, rot = {0.00, 180.00, 0.00}, starter = {{7.29, 2.09, 10.23}, {12.81, 2.09, 9.35}}},
+   Greek = {pos = { - 55.75, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{25.70, 2.09, - 15.49}, {30.17, 2.09, - 13.19}, {32.37, 2.09, - 13.74}}},
+   Iberians = {pos = { - 27.90, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{ - 9.98, 2.09, - 20.07}, { - 5.20, 2.09, - 18.61}, { - 3.51, 2.09, - 14.39}}},
+   Norsemen = {pos = { - 0.03, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{7.64, 2.09, 22.32}, {12.84, 2.09, 22.79}, {13.22, 2.09, 18.91}}},
+   Romans = {pos = {27.83, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{9.96, 2.09, - 11.35}, {15.16, 2.09, - 13.43}}},
+   Slavs = {pos = {55.69, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{29.73, 2.09, 10.79}, {28.17, 2.09, 6.55}, {31.63, 2.09, 4.86}, {32.20, 2.09, 8.39}}}
+}
+
+playerTable = {
+   Yellow = {pos = {x = -60.00, y = 1.48, z = -60.00}, guid = "e5df01", Vasall = {positions = {}}, Chooser = "", playing = false},
+   Blue = {pos = {x = -20.00, y = 1.48, z = -60.00}, guid = "98f2d4", Vasall = {positions = {}}, Chooser = "", playing = false},
+   Red = {pos = {x = 20.00, y = 1.48, z = -60.00}, guid = "2df374", Vasall = {positions = {}}, Chooser = "", playing = false},
+   Green = {pos = {x = 60.00, y = 1.48, z = -60.01}, guid = "9103f6", Vasall = {positions = {}}, Chooser = "", playing = false}
+}
+
+triumphalPositions = {
+   {
+      short = {
+         {pos = {x = 3.07, y = 2.53, z = -35.61}, rot = {0.00, 180.00, 0.00}}
+      },
+      long = {
+         {pos = {x = -3.13, y = 2.53, z = 35.42}, rot = {0.00, 0.00, 0.00}}
+      }
+   },
+   {
+      short = {
+         {pos = {x = 21.71, y = 2.53, z = -35.62}, rot = {0.00, 180.00, 0.00}},
+         {pos = {x = 24.71, y = 2.53, z = -35.62}, rot = {0.00, 180.00, 0.00}}
+      },
+      long = {
+         {pos = {x = -35.08, y = 2.53, z = 35.62}, rot = {0.00, 0.00, 0.00}},
+         {pos = {x = -38.08, y = 2.53, z = 35.62}, rot = {0.00, 0.00, 0.00}}
+      }
+   },
+   {
+      short = {
+         {pos = {x = 41.63, y = 2.53, z = -35.11}, rot = {0.00, 180.00, 0.00}},
+         {pos = {x = 43.30, y = 2.53, z = -36.02}, rot = {0.00, 180.00, 0.00}},
+         {pos = {x = 45.03, y = 2.53, z = -35.11}, rot = {0.00, 180.00, 0.00}}
+      },
+      long = {
+         {pos = {x = -50.32, y = 2.53, z = 22.53}, rot = {0.00, 270.00, 0.00}},
+         {pos = {x = -51.23, y = 2.53, z = 20.86}, rot = {0.00, 270.00, 0.00}},
+         {pos = {x = -50.33, y = 2.53, z = 19.14}, rot = {0.00, 270.00, 0.00}}
+      }
+   },
+   {
+      short = {
+         {pos = {x = 50.30, y = 2.53, z = -29.85}, rot = {0.00, 90.00, 0.00}},
+         {pos = {x = 51.21, y = 2.53, z = -28.73}, rot = {0.00, 90.00, 0.00}},
+         {pos = {x = 50.30, y = 2.53, z = -26.99}, rot = {0.00, 90.00, 0.00}},
+         {pos = {x = 51.21, y = 2.53, z = -25.79}, rot = {0.00, 90.00, 0.00}}
+      },
+      long = {
+         {pos = {x = -50.29, y = 2.53, z = 1.98}, rot = {0.00, 270.00, 0.00}},
+         {pos = {x = -51.20, y = 2.53, z = 0.87}, rot = {0.00, 270.00, 0.00}},
+         {pos = {x = -50.29, y = 2.53, z = -0.88}, rot = {0.00, 270.00, 0.00}},
+         {pos = {x = -51.20, y = 2.53, z = -2.07}, rot = {0.00, 270.00, 0.00}}
+      }
+   }
+}
+
+limiter = {
+   two1 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002806135/3BD9AF99AC015DB5AF2EFB4002D05205025AD033/",
+      nations = {Carthaginians = true, Iberians = true, Romans = true},
+      {pos = { - 18.77, 1.88, - 4.50}, rot = {0.00, 180.00, 180.00}},
+      {pos = { - 13.78, 1.88, - 1.52}, rot = {0.00, 120.00, 180.00}},
+      {pos = { - 8.89, 1.88, 1.16}, rot = {0.00, 180.00, 180.00}},
+      {pos = { - 3.98, 1.88, - 1.71}, rot = {0.00, 240.00, 180.00}},
+      {pos = {0.85, 1.88, - 4.52}, rot = {0.00, 180.00, 180.00}},
+      {pos = {5.86, 1.88, - 1.54}, rot = {0.00, 120.00, 180.00}},
+      {pos = {10.67, 1.88, 1.15}, rot = {0.00, 180.00, 180.00}},
+      {pos = {15.56, 1.88, - 1.58}, rot = {0.00, 240.00, 180.00}},
+      {pos = {20.43, 1.88, - 4.61}, rot = {0.00, 180.00, 180.00}},
+      {pos = {25.38, 1.88, - 7.33}, rot = {0.00, 240.00, 180.00}},
+      {pos = {25.32, 1.88, - 12.91}, rot = {0.00, 120.00, 180.00}},
+      {pos = {25.28, 1.88, - 18.54}, rot = {0.00, 240.00, 180.00}},
+      {pos = {25.32, 1.88, - 24.27}, rot = {0.00, 300.00, 0.00}},
+      {pos = {20.36, 1.88, - 27.15}, rot = {0.00, 180.00, 180.00}},
+      {pos = {15.66, 1.88, - 29.78}, rot = {0.00, 120.00, 180.00}}
+
+   },
+   two2 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002817173/FD37A535126AB5449729F80520DFD16F94BFDBB5/",
+      nations = {Britons = true, Gauls = true, Iberians = true},
+      {pos = {5.78, 1.88, - 18.72}, rot = {0.00, 60.00, 180.00}},
+      {pos = {5.84, 1.88, - 24.14}, rot = {0.00, 120.00, 180.00}},
+      {pos = {5.76, 1.88, - 29.94}, rot = {0.00, 60.00, 180.00}},
+      {pos = {5.83, 1.88, - 12.95}, rot = {0.00, 120.00, 180.00}},
+      {pos = {5.62, 1.88, - 7.16}, rot = {0.00, 60.00, 180.00}},
+      {pos = {5.83, 1.88, - 1.60}, rot = {0.00, 120.00, 180.00}},
+      {pos = {5.65, 1.88, 4.07}, rot = {0.00, 60.00, 180.00}},
+      {pos = {5.81, 1.88, 9.68}, rot = {0.00, 120.00, 180.00}},
+      {pos = {5.74, 1.88, 15.34}, rot = {0.00, 60.00, 180.00}},
+      {pos = {5.98, 1.88, 21.21}, rot = {0.00, 120.00, 180.00}}
+   },
+   two3 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002780920/CCCE06841383D5E00D9F6976CBD593D6683919F1/",
+      nations = {Britons = true, Norsemen = true, Germanics = true, Slavs = true},
+      {pos = { - 18.59, 1.88, 6.79}, rot = {0.00, 0.00, 0.00}},
+      {pos = { - 13.82, 1.88, 4}, rot = {0.00, 60.00, 0.00}},
+      {pos = { - 8.78, 1.88, 1.16}, rot = {0.00, 0.00, 0.00}},
+      {pos = { - 4.03, 1.88, 4}, rot = {0.00, 300.00, 0.00}},
+      {pos = {0.88, 1.88, 6.79}, rot = {0.00, 0.00, 0.00}},
+      {pos = {5.90, 1.88, 4}, rot = {0.00, 60.00, 0.00}},
+      {pos = {10.51, 1.88, 1.11}, rot = {0.00, 0.00, 0.00}},
+      {pos = {15.44, 1.88, 4}, rot = {0.00, 300.00, 0.00}},
+      {pos = {20.35, 1.88, 6.65}, rot = {0.00, 0.00, 0.00}},
+      {pos = {25.40, 1.88, 4}, rot = {0.00, 60.00, 0.00}},
+      {pos = {29.95, 1.88, 1.11}, rot = {0.00, 0.00, 0.00}},
+      {pos = {35.13, 1.88, 3.88}, rot = {0.00, 300.00, 0.00}}
+   },
+   two4 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002794346/07A082088ED1BDDEB03B2A5C390AE270698C6D31/",
+      nations = {Romans = true, Carthaginians = true, Egyptians = true, Greek = true},
+      {pos = {5.716, 1.877, - 7.283}, rot = { - 0.01, 59.97, 0}},
+      {pos = {0.751, 1.877, - 15.838}, rot = { - 0.01, 359.98, 0}},
+      {pos = {10.647, 1.877, 1.088}, rot = { - 0.01, - 0.01, - 0.01}},
+      {pos = {20.415, 1.877, - 4.564}, rot = {0, - 0.01, - 0.01}},
+      {pos = {29.95, 1.877, 1.113}, rot = { - 0.01, 359.98, - 0.01}},
+      {pos = { - 3.996, 1.877, - 29.976}, rot = {0, 299.99, 0}},
+      {pos = {5.79, 1.877, - 12.95}, rot = {0, 300, 0}},
+      {pos = {5.887, 1.877, - 1.479}, rot = { - 0.01, 120.01, - 0.01}},
+      {pos = {25.456, 1.877, - 1.573}, rot = {0, 300, - 0.01}},
+      {pos = {15.453, 1.877, - 1.553}, rot = {0, 59.99, 0}},
+      {pos = { - 4, 1.877, - 18.646}, rot = {0, 120, - 0.01}},
+      {pos = { - 4.117, 1.877, - 24.194}, rot = {0, 60, 0}},
+      {pos = {35.166, 1.877, 3.962}, rot = {0, 300, 0}}
+   },
+   two5 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002788067/C31D8559CA87EC58CE6C639370A4E2AE1482A0F2/",
+      nations = {Slavs = true, Egyptians = true, Greek = true},
+      {pos = {15.432, 1.877, - 24.231}, rot = {0, 60, - 0.01}},
+      {pos = {15.58, 1.877, - 13.1}, rot = { - 0.01, 59.97, 0}},
+      {pos = {15.636, 1.877, 15.386}, rot = {0, 300, 0}},
+      {pos = {15.511, 1.877, 21.008}, rot = { - 0.01, 60, - 0.01}},
+      {pos = {15.522, 1.877, - 7.358}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {15.573, 1.877, 4.001}, rot = {0, 300, 0}},
+      {pos = {15.476, 1.877, - 1.666}, rot = {0, 60, - 0.01}},
+      {pos = {15.512, 1.877, 9.596}, rot = { - 0.01, 60, 0}},
+      {pos = {15.592, 1.877, 26.567}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {15.613, 1.877, - 18.477}, rot = {0, 120, - 0.01}},
+      {pos = {15.62, 1.877, - 29.882}, rot = { - 0.01, 300, - 0.01}}
+   },
+   two6 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002947529/1FE8C29168FB264F02C34F6A7E281EEF692F663A/",
+      nations = {Britons = true, Gauls = true, Norsemen = true, Germanics = true},
+      {pos = { - 23.554, 1.877, 9.632}, rot = {0, 59.99, - 0.01}},
+      {pos = { - 18.643, 1.877, 6.894}, rot = { - 0.01, 0, 0}},
+      {pos = { - 13.757, 1.877, 3.872}, rot = {0, 60, 0}},
+      {pos = { - 13.741, 1.877, - 1.606}, rot = { - 0.01, 300, - 0.01}},
+      {pos = { - 13.786, 1.877, - 7.377}, rot = { - 0.01, 60, 0}},
+      {pos = { - 9.083, 1.877, - 10.154}, rot = { - 0.01, - 0.01, - 0.01}},
+      {pos = { - 4.115, 1.877, - 12.891}, rot = {0, 59.99, 0}},
+      {pos = {0.779, 1.877, - 15.837}, rot = {0, 0, - 0.01}},
+      {pos = {5.788, 1.877, - 13.015}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {10.492, 1.877, - 10.032}, rot = { - 0.01, - 0.01, - 0.01}},
+      {pos = {15.606, 1.877, - 7.296}, rot = { - 0.01, 300, 0}},
+      {pos = {20.333, 1.877, - 4.547}, rot = {0, - 0.01, 0}},
+      {pos = {25.417, 1.877, - 1.599}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {25.28, 1.877, 4.098}, rot = {0, 59.99, 0}},
+      {pos = {25.414, 1.877, 9.72}, rot = { - 0.01, 300, 0}},
+      {pos = {25.303, 1.877, 15.278}, rot = {0, 60, 0}},
+      {pos = {25.382, 1.877, 20.954}, rot = {0, 300, 0}},
+      {pos = {25.269, 1.877, 26.837}, rot = {0, 60, 0}}
+   },
+   three1 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002881497/64D6F85A2F8C66C5D264CC300FF59C0A81D993DA/",
+      nations = {Norsemen = true, Germanics = true, Britons = true, Gauls = true, Iberians = true, Carthaginians = true},
+      {pos = {15.432, 1.877, - 24.231}, rot = {0, 60, - 0.01}},
+      {pos = {15.58, 1.877, - 13.1}, rot = { - 0.01, 59.97, 0}},
+      {pos = {15.636, 1.877, 15.386}, rot = {0, 300, 0}},
+      {pos = {15.511, 1.877, 21.008}, rot = { - 0.01, 60, - 0.01}},
+      {pos = {15.522, 1.877, - 7.358}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {15.573, 1.877, 4.001}, rot = {0, 300, 0}},
+      {pos = {15.476, 1.877, - 1.666}, rot = {0, 60, - 0.01}},
+      {pos = {15.512, 1.877, 9.596}, rot = { - 0.01, 60, 0}},
+      {pos = {15.592, 1.877, 26.567}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {15.613, 1.877, - 18.477}, rot = {0, 120, - 0.01}},
+      {pos = {15.62, 1.877, - 29.882}, rot = { - 0.01, 300, - 0.01}}
+   },
+   three2 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002870793/3AC78DF0E99F5A972F50D8B132292C88B749888C/",
+      nations = {Romans = true, Carthaginians = true, Egyptians = true, Greek = true, Gauls = true, Iberians = true},
+      {pos = { - 18.59, 1.88, 6.79}, rot = {0.00, 0.00, 0.00}},
+      {pos = { - 13.82, 1.88, 4}, rot = {0.00, 60.00, 0.00}},
+      {pos = { - 8.78, 1.88, 1.16}, rot = {0.00, 0.00, 0.00}},
+      {pos = { - 4.03, 1.88, 4}, rot = {0.00, 300.00, 0.00}},
+      {pos = {0.88, 1.88, 6.79}, rot = {0.00, 0.00, 0.00}},
+      {pos = {5.90, 1.88, 4}, rot = {0.00, 60.00, 0.00}},
+      {pos = {10.51, 1.88, 1.11}, rot = {0.00, 0.00, 0.00}},
+      {pos = {15.44, 1.88, 4}, rot = {0.00, 300.00, 0.00}},
+      {pos = {20.35, 1.88, 6.65}, rot = {0.00, 0.00, 0.00}},
+      {pos = {25.40, 1.88, 4}, rot = {0.00, 60.00, 0.00}},
+      {pos = {29.95, 1.88, 1.11}, rot = {0.00, 0.00, 0.00}},
+      {pos = {35.13, 1.88, 3.88}, rot = {0.00, 300.00, 0.00}}
+   },
+   three3 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002825480/E589B4196E17DE4113316B9D2D381613D0807DD9/",
+      nations = {Britons = true, Gauls = true, Norsemen = true, Germanics = true, Slavs = true},
+      {pos = { - 18.732, 1.877, - 4.554}, rot = {0, 359.98, - 0.01}},
+      {pos = { - 9.106, 1.877, - 10.241}, rot = { - 0.01, 0, 0}},
+      {pos = {0.754, 1.877, - 4.514}, rot = { - 0.01, 359.98, - 0.01}},
+      {pos = {10.47, 1.88, - 10.05}, rot = { - 0.01, 359.99, 0}},
+      {pos = {20.285, 1.877, - 4.58}, rot = {0, - 0.01, 0}},
+      {pos = {30.16, 1.88, - 10.18}, rot = { - 0.01, 359.98, 0}},
+      {pos = { - 13.813, 1.877, - 7.295}, rot = {0, 60, - 0.01}},
+      {pos = {25.23, 1.88, - 7.26}, rot = {0, 60, - 0.01}},
+      {pos = {35.27, 1.88, - 1.65}, rot = {0, 60, - 0.01}},
+      {pos = { - 4.039, 1.877, - 7.279}, rot = {0, 300, - 0.01}},
+      {pos = {5.69, 1.88, - 7.30}, rot = {0, 60, - 0.01}},
+      {pos = {15.62, 1.88, - 7.20}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {35.17, 1.88, - 7.24}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {35.154, 1.877, 3.954}, rot = { - 0.01, 300, 0}}
+   },
+   three4 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002864682/7C12CB137F5BBAE1230631E2575A9AB3AB469DDA/",
+      nations = {Slavs = true, Egyptians = true, Greek = true, Carthaginians = true, Norsemen = true, Germanics = true, Romans = true},
+      {pos = {0.711, 1.877, - 15.851}, rot = {0, 179.99, 0}},
+      {pos = {5.8, 1.877, 9.794}, rot = { - 0.01, 300, 0}},
+      {pos = {5.676, 1.877, 15.417}, rot = { - 0.01, 59.99, - 0.01}},
+      {pos = {5.685, 1.877, - 12.951}, rot = { - 0.01, 300, 0}},
+      {pos = {5.736, 1.877, - 1.592}, rot = {0, 300, - 0.01}},
+      {pos = {5.639, 1.877, - 7.257}, rot = {0, 60, 0}},
+      {pos = {5.676, 1.877, 4.004}, rot = {0, 60, 0}},
+      {pos = {0.825, 1.877, 18.041}, rot = { - 0.01, 0, - 0.01}},
+      {pos = { - 3.953, 1.877, - 18.611}, rot = { - 0.01, 119.99, - 0.01}},
+      {pos = { - 4.139, 1.877, - 24.239}, rot = { - 0.01, 59.99, 0}},
+      {pos = { - 3.871, 1.877, - 29.727}, rot = {0, 300, 0}},
+      {pos = { - 4.15, 1.877, 21.021}, rot = {0, 60, 0}}
+   },
+   four1 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002907318/F75F7ACAFFE17C7038ED43A8C669D9A1947DFE0D/",
+      nations = {Carthaginians = true, Egyptians = true, Gauls = true, Germanics = true, Greek = true, Iberians = true, Romans = true, Slavs = true},
+      {pos = { - 18.653, 1.877, 6.782}, rot = { - 0.01, 359.98, 0}},
+      {pos = { - 13.816, 1.877, 4.078}, rot = { - 0.01, 59.99, - 0.01}},
+      {pos = { - 8.877, 1.877, 1.09}, rot = {0, 359.98, 0}},
+      {pos = { - 4.031, 1.877, 4.002}, rot = {0, 299.99, 0}},
+      {pos = { - 4.04, 1.877, 9.648}, rot = {0, 239.99, 0}},
+      {pos = { - 4.017, 1.877, 15.282}, rot = { - 0.01, 300, 0}},
+      {pos = {0.814, 1.877, 18.101}, rot = { - 0.01, 359.98, - 0.01}},
+      {pos = {5.695, 1.877, 15.391}, rot = { - 0.01, 59.99, 0}},
+      {pos = {10.614, 1.877, 12.372}, rot = {0, 359.98, 0}},
+      {pos = {15.573, 1.877, 15.287}, rot = { - 0.01, 299.98, 0}},
+      {pos = {20.378, 1.877, 18.096}, rot = { - 0.01, 359.98, 0}},
+      {pos = {25.405, 1.877, 21.003}, rot = {0, 300, 0}}
+   },
+   four2 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002914460/D0BCD1C84D89E9106F594D8E1ABBED2B19E9DA23/",
+      nations = {Britons = true, Carthaginians = true, Gauls = true, Germanics = true, Iberians = true, Norsemen = true, Romans = true},
+      {pos = {25.32, 1.88, - 24.23}, rot = { 0, 300, 0}},
+      {pos = {25.06, 1.88, - 30.06}, rot = { 0, 60, 0}},
+      {pos = {25.302, 1.877, - 18.708}, rot = {0, 59.99, 0}},
+      {pos = {25.335, 1.877, - 12.987}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {25.304, 1.877, - 7.35}, rot = { - 0.01, 60, - 0.01}},
+      {pos = {25.376, 1.877, - 1.631}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {25.363, 1.877, 3.916}, rot = {0, 60.02, 0}},
+      {pos = {25.387, 1.877, 9.724}, rot = { - 0.01, 300, - 0.01}},
+      {pos = {25.327, 1.877, 15.253}, rot = {0, 60, 0}},
+      {pos = {25.398, 1.877, 21.051}, rot = {0, 300, 0}},
+      {pos = {25.39, 1.88, 26.61}, rot = {0, 60, 0}}
+   },
+   four3 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486444002897407/7551C78DCDD16E392628FBCB0B97D74DA89B1878/",
+      nations = {Carthaginians = true, Egyptians = true, Gauls = true, Germanics = true, Greek = true, Norsemen = true, Romans = true, Slavs = true},
+      {pos = { - 3.92, 1.88, - 29.82}, rot = {0, 300, - 0.01}},
+      {pos = { - 3.968, 1.877, 15.327}, rot = { - 0.01, 119.98, - 0.01}},
+      {pos = { - 4.096, 1.877, 21.007}, rot = { - 0.01, 59.99, 0}},
+      {pos = { - 4.011, 1.877, 9.651}, rot = { - 0.01, 59.99, 0}},
+      {pos = { - 3.958, 1.877, 4.081}, rot = { - 0.01, 300, 0}},
+      {pos = { - 13.785, 1.877, - 7.429}, rot = {359.98, 59.98, 0}},
+      {pos = { - 9.015, 1.877, - 10.172}, rot = { - 0.01, 0, 0}},
+      {pos = { - 4.041, 1.877, - 12.944}, rot = {0, 59.99, 0}},
+      {pos = { - 3.958, 1.877, - 18.554}, rot = { - 0.01, 300, 0}},
+      {pos = { - 4.145, 1.877, - 24.284}, rot = {0, 59.99, 0}},
+      {pos = { - 13.779, 1.877, - 1.644}, rot = {0, 300, - 0.01}},
+      {pos = { - 8.794, 1.877, 1.147}, rot = {0, 359.98, 0}}
+   },
+   four4 = {
+      url = "http://cloud-3.steamusercontent.com/ugc/957486694770952981/259A1113F8DF21F39D50405826CC3092BC1E2833/",
+      nations = {Britons = true, Gauls = true, Germanics = true, Greek = true, Norsemen = true, Romans = true, Slavs = true},
+      {pos = { - 18.726, 1.877, - 4.488}, rot = {0, 359.98, 0}},
+      {pos = { - 13.777, 1.877, - 7.308}, rot = { - 0.01, 59.99, - 0.01}},
+      {pos = { - 8.939, 1.877, - 10.181}, rot = {0, 359.98, 0}},
+      {pos = { - 4.104, 1.877, - 12.933}, rot = { - 0.01, 59.99, - 0.01}},
+      {pos = {0.815, 1.877, - 15.854}, rot = {0, 359.98, 0}},
+      {pos = {5.684, 1.877, - 18.557}, rot = {0, 60, 0}},
+      {pos = {10.597, 1.877, - 21.455}, rot = {0, 359.98, - 0.01}},
+      {pos = {15.56, 1.877, - 24.3}, rot = { - 0.01, 59.99, 0}},
+      {pos = {20.308, 1.877, - 27.169}, rot = {0, 359.98, 0}},
+      {pos = {25.059, 1.877, - 29.933}, rot = { - 0.01, 59.99, - 0.01}},
+      {pos = {35.14, 1.88, - 29.66}, rot = {0, 300, 0}},
+      {pos = {35.055, 1.877, - 24.22}, rot = { - 0.01, 59.99, 0}},
+      {pos = {35.303, 1.877, - 18.547}, rot = { - 0.01, 300, 0}},
+      {pos = {35.086, 1.877, - 12.824}, rot = { - 0.01, 59.99, - 0.01}},
+      {pos = {35.148, 1.877, - 7.251}, rot = {0, 300, 0}},
+      {pos = {35.272, 1.877, - 1.539}, rot = { - 0.01, 59.99, - 0.01}},
+      {pos = {35.179, 1.877, 4.022}, rot = {0, 300, 0}}
+   },
+   five = {
+      nations = {Britons = true, Carthaginians = true, Egyptians = true, Gauls = true, Germanics = true, Greek = true, Iberians = true, Norsemen = true, Romans = true, Slavs = true}
+   }
+}
+
+token = {
+   food = {
+      { - 34.26, 1.83, - 25.53},
+      { - 19.93, 1.83, - 21.43},
+      { - 14.06, 1.83, - 20.95},
+      { - 8.48, 1.83, - 24.96},
+      { - 10.12, 1.83, - 17.37},
+      { - 5.11, 1.83, - 13.93},
+      { - 9.29, 1.83, - 5.88},
+      { - 7.54, 1.83, - 1.86},
+      { - 4.93, 1.83, - 5.47},
+      {1.85, 1.83, - 9.24},
+      {2.80, 1.83, - 13.11},
+      {3.13, 1.83, - 20.09},
+      {1.38, 1.83, - 22.81},
+      {9.27, 1.83, - 23.65},
+      {11.99, 1.83, - 25.39},
+      {12.93, 1.83, - 6.87},
+      {12.83, 1.83, - 11.44},
+      {20.56, 1.83, - 7.40},
+      {19.51, 1.83, - 12.32},
+      {21.06, 1.83, - 17.19},
+      {25.88, 1.70, - 28.39},
+      {28.92, 1.83, - 26.12},
+      {36.11, 1.83, - 33.62},
+      {36.93, 1.83, - 28.76},
+      {42.72, 1.83, - 26.30},
+      {44.08, 1.83, - 21.75},
+      {32.23, 1.83, - 17.42},
+      {29.18, 1.83, - 11.75},
+      {37.89, 1.83, - 10.42},
+      {31.71, 1.83, - 8.14},
+      {35.18, 1.83, - 4.20},
+      {47.82, 1.83, - 5.56},
+      {28.51, 1.83, 13.97},
+      {22.58, 1.83, 23.08},
+      {22.77, 1.83, 4.71},
+      {18.71, 1.83, 10.82},
+      {11.14, 1.83, 21.12},
+      {11.87, 1.83, 16.29},
+      {14.28, 1.83, 15.91},
+      {9.63, 1.83, 13.93},
+      {9.44, 1.83, 9.00},
+      {9.45, 1.83, 2.73},
+      {3.01, 1.83, 4.66},
+      {0.73, 1.83, 11.13},
+      {1.31, 1.83, 22.93},
+      { - 4.84, 1.83, 6.42},
+      { - 10.86, 1.83, 10.42},
+      { - 9.85, 1.83, 14.04},
+      { - 30.40, 1.58, 31.19},
+      { - 20.60, 1.83, 12.68}
+   },
+   beer = {
+      {24.66, 1.83, 2.28},
+      {14.42, 1.83, 6.38},
+      {15.11, 1.83, 18.51},
+      { - 17.22, 1.83, 14.90}
+   },
+   ivory = {
+      {3.52, 1.83, - 25.02},
+      {9.39, 1.83, - 30.38},
+      {38.32, 1.83, - 33.30},
+      { - 38.05, 1.83, 24.51}
+   },
+   spices = {
+      {48.32, 1.83, - 20.54},
+      { - 13.58, 1.83, - 16.47},
+      {21.92, 1.83, - 11.26}
+   },
+   diamonds = {
+      { - 40.25, 1.83, - 28.56},
+      {7.18, 1.83, - 25.63},
+      {32.99, 1.83, - 19.69}
+   },
+   wine = {
+      {6.28, 1.83, 6.37},
+      { - 2.60, 1.83, 1.29},
+      { - 38.62, 1.83, 26.58},
+      { - 6.49, 1.83, - 17.42},
+      {1.35, 1.83, - 5.82},
+      {8.09, 1.83, - 7.58},
+      {39.70, 1.83, - 6.59}
+   },
+   fur = {
+      {26.00, 1.83, 6.44},
+      {29.87, 1.83, 21.80},
+      {18.50, 1.83, - 2.95},
+      {17.05, 1.83, 25.87},
+      { - 8.57, 1.83, 17.83}
+   },
+   gold = {
+      { - 40.01, 1.83, - 32.55},
+      { - 6.49, 1.83, - 27.38},
+      {28.21, 1.83, - 20.11},
+      {32.08, 1.83, - 0.55},
+      { - 8.08, 1.83, - 12.01},
+      {4.98, 1.83, 23.86}
+   },
+   cloth = {
+      {48.69, 1.83, - 24.68},
+      { - 9.51, 1.83, 4.65},
+      {18.48, 1.83, - 14.38}
+   },
+   horse = {
+      {42.76, 1.83, - 32.66},
+      {31.15, 1.83, 15.28},
+      {18.68, 1.83, 7.99},
+      { - 10.43, 1.83, - 14.59}
+   },
+   ore = {
+      {42.00, 1.83, - 20.08},
+      {10.81, 1.83, 6.49},
+      { - 8.28, 1.83, 11.03}
+   },
+   barbarianGreen = {
+      { - 39.39, 1.68, - 26.25},
+      { - 35.15, 1.68, - 33.32},
+      {45.70, 1.68, - 24.35},
+      {45.70, 1.68, - 19.77},
+      {45.40, 1.68, - 6.24},
+      {43.12, 1.68, - 2.84}
+   },
+   barbarianRed = {
+      { - 37.96, 1.68, - 33.78},
+      {46.01, 1.68, - 27.24}
+   }
+}
+
+---------------------Rules Book
+zoomFactor = 1.2
+ruleBook = {
+   currentPage = 1,
+   previousCurrentPage = 1,
+   selectedBook = "Rulebook",
+   Rulebook = {title = "Rulebook"}
+}
+
+function RulesClicked(player, value, id)
+   if id:find("closeButton") then
+      Global.UI.hide("RulesPanel")
+   elseif id:find("nextPage") then
+      if ruleBook.currentPage < #ruleBook[ruleBook.selectedBook] then
+         ruleBook.currentPage = ruleBook.currentPage + 1
+         if ruleBook.currentPage == #ruleBook[ruleBook.selectedBook] then --if on the last page
+            Global.UI.setAttribute("nextPage", "active", "false")
+         else
+            --turn on next button if it's off
+            if Global.UI.getAttribute("nextPage", "active") == "false" then
+               Global.UI.setAttribute("nextPage", "active", "true")
+            end
+         end
+         --Turn on previous button if it's off
+         if Global.UI.getAttribute("previousPage", "active") == "false" then
+            Global.UI.setAttribute("previousPage", "active", "true")
+         end
+         Global.UI.setAttribute("CurrentPageCount", "text", ruleBook.currentPage)
+         Global.UI.setAttribute("RulesImage", "image", ruleBook[ruleBook.selectedBook][ruleBook.currentPage])
+      end
+   elseif id:find("previousPage") then
+      if ruleBook.currentPage > 1 then
+         ruleBook.currentPage = ruleBook.currentPage - 1
+         if ruleBook.currentPage == 1 then --if on the first page
+            Global.UI.setAttribute("previousPage", "active", "false")
+         else
+            --turn on previous button if it's off
+            if Global.UI.getAttribute("previousPage", "active") == "false" then
+               Global.UI.setAttribute("previousPage", "active", "true")
+            end
+         end
+         --Turn on next button if it's off
+         if Global.UI.getAttribute("nextPage", "active") == "false" then
+            Global.UI.setAttribute("nextPage", "active", "true")
+         end
+         Global.UI.setAttribute("CurrentPageCount", "text", ruleBook.currentPage)
+         Global.UI.setAttribute("RulesImage", "image", ruleBook[ruleBook.selectedBook][ruleBook.currentPage])
+      end
+   elseif id:find("zoomInButton") then
+      local newWidth = tonumber(Global.UI.getAttribute("RulesImage", "width")) * zoomFactor
+      local newHeight = tonumber(Global.UI.getAttribute("RulesImage", "height")) * zoomFactor
+      Global.UI.setAttribute("RulesImage", "width", tostring(newWidth))
+      Global.UI.setAttribute("RulesImage", "height", tostring(newHeight))
+   elseif id:find("zoomOutButton") then
+      local newWidth = tonumber(Global.UI.getAttribute("RulesImage", "width")) / zoomFactor
+      local newHeight = tonumber(Global.UI.getAttribute("RulesImage", "height")) / zoomFactor
+      Global.UI.setAttribute("RulesImage", "width", tostring(newWidth))
+      Global.UI.setAttribute("RulesImage", "height", tostring(newHeight))
+   elseif id:find("widenButton") then
+      local newWidth = Global.UI.getAttribute("imageScroll", "width") * zoomFactor
+      Global.UI.setAttribute("imageScroll", "width", tostring(newWidth))
+      newWidth = Global.UI.getAttribute("RulesPanel", "width") * zoomFactor
+      Global.UI.setAttribute("RulesPanel", "width", tostring(newWidth))
+   elseif id:find("narrowButton") then
+      local newWidth = Global.UI.getAttribute("imageScroll", "width") / zoomFactor
+      Global.UI.setAttribute("imageScroll", "width", tostring(newWidth))
+      newWidth = Global.UI.getAttribute("RulesPanel", "width") / zoomFactor
+      Global.UI.setAttribute("RulesPanel", "width", tostring(newWidth))
+   end
+end
+
+function onEndEditZoomPercentage(player, value, id)
+   if value == "" then
+      Global.UI.setAttribute("InputZoomMultiplier", "text", zoomFactor * 100)
+      return
+   end
+
+   if value + 0 <= 100 then
+      broadcastToColor("Zoom value must be above 100", player.color, stringColorToRGB("Red"))
+   else
+      zoomFactor = value / 100
+   end
+end
+
+function onEndEditCurrentPage(player, value, id)
+   ruleBook.previousCurrentPage = ruleBook.currentPage
+
+   if value == "" then
+      Global.UI.setAttribute("CurrentPageCount", "text", ruleBook.previousCurrentPage)
+      return
+   end
+
+   ruleBook.currentPage = value + 0
+   if ruleBook.currentPage <= #ruleBook[ruleBook.selectedBook] and ruleBook.currentPage > 0 then
+      if ruleBook.currentPage == #ruleBook[ruleBook.selectedBook] then --if on the last page
+         Global.UI.setAttribute("nextPage", "active", "false")
+         Global.UI.setAttribute("previousPage", "active", "true")
+      elseif ruleBook.currentPage == 1 then
+         Global.UI.setAttribute("previousPage", "active", "false")
+         Global.UI.setAttribute("nextPage", "active", "true")
+      else -- if in between first and last page
+         Global.UI.setAttribute("nextPage", "active", "true")
+         Global.UI.setAttribute("previousPage", "active", "true")
+      end
+      Global.UI.setAttribute("CurrentPageCount", "text", ruleBook.currentPage)
+      Global.UI.setAttribute("RulesImage", "image", ruleBook[ruleBook.selectedBook][ruleBook.currentPage])
+   else
+      Global.UI.setAttribute("CurrentPageCount", "text", ruleBook.previousCurrentPage)
+      broadcastToColor("You must type a number between 1 and "..#ruleBook[ruleBook.selectedBook], player.color, stringColorToRGB("Red"))
+   end
+end
+-----------------Rules Book

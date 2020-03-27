@@ -1,0 +1,22 @@
+<Defaults>
+   <Image onClick="select" outline="#00000000" outlineSize="0 0" color="#00000002"/>
+   <HorizontalLayout spacing="55"/>
+</Defaults>
+<Panel scale="0.1 0.1 0.1" width="2770" height="1970" position="0 0 -11">
+   <VerticalLayout spacing="30">
+      <HorizontalLayout>
+         <Image id="Slavs"/>
+         <Image id="Romans"/>
+         <Image id="Norsemen"/>
+         <Image id="Iberians"/>
+         <Image id="Greek"/>
+      </HorizontalLayout>
+      <HorizontalLayout>
+         <Image id="Germanics"/>
+         <Image id="Gauls"/>
+         <Image id="Egyptians"/>
+         <Image id="Carthaginians"/>
+         <Image id="Britons"/>
+      </HorizontalLayout>
+   </VerticalLayout>
+</Panel>

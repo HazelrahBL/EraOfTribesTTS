@@ -1,0 +1,28 @@
+<Defaults>
+   <Image preserveAspect="true" raycastTarget="true" onClick="select" outline="#00000000" outlineSize="10 10"/>
+   <HorizontalLayout spacing="10"/>
+</Defaults>
+<VerticalScrollView scale="0.15 0.15 0.15" width="1800" height="1200" position="0 0 -11" movementType="Elastic" color="#00000000" scrollSensitivity="100" scrollbarBackgroundColor="#451f13" scrollbarColors="#181612|#383632|#585652|#444444">
+   <VerticalLayout width="1770" height="3175" offsetXY="5 0">
+      <HorizontalLayout>
+         <Image id="Britons" image="Britons"/>
+         <Image id="Carthaginians" image="Carthaginians"/>
+      </HorizontalLayout>
+      <HorizontalLayout>
+         <Image id="Egyptians" image="Egyptians"/>
+         <Image id="Gauls" image="Gauls"/>
+      </HorizontalLayout>
+      <HorizontalLayout>
+         <Image id="Germanics" image="Germanics"/>
+         <Image id="Greek" image="Greek"/>
+      </HorizontalLayout>
+      <HorizontalLayout>
+         <Image id="Iberians" image="Iberians"/>
+         <Image id="Norsemen" image="Norsemen"/>
+      </HorizontalLayout>
+      <HorizontalLayout>
+         <Image id="Romans" image="Romans"/>
+         <Image id="Slavs" image="Slavs"/>
+      </HorizontalLayout>
+   </VerticalLayout>
+</VerticalScrollView>

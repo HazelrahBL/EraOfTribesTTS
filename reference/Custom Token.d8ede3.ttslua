@@ -1,0 +1,11 @@
+function onLoad(save_state)
+  self.createButton({
+    click_function = "showRules",
+    function_owner = Global,
+    label          = "",
+    position       = {0, -0.2, 0},
+    width          = 3000,
+    height         = 1000,
+    color          = {1, 1, 1, 0}
+  })
+end
