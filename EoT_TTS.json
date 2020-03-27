@@ -3,7 +3,7 @@
   "GameMode": "Era of Tribes",
   "Gravity": 0.5,
   "PlayArea": 0.5,
-  "Date": "3/26/2020 9:01:11 PM",
+  "Date": "3/26/2020 10:33:55 PM",
   "Table": "Table_None",
   "Sky": "Sky_Regal",
   "SkyURL": "http://cloud-3.steamusercontent.com/ugc/861734447427622808/DB9EEA3B7977B0D4912A0C4C3A76E36FC3A6062E/",
@@ -182,6 +182,20 @@
     "Hiding": 0,
     "HandTransforms": [
       {
+        "Color": "Orange",
+        "Transform": {
+          "posX": -91.00001,
+          "posY": 5.0,
+          "posZ": 0.0,
+          "rotX": 0.0,
+          "rotY": 90.0,
+          "rotZ": 0.0,
+          "scaleX": 11.8623753,
+          "scaleY": 7.002465,
+          "scaleZ": 4.14464331
+        }
+      },
+      {
         "Color": "Yellow",
         "Transform": {
           "posX": -59.0000076,
@@ -236,6 +250,20 @@
           "scaleY": 7.0,
           "scaleZ": 4.0411787
         }
+      },
+      {
+        "Color": "Pink",
+        "Transform": {
+          "posX": 91.00001,
+          "posY": 5.0,
+          "posZ": 0.0,
+          "rotX": 0.0,
+          "rotY": 270.0,
+          "rotZ": 0.0,
+          "scaleX": 11.8630056,
+          "scaleY": 7.002465,
+          "scaleZ": 4.14495564
+        }
       }
     ]
   },
@@ -253,7 +281,7 @@
     {
       "Name": "Custom_Assetbundle",
       "Transform": {
-        "posX": -63.0,
+        "posX": -71.0,
         "posY": -9.0,
         "posZ": -55.8,
         "rotX": 6.536436E-07,
@@ -296,7 +324,7 @@
     {
       "Name": "Custom_Assetbundle",
       "Transform": {
-        "posX": -63.0,
+        "posX": -71.0,
         "posY": -9.0,
         "posZ": 55.8,
         "rotX": 6.536436E-07,
@@ -339,7 +367,7 @@
     {
       "Name": "Custom_Assetbundle",
       "Transform": {
-        "posX": 63.0,
+        "posX": 71.0,
         "posY": -9.0,
         "posZ": 55.8,
         "rotX": 6.536436E-07,
@@ -382,7 +410,7 @@
     {
       "Name": "Custom_Assetbundle",
       "Transform": {
-        "posX": 63.0,
+        "posX": 71.0,
         "posY": -9.0,
         "posZ": -55.8,
         "rotX": 6.536436E-07,
@@ -425,9 +453,9 @@
     {
       "Name": "Chinese_Checkers_Piece",
       "Transform": {
-        "posX": 80.29215,
-        "posY": -2.30256987,
-        "posZ": -73.10917,
+        "posX": 88.5,
+        "posY": -2.3,
+        "posZ": -73.0,
         "rotX": 0.00190076465,
         "rotY": 180.0,
         "rotZ": 0.000379891542,
@@ -468,7 +496,7 @@
         "rotX": -1.01777751E-13,
         "rotY": 0.0,
         "rotZ": 0.0,
-        "scaleX": 4.5,
+        "scaleX": 4.95,
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
@@ -505,7 +533,7 @@
     {
       "Name": "Custom_Assetbundle",
       "Transform": {
-        "posX": -63.0,
+        "posX": -71.0,
         "posY": -9.0,
         "posZ": 0.0,
         "rotX": 0.0,
@@ -554,7 +582,7 @@
         "rotX": -1.01777751E-13,
         "rotY": 180.0,
         "rotZ": 0.0,
-        "scaleX": 4.5,
+        "scaleX": 4.95,
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
@@ -591,7 +619,7 @@
     {
       "Name": "Custom_Assetbundle",
       "Transform": {
-        "posX": 63.0,
+        "posX": 71.0,
         "posY": -9.0,
         "posZ": 0.0,
         "rotX": 0.0,
@@ -28780,7 +28808,7 @@
         "rotX": 0.0,
         "rotY": -0.00189453643,
         "rotZ": 0.0,
-        "scaleX": 4.5,
+        "scaleX": 4.95,
         "scaleY": 1.0,
         "scaleZ": 4.1
       },
