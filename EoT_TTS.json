@@ -3,7 +3,7 @@
   "GameMode": "Era of Tribes",
   "Gravity": 0.5,
   "PlayArea": 0.5,
-  "Date": "3/26/2020 7:07:35 PM",
+  "Date": "3/26/2020 7:41:29 PM",
   "Table": "Table_None",
   "Sky": "Sky_Regal",
   "SkyURL": "http://cloud-3.steamusercontent.com/ugc/861734447427622808/DB9EEA3B7977B0D4912A0C4C3A76E36FC3A6062E/",
@@ -36759,6 +36759,48 @@
       "LuaScript": "",
       "LuaScriptState": "",
       "GUID": "107771"
+    },
+    {
+      "Name": "Custom_PDF",
+      "Transform": {
+        "posX": 40.0,
+        "posY": 1.48,
+        "posZ": 56.0,
+        "rotX": 0.0,
+        "rotY": 180.0,
+        "rotZ": 0.0,
+        "scaleX": 8.0,
+        "scaleY": 1.0,
+        "scaleZ": 8.0
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomPDF": {
+        "PDFUrl": "http://cloud-3.steamusercontent.com/ugc/776247958424610287/045D7C3B7F6971787498DA3184E4047D9A605E4B/",
+        "PDFPassword": "",
+        "PDFPage": 0,
+        "PDFPageOffset": 0
+      },
+      "XmlUI": "",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "GUID": "fe26c4"
     }
   ],
   "DecalPallet": [],
