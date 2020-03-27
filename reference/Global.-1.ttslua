@@ -4,9 +4,6 @@ map = "223852"
 playerSelected = true
 
 function onload(save_state)
-   for i = 1, 28 do
-      table.insert(ruleBook["Rulebook"], i)
-   end
    for _, obj in pairs(getAllObjects()) do
       if obj.getDescription() == "uninteractable" then
          obj.interactable = false
@@ -21,12 +18,6 @@ end
 
 function showPreview(obj, player_clicker_color, alt_click)
    show(Player[player_clicker_color], "PreView")
-end
-
-function showRules(obj, player_clicker_color, alt_click)
-   Global.UI.setAttribute("RulesImage", "image", ruleBook[ruleBook.selectedBook][ruleBook.currentPage])
-   Global.UI.setAttribute("RulesText", "text", ruleBook[ruleBook.selectedBook].title)
-   show(Player[player_clicker_color], "RulesPanel")
 end
 
 function changePage(player, value, id)
@@ -915,116 +906,3 @@ token = {
       {46.01, 1.68, - 27.24}
    }
 }
-
----------------------Rules Book
-zoomFactor = 1.2
-ruleBook = {
-   currentPage = 1,
-   previousCurrentPage = 1,
-   selectedBook = "Rulebook",
-   Rulebook = {title = "Rulebook"}
-}
-
-function RulesClicked(player, value, id)
-   if id:find("closeButton") then
-      Global.UI.hide("RulesPanel")
-   elseif id:find("nextPage") then
-      if ruleBook.currentPage < #ruleBook[ruleBook.selectedBook] then
-         ruleBook.currentPage = ruleBook.currentPage + 1
-         if ruleBook.currentPage == #ruleBook[ruleBook.selectedBook] then --if on the last page
-            Global.UI.setAttribute("nextPage", "active", "false")
-         else
-            --turn on next button if it's off
-            if Global.UI.getAttribute("nextPage", "active") == "false" then
-               Global.UI.setAttribute("nextPage", "active", "true")
-            end
-         end
-         --Turn on previous button if it's off
-         if Global.UI.getAttribute("previousPage", "active") == "false" then
-            Global.UI.setAttribute("previousPage", "active", "true")
-         end
-         Global.UI.setAttribute("CurrentPageCount", "text", ruleBook.currentPage)
-         Global.UI.setAttribute("RulesImage", "image", ruleBook[ruleBook.selectedBook][ruleBook.currentPage])
-      end
-   elseif id:find("previousPage") then
-      if ruleBook.currentPage > 1 then
-         ruleBook.currentPage = ruleBook.currentPage - 1
-         if ruleBook.currentPage == 1 then --if on the first page
-            Global.UI.setAttribute("previousPage", "active", "false")
-         else
-            --turn on previous button if it's off
-            if Global.UI.getAttribute("previousPage", "active") == "false" then
-               Global.UI.setAttribute("previousPage", "active", "true")
-            end
-         end
-         --Turn on next button if it's off
-         if Global.UI.getAttribute("nextPage", "active") == "false" then
-            Global.UI.setAttribute("nextPage", "active", "true")
-         end
-         Global.UI.setAttribute("CurrentPageCount", "text", ruleBook.currentPage)
-         Global.UI.setAttribute("RulesImage", "image", ruleBook[ruleBook.selectedBook][ruleBook.currentPage])
-      end
-   elseif id:find("zoomInButton") then
-      local newWidth = tonumber(Global.UI.getAttribute("RulesImage", "width")) * zoomFactor
-      local newHeight = tonumber(Global.UI.getAttribute("RulesImage", "height")) * zoomFactor
-      Global.UI.setAttribute("RulesImage", "width", tostring(newWidth))
-      Global.UI.setAttribute("RulesImage", "height", tostring(newHeight))
-   elseif id:find("zoomOutButton") then
-      local newWidth = tonumber(Global.UI.getAttribute("RulesImage", "width")) / zoomFactor
-      local newHeight = tonumber(Global.UI.getAttribute("RulesImage", "height")) / zoomFactor
-      Global.UI.setAttribute("RulesImage", "width", tostring(newWidth))
-      Global.UI.setAttribute("RulesImage", "height", tostring(newHeight))
-   elseif id:find("widenButton") then
-      local newWidth = Global.UI.getAttribute("imageScroll", "width") * zoomFactor
-      Global.UI.setAttribute("imageScroll", "width", tostring(newWidth))
-      newWidth = Global.UI.getAttribute("RulesPanel", "width") * zoomFactor
-      Global.UI.setAttribute("RulesPanel", "width", tostring(newWidth))
-   elseif id:find("narrowButton") then
-      local newWidth = Global.UI.getAttribute("imageScroll", "width") / zoomFactor
-      Global.UI.setAttribute("imageScroll", "width", tostring(newWidth))
-      newWidth = Global.UI.getAttribute("RulesPanel", "width") / zoomFactor
-      Global.UI.setAttribute("RulesPanel", "width", tostring(newWidth))
-   end
-end
-
-function onEndEditZoomPercentage(player, value, id)
-   if value == "" then
-      Global.UI.setAttribute("InputZoomMultiplier", "text", zoomFactor * 100)
-      return
-   end
-
-   if value + 0 <= 100 then
-      broadcastToColor("Zoom value must be above 100", player.color, stringColorToRGB("Red"))
-   else
-      zoomFactor = value / 100
-   end
-end
-
-function onEndEditCurrentPage(player, value, id)
-   ruleBook.previousCurrentPage = ruleBook.currentPage
-
-   if value == "" then
-      Global.UI.setAttribute("CurrentPageCount", "text", ruleBook.previousCurrentPage)
-      return
-   end
-
-   ruleBook.currentPage = value + 0
-   if ruleBook.currentPage <= #ruleBook[ruleBook.selectedBook] and ruleBook.currentPage > 0 then
-      if ruleBook.currentPage == #ruleBook[ruleBook.selectedBook] then --if on the last page
-         Global.UI.setAttribute("nextPage", "active", "false")
-         Global.UI.setAttribute("previousPage", "active", "true")
-      elseif ruleBook.currentPage == 1 then
-         Global.UI.setAttribute("previousPage", "active", "false")
-         Global.UI.setAttribute("nextPage", "active", "true")
-      else -- if in between first and last page
-         Global.UI.setAttribute("nextPage", "active", "true")
-         Global.UI.setAttribute("previousPage", "active", "true")
-      end
-      Global.UI.setAttribute("CurrentPageCount", "text", ruleBook.currentPage)
-      Global.UI.setAttribute("RulesImage", "image", ruleBook[ruleBook.selectedBook][ruleBook.currentPage])
-   else
-      Global.UI.setAttribute("CurrentPageCount", "text", ruleBook.previousCurrentPage)
-      broadcastToColor("You must type a number between 1 and "..#ruleBook[ruleBook.selectedBook], player.color, stringColorToRGB("Red"))
-   end
-end
------------------Rules Book
