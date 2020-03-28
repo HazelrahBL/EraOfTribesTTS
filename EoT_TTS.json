@@ -36831,54 +36831,6 @@
       "GUID": "fe26c4"
     },
     {
-      "Name": "Custom_Tile",
-      "Transform": {
-        "posX": -25.6744213,
-        "posY": 1.48149931,
-        "posZ": 69.2515,
-        "rotX": -1.83406028E-05,
-        "rotY": 179.980164,
-        "rotZ": 1.29514037E-05,
-        "scaleX": 1.66,
-        "scaleY": 1.0,
-        "scaleZ": 1.66
-      },
-      "Nickname": "",
-      "Description": "",
-      "GMNotes": "",
-      "ColorDiffuse": {
-        "r": 0.468640924,
-        "g": 0.450883329,
-        "b": 0.444961429
-      },
-      "Locked": true,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": false,
-      "Hands": false,
-      "CustomImage": {
-        "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397940227/7797D241BDFA07421711D629CECB9B0720C8B9B8/",
-        "ImageSecondaryURL": "",
-        "ImageScalar": 1.0,
-        "WidthScale": 0.0,
-        "CustomTile": {
-          "Type": 2,
-          "Thickness": 0.1,
-          "Stackable": true,
-          "Stretch": true
-        }
-      },
-      "XmlUI": "",
-      "LuaScript": "function update_color_callback(new_obj, bag, color)\r\n    new_obj.setColorTint(color)\r\n    bag.putObject(new_obj)\r\nend\r\n\r\n-- 5e94a3\r\n-- 8eadd3\r\n-- 6d6ded\r\n-- 4f40a8\r\n\r\nfunction do_recolor()\r\n  local guids = { [\"5e94a3\"] = \"Pink\", [\"8eadd3\"] = \"Pink\",\r\n                  [\"6d6ded\"] = \"Orange\", [\"4f40a8\"] = \"Orange\" }\r\n  for guid, color in pairs(guids) do\r\n    local bag = getObjectFromGUID(guid)\r\n    local pos = {x = -55.0, y = 2.0, z = -44}\r\n    for i, obj in pairs(bag.getObjects()) do\r\n      if not (obj.name == \"Chooser\" or obj.name == \"Board\") then\r\n        bag.takeObject({\r\n          position = pos,\r\n          smooth = false,\r\n          guid = obj.guid,\r\n          callback_function = function(new_obj) update_color_callback(new_obj, bag, color) end\r\n        })\r\n      end\r\n    end\r\n  end\r\nend\r\n\r\n\r\n\r\nfunction onLoad(save_state)\r\n  self.createButton({\r\n    click_function = \"do_recolor\",\r\n    function_owner = self,\r\n    label          = \"\",\r\n    position       = {0, -0.2, 0},\r\n    width          = 3000,\r\n    height         = 1000,\r\n    color          = {1, 1, 1, 0}\r\n  })\r\nend\r\n",
-      "LuaScriptState": "",
-      "GUID": "3bd747"
-    },
-    {
       "Name": "Bag",
       "Transform": {
         "posX": 10.0,
