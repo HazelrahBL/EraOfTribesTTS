@@ -1,6 +1,6 @@
 selected = ""
 duration = ""
-map = "223852"
+mapGuid = "223852"
 playerSelected = true
 
 function onload(save_state)
@@ -89,9 +89,9 @@ function gameSetup(player, value, id)
       return
    end
 
-   if limiter[selected].url then
-      getObjectFromGUID(map).setCustomObject({image = limiter[selected].url})
-      getObjectFromGUID(map).reload()
+   if mapCfg[selected].url then
+      getObjectFromGUID(mapGuid).setCustomObject({image = mapCfg[selected].url})
+      getObjectFromGUID(mapGuid).reload()
    end
 
    for i = 1, #players do
@@ -101,17 +101,17 @@ function gameSetup(player, value, id)
    end
 
    for k, v in pairs(numbers) do
-      Wait.condition(function() setupPlayer(k - 1, v, (duration ~= "normal") and true or false, #numbers, limiter[selected].nations) end, function() return playerSelected end)
+      Wait.condition(function() setupPlayer(k - 1, v, (duration ~= "normal") and true or false, #numbers, mapCfg[selected].nations) end, function() return playerSelected end)
    end
 
    setupMap(selected)
    show("", "menu")
-   getObjectFromGUID(map).setDescription(selected)
+   getObjectFromGUID(mapGuid).setDescription(selected)
 end
 
 function setupMap(selected)
-   bags = {
-      limiter = getObjectFromGUID("acc51c"),
+   local bags = {
+      boarders = getObjectFromGUID("acc51c"),
       horse = getObjectFromGUID("2fc48c"),
       ore = getObjectFromGUID("b6abb2"),
       gold = getObjectFromGUID("0655d1"),
@@ -127,9 +127,9 @@ function setupMap(selected)
       barbarianRed = getObjectFromGUID("4fe34c")
    }
    if selected ~= "five" then
-      for k, v in pairs(limiter[selected]) do
+      for k, v in pairs(mapCfg[selected]) do
          if k ~= "nations" then
-            bags.limiter.takeObject({position = v.pos, rotation = v.rot, smooth = false}).lock()
+            bags.boarders.takeObject({position = v.pos, rotation = v.rot, smooth = false}).lock()
          end
       end
    end
@@ -277,7 +277,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
                                  for _, v in pairs(nationsPreview[nationSelected].starter) do
                                     vasalls.takeObject({position = v, smooth = false})
                                  end
-                                 limiter[selected].nations[nationSelected] = false
+                                 mapCfg[selected].nations[nationSelected] = false
                                  playerSelected = true
                               end,
                               function()
@@ -317,7 +317,7 @@ function getSelectedNation(matPos)
    })
 
    for _, hit in pairs(hitlist) do
-      if limiter[selected].nations[hit.hit_object.getName()] then
+      if mapCfg[selected].nations[hit.hit_object.getName()] then
          return hit.hit_object.getName()
       end
    end
@@ -488,6 +488,10 @@ playerTable = {
    Green = {pos = {x = 60.00, y = 1.48, z = -60.01}, guid = "9103f6", Vasall = {positions = {}}, Chooser = "", playing = false}
 }
 
+--[[
+  Data table containing initial location of the Victory Parade tokens per
+  section 0.6.5 of the rulebook
+]]
 triumphalPositions = {
    {
       short = {
@@ -535,7 +539,11 @@ triumphalPositions = {
    }
 }
 
-limiter = {
+--[[
+  Data table containing information on how to configure the map per section
+  0.3 of the rulebook
+]]
+mapCfg = {
    two1 = {
       url = "http://cloud-3.steamusercontent.com/ugc/957486444002806135/3BD9AF99AC015DB5AF2EFB4002D05205025AD033/",
       nations = {Carthaginians = true, Iberians = true, Romans = true},
