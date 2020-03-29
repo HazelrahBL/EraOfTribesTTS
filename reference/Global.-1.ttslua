@@ -64,13 +64,13 @@ function checkDuration(player, value, id)
 end
 
 function checkPlayer(player, value, id)
-   playerTable[id].playing = not playerTable[id].playing
+   playerAreaCfg[id].playing = not playerAreaCfg[id].playing
 end
 
 function gameSetup(player, value, id)
    local players = {}
    local numbers = {}
-   for k, v in pairs(playerTable) do
+   for k, v in pairs(playerAreaCfg) do
       if v.playing == true then
          table.insert(players, k)
       end
@@ -147,8 +147,8 @@ end
 
 function setupPlayer(player, color, long, playerNumber, availableNations)
    playerSelected = false
-   local bag = getObjectFromGUID(playerTable[color].guid)
-   local matPos = playerTable[color].pos
+   local bag = getObjectFromGUID(playerAreaCfg[color].guid)
+   local matPos = playerAreaCfg[color].pos
    local coin1 = getObjectFromGUID("52539a")
    local coin3 = getObjectFromGUID("ce49c7")
    local deck = getObjectFromGUID("3cfcd2")
@@ -205,7 +205,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
 
    for _, obj in pairs(bag.getObjects()) do
       if obj.name == "Chooser" then
-         playerTable[color].Chooser = obj.guid
+         playerAreaCfg[color].Chooser = obj.guid
          local objPos = positions[obj.name][#positions[obj.name]]
          local pos = (objPos.x ~= nil) and {matPos.x + objPos.x, matPos.y + objPos.y, matPos.z + objPos.z} or objPos
          bag.takeObject({
@@ -220,7 +220,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
    deck.deal((player == (playerNumber - 1)) and 4 or 2, color)
 
    Wait.frames(function()
-      local chooser = getObjectFromGUID(playerTable[color].Chooser)
+      local chooser = getObjectFromGUID(playerAreaCfg[color].Chooser)
       local vasallFrame = 0
       Wait.condition(
          function()
@@ -249,11 +249,11 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
                                  }).setLock((positions[obj.name].lock == true) and true or false)
                                  table.remove(positions[obj.name])
                                  if obj.name == "Town" then
-                                    table.insert(playerTable[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + 0.74})
-                                    table.insert(playerTable[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 0.27})
-                                    table.insert(playerTable[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 1.28})
+                                    table.insert(playerAreaCfg[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + 0.74})
+                                    table.insert(playerAreaCfg[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 0.27})
+                                    table.insert(playerAreaCfg[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 1.28})
                                  elseif obj.name == "Vasalls" then
-                                    playerTable[color].Vasall.obj = obj.guid
+                                    playerAreaCfg[color].Vasall.obj = obj.guid
                                     vasallFrame = i
                                  end
                               end
@@ -267,14 +267,14 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
                   coin3.takeObject({position = {matPos.x + positions.Coins[3].x, matPos.y + positions.Coins[3].y, matPos.z + positions.Coins[3].z}, rotation = {0, 180, 0}, smooth = false})
 
                   Wait.frames(function()
-                     local vasalls = getObjectFromGUID(playerTable[color].Vasall.obj)
+                     local vasalls = getObjectFromGUID(playerAreaCfg[color].Vasall.obj)
                      Wait.condition(
                         function()
                            local nationSelected = ""
                            Wait.condition(
                               function()
                                  nationSelected = getSelectedNation(matPos)
-                                 for _, v in pairs(nationsPreview[nationSelected].starter) do
+                                 for _, v in pairs(nationsCfg[nationSelected].starter) do
                                     vasalls.takeObject({position = v, smooth = false})
                                  end
                                  mapCfg[selected].nations[nationSelected] = false
@@ -284,12 +284,12 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
                                  if getSelectedNation(matPos) ~= nil then return true else return false end
                               end
                            )
-                           for _, v in pairs(playerTable[color].Vasall.positions) do
+                           for _, v in pairs(playerAreaCfg[color].Vasall.positions) do
                               vasalls.takeObject({position = v, smooth = false})
                            end
                         end,
                         function()
-                           vasalls = getObjectFromGUID(playerTable[color].Vasall.obj)
+                           vasalls = getObjectFromGUID(playerAreaCfg[color].Vasall.obj)
                            return checkLoaded(vasalls)
                         end
                      )
@@ -343,8 +343,8 @@ function cleanUp(playerColor, value, id)
    else
       for _, obj in pairs(bag.getObjects()) do
          bag.takeObject({
-            position = nationsPreview[obj.name].pos,
-            rotation = nationsPreview[obj.name].rot,
+            position = nationsCfg[obj.name].pos,
+            rotation = nationsCfg[obj.name].rot,
             smooth = false,
             guid = obj.guid
          }).lock()
@@ -468,7 +468,7 @@ function checkLoaded(obj)
    return false
 end
 
-nationsPreview = {
+nationsCfg = {
    Britons = {pos = { - 55.75, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{ - 6.82, 2.09, 9.51}, { - 6.48, 2.09, 6.91}, { - 7.75, 2.09, 5.05}}},
    Carthaginians = {pos = { - 27.90, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{7.57, 2.09, - 22.99}, {10.78, 2.09, - 28.01}, {12.84, 2.09, - 30.09}}},
    Egyptians = {pos = { - 0.03, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{35.56, 2.09, - 31.97}, {37.36, 2.09, - 30.46}, {39.64, 2.09, - 29.36}}},
@@ -481,7 +481,11 @@ nationsPreview = {
    Slavs = {pos = {55.69, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{29.73, 2.09, 10.79}, {28.17, 2.09, 6.55}, {31.63, 2.09, 4.86}, {32.20, 2.09, 8.39}}}
 }
 
-playerTable = {
+--[[
+  Data table containing information and location data of individual player's
+  playing area and hand
+]]
+playerAreaCfg = {
    Yellow = {pos = {x = -60.00, y = 1.48, z = -60.00}, guid = "e5df01", Vasall = {positions = {}}, Chooser = "", playing = false},
    Blue = {pos = {x = -20.00, y = 1.48, z = -60.00}, guid = "98f2d4", Vasall = {positions = {}}, Chooser = "", playing = false},
    Red = {pos = {x = 20.00, y = 1.48, z = -60.00}, guid = "2df374", Vasall = {positions = {}}, Chooser = "", playing = false},
