@@ -354,7 +354,12 @@ function cleanUp(playerColor, value, id)
 end
 
 function onObjectDrop(player_color, dropped_object)
-   local token = {
+
+  if not playerAreaCfg[player_color].playing then
+    return
+  end
+  
+  local token = {
       Farming = {"Add two new food tokens.", "Add two new food tokens.", "Add two new food tokens.\nYou are now allowed to have two vasalls in one area.", "Add three new food tokens."},
       Culture = {"Get one influence and two moral.", "Get two influence and +1 for Bread&Circuses.", "Get two influence and +2 (now 3) for Bread&Circuses.", "Get four influence."},
       Navigation = {
@@ -380,6 +385,15 @@ function onObjectDrop(player_color, dropped_object)
          "4704ee", "4704ee", "4704ee", "4704ee"
       }
    }
+
+   -- Placement positions relative to the player board
+   local relPos = {
+     Commerce = {11.00, 0.10, 5.86},
+     Culture =  {6.24, 0.10, -3.52},
+     Farming =  {-10.0, 3.52, 6.48}
+   }
+
+   --local playerBoard
 
    local positions = {
       Commerce = {
@@ -486,10 +500,10 @@ nationsCfg = {
   playing area and hand
 ]]
 playerAreaCfg = {
-   Yellow = {pos = {x = -60.00, y = 1.48, z = -60.00}, guid = "e5df01", Vasall = {positions = {}}, Chooser = "", playing = false},
-   Blue = {pos = {x = -20.00, y = 1.48, z = -60.00}, guid = "98f2d4", Vasall = {positions = {}}, Chooser = "", playing = false},
-   Red = {pos = {x = 20.00, y = 1.48, z = -60.00}, guid = "2df374", Vasall = {positions = {}}, Chooser = "", playing = false},
-   Green = {pos = {x = 60.00, y = 1.48, z = -60.01}, guid = "9103f6", Vasall = {positions = {}}, Chooser = "", playing = false}
+   Yellow = {pos = {x = -60.00, y = 1.48, z = -60.00}, guid = "e5df01", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
+   Blue = {pos = {x = -20.00, y = 1.48, z = -60.00}, guid = "98f2d4", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
+   Red = {pos = {x = 20.00, y = 1.48, z = -60.00}, guid = "2df374", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
+   Green = {pos = {x = 60.00, y = 1.48, z = -60.01}, guid = "9103f6", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false}
 }
 
 --[[
