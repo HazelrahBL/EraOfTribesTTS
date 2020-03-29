@@ -193,7 +193,13 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
       Chooser = {{x = 0, y = 0, z = 0}, lock = true},
       Order = {{order.start.x + player * order.step, order.start.y, order.start.z}},
       Influence = {{influence.start.x + player * influence.step, influence.start.y, influence.start.z}},
-      Coins = {{x = -4, y = 0.09, z = 16}, {x = -4, y = 0.09, z = 13}, {x = -1, y = 0.09, z = 14.5}},
+      Coins = {
+        {x = -4, y = 0.09, z = 19},
+        {x = -4, y = 0.09, z = 16},
+        {x = -4, y = 0.09, z = 13},
+        {x = -1, y = 0.09, z = 16},
+        {x = -1, y = 0.09, z = 13}
+      },
       VictoryParade = {
          {
             (long == true) and victoryParadeCfg[playerNumber].long[player + 1].pos.x or victoryParadeCfg[playerNumber].short[player + 1].pos.x,
@@ -262,9 +268,9 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
                      i)
                   end
 
-                  coin1.takeObject({position = {matPos.x + positions.Coins[1].x, matPos.y + positions.Coins[1].y, matPos.z + positions.Coins[1].z}, rotation = {0, 180, 0}, smooth = false})
-                  coin1.takeObject({position = {matPos.x + positions.Coins[2].x, matPos.y + positions.Coins[2].y, matPos.z + positions.Coins[2].z}, rotation = {0, 180, 0}, smooth = false})
-                  coin3.takeObject({position = {matPos.x + positions.Coins[3].x, matPos.y + positions.Coins[3].y, matPos.z + positions.Coins[3].z}, rotation = {0, 180, 0}, smooth = false})
+                  for _,v in pairs(positions.Coins) do
+                    coin1.takeObject({position = {matPos.x + v.x, matPos.y + v.y, matPos.z + v.z}, rotation = {0, 180, 0}, smooth = false})
+                  end
 
                   Wait.frames(function()
                      local vasalls = getObjectFromGUID(playerAreaCfg[color].Vasall.obj)
