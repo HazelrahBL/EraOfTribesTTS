@@ -1,0 +1,18 @@
+Yellow hand:
+	-59.00	5.00 	-75.55
+	0		0		0
+
+Yellow player board:
+	-60.00	1.48	-60.00
+	0		180		0
+
+	diff:
+	1		-		15.55
+
+
+Yellow resource tracker:
+	-60.00	1.48	-43.50
+	0.00	180.00	0.00
+
+	diff:
+	0		-		32.05

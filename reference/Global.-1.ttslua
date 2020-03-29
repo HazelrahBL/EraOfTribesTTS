@@ -358,7 +358,7 @@ function onObjectDrop(player_color, dropped_object)
   if not playerAreaCfg[player_color].playing then
     return
   end
-  
+
   local token = {
       Farming = {"Add two new food tokens.", "Add two new food tokens.", "Add two new food tokens.\nYou are now allowed to have two vasalls in one area.", "Add three new food tokens."},
       Culture = {"Get one influence and two moral.", "Get two influence and +1 for Bread&Circuses.", "Get two influence and +2 (now 3) for Bread&Circuses.", "Get four influence."},
@@ -400,19 +400,25 @@ function onObjectDrop(player_color, dropped_object)
          Yellow = { - 48.94, 1.58, - 54.14},
          Blue = { - 8.97, 1.58, - 54.14},
          Red = {31.02, 1.58, - 54.14},
-         Green = {71.00, 1.58, - 54.14}
+         Green = {71.00, 1.58, - 54.14},
+         Pink = {71.00, 1.58, - 54.14},
+         Orange = {71.00, 1.58, - 54.14}
       },
       Culture = {
          Yellow = { - 53.75, 1.58, - 63.52},
          Blue = { - 13.73, 1.58, - 63.52},
          Red = {26.26, 1.58, - 63.52},
-         Green = {66.24, 1.58, - 63.52}
+         Green = {66.24, 1.58, - 63.52},
+         Pink = {71.00, 1.58, - 54.14},
+         Orange = {71.00, 1.58, - 54.14}
       },
       Farming = {
          Yellow = { - 70.00, 5, - 53.52},
          Blue = { - 30.00, 5, - 53.52},
          Red = {10.00, 5, - 53.52},
-         Green = {50.00, 5, - 53.52}
+         Green = {50.00, 5, - 53.52},
+         Pink = {71.00, 1.58, - 54.14},
+         Orange = {71.00, 1.58, - 54.14}
       }
    }
 
@@ -500,10 +506,12 @@ nationsCfg = {
   playing area and hand
 ]]
 playerAreaCfg = {
-   Yellow = {pos = {x = -60.00, y = 1.48, z = -60.00}, guid = "e5df01", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
-   Blue = {pos = {x = -20.00, y = 1.48, z = -60.00}, guid = "98f2d4", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
-   Red = {pos = {x = 20.00, y = 1.48, z = -60.00}, guid = "2df374", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
-   Green = {pos = {x = 60.00, y = 1.48, z = -60.01}, guid = "9103f6", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false}
+   Yellow = {pos = {x = -60.00, y = 1.48, z = -60.00}, rot = "0.0", guid = "e5df01", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
+   Blue = {pos = {x = -20.00, y = 1.48, z = -60.00}, rot = "0.0", guid = "98f2d4", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
+   Red = {pos = {x = 20.00, y = 1.48, z = -60.00}, rot = "0.0", guid = "2df374", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
+   Green = {pos = {x = 60.00, y = 1.48, z = -60.01}, rot = "0.0", guid = "9103f6", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
+   Pink = {pos = {x = 76.00, y = 1.48, z = 0.00}, rot = "-90.0", guid = "8eadd3", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false},
+   Orange = {pos = {x = -76.00, y = 1.48, z = 0.01}, rot = "90.0", guid = "6d6ded", Vasall = {positions = {}}, Chooser = "", nation = nil, playing = false}
 }
 
 --[[

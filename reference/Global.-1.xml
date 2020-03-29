@@ -13,17 +13,19 @@
 
 <Image id="menu" image="Background" width="661" height="992" active="false" showAnimation="Grow" hideAnimation="Shrink">
    <Panel rectAlignment="UpperCenter" color="#00000090"/>
-   <VerticalLayout rectAlignment="UpperCenter" height="70" width="400" offsetXY="0 -30">
-      <Text text="Aktive Player:" fontSize="30" fontStyle="Bold" color="#000000"/>
+   <VerticalLayout rectAlignment="UpperCenter" height="57" width="560" offsetXY="0 -60">
+      <Text text="Active Players:" fontSize="24" fontStyle="Bold" color="#000000"/>
       <HorizontalLayout minHeight="30">
          <Toggle id="Yellow" textColor="#CCC600" onValueChanged="checkPlayer">Yellow</Toggle>
          <Toggle id="Blue" textColor="#192195" onValueChanged="checkPlayer">Blue</Toggle>
          <Toggle id="Red" textColor="#C33017" onValueChanged="checkPlayer">Red</Toggle>
          <Toggle id="Green" textColor="#178715" onValueChanged="checkPlayer">Green</Toggle>
+         <Toggle id="Pink" textColor="#F570CE" onValueChanged="checkPlayer">Pink</Toggle>
+         <Toggle id="Purple" textColor="#7A0000" onValueChanged="checkPlayer">Purple</Toggle>
       </HorizontalLayout>
    </VerticalLayout>
-   <VerticalLayout rectAlignment="UpperCenter" height="80" width="600" offsetXY="0 -90">
-      <Text text="Duration:" fontSize="30" fontStyle="Bold" color="#000000"/>
+   <VerticalLayout rectAlignment="UpperCenter" height="55" width="600" offsetXY="0 -120">
+      <Text text="Duration:" fontSize="24" fontStyle="Bold" color="#000000"/>
       <ToggleGroup>
          <HorizontalLayout minHeight="30">
             <Toggle id="normal" textColor="#178715" onValueChanged="checkDuration">Normal (30min/Player)</Toggle>
@@ -32,8 +34,8 @@
          </HorizontalLayout>
       </ToggleGroup>
    </VerticalLayout>
-   <VerticalLayout rectAlignment="UpperCenter" height="600" width="600" offsetXY="0 -170">
-      <Text text="Map Setup:" minHeight="40" fontSize="30" fontStyle="Bold" color="#000000"/>
+   <VerticalLayout rectAlignment="UpperCenter" height="580" width="600" offsetXY="0 -180">
+      <Text text="Map Setup:" minHeight="40" fontSize="24" fontStyle="Bold" color="#000000"/>
       <Text text="2 Player:" minHeight="30" fontSize="20" color="#000000"/>
       <HorizontalLayout minHeight="120">
          <Image id="two1" Image="2 Spieler 1"><Button onClick="checkMap(two1)"/></Image>
@@ -54,16 +56,16 @@
          <Image id="three4" Image="3 Spieler 4"><Button onClick="checkMap(three4)"/></Image>
       </HorizontalLayout>
       <Text text="4 Player:" minHeight="30" fontSize="20" color="#000000"/>
-      <HorizontalLayout minHeight="140">
+      <HorizontalLayout minHeight="120">
          <Image id="four1" Image="4 Spieler 1"><Button onClick="checkMap(four1)"/></Image>
          <Image id="four2" Image="4 Spieler 2"><Button onClick="checkMap(four2)"/></Image>
          <Image id="four3" Image="4 Spieler 3"><Button onClick="checkMap(four3)"/></Image>
          <Image id="four4" Image="4 Spieler 4"><Button onClick="checkMap(four4)"/></Image>
       </HorizontalLayout>
    </VerticalLayout>
-   <Button id="five" text="Whole Map" rectAlignment="LowerCenter" offsetXY="0 120" color="#917251" fontSize="30" outline="#00000000" outlineSize="10 10" fontStyle="Bold" width="600" height="40" onClick="checkMap(five)"/>
-   <Button text="Start Setup" rectAlignment="LowerCenter" offsetXY="-130 40" color="#604024" fontSize="30" fontStyle="Bold" width="200" height="40" onClick="gameSetup"/>
-   <Button text="Close" rectAlignment="LowerCenter" offsetXY="130 40" color="#604024" fontSize="30" fontStyle="Bold" width="200" height="40" onClick="show(menu)"/>
+   <Button id="five" text="Whole Map" rectAlignment="LowerCenter" offsetXY="0 130" color="#917251" fontSize="30" outline="#00000000" outlineSize="10 10" fontStyle="Bold" width="600" height="40" onClick="checkMap(five)"/>
+   <Button text="Start Setup" rectAlignment="LowerCenter" offsetXY="-130 60" color="#604024" fontSize="30" fontStyle="Bold" width="200" height="40" onClick="gameSetup"/>
+   <Button text="Close" rectAlignment="LowerCenter" offsetXY="130 60" color="#604024" fontSize="30" fontStyle="Bold" width="200" height="40" onClick="show(menu)"/>
 </Image>
 
 <Panel id="PreView" height="95%" rectAlignment="LowerCenter" active="false">
