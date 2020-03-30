@@ -123,8 +123,7 @@ function setupMap(selected)
       fur = getObjectFromGUID("e6aa2f"),
       spices = getObjectFromGUID("6ef5fd"),
       food = getObjectFromGUID("4704ee"),
-      barbarianGreen = getObjectFromGUID("a4e39b"),
-      barbarianRed = getObjectFromGUID("4fe34c")
+      barbarian = getObjectFromGUID("a4e39b")
    }
    if selected ~= "five" then
       for k, v in pairs(mapCfg[selected]) do
@@ -138,7 +137,7 @@ function setupMap(selected)
          bags[k].shuffle()
          bags[k].takeObject({position = pos, rotation = (k == "food") and {0, 180, 0} or {0, 180, 180}, smooth = false})
       end
-      if k ~= "food" and k ~= "barbarianGreen" and k ~= "barbarianRed" then
+      if k ~= "food" and k ~= "barbarian" then
          bags[k].destruct()
       end
    end
@@ -890,15 +889,13 @@ tokenCfg = {
       {10.81, 1.83, 6.49},
       { - 8.28, 1.83, 11.03}
    },
-   barbarianGreen = {
+   barbarian = {
       { - 39.39, 1.68, - 26.25},
       { - 35.15, 1.68, - 33.32},
       {45.70, 1.68, - 24.35},
       {45.70, 1.68, - 19.77},
       {45.40, 1.68, - 6.24},
-      {43.12, 1.68, - 2.84}
-   },
-   barbarianRed = {
+      {43.12, 1.68, - 2.84},
       { - 37.96, 1.68, - 33.78},
       {46.01, 1.68, - 27.24}
    }
