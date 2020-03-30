@@ -274,7 +274,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
                            Wait.condition(
                               function()
                                  nationSelected = getSelectedNation(matPos)
-                                 for _, v in pairs(nationsCfg[nationSelected].starter) do
+                                 for _, v in pairs(nationsCfg[nationSelected].homes) do
                                     vasalls.takeObject({position = v, smooth = false})
                                  end
                                  mapCfg[selected].nations[nationSelected] = false
@@ -322,35 +322,6 @@ function getSelectedNation(matPos)
       end
    end
    return nil
-end
-
-function cleanUp(playerColor, value, id)
-   local bag = getObjectFromGUID("38a791")
-   if #bag.getObjects() == 0 then
-      local hitlist = Physics.cast({
-         origin = {0, 1, - 100},
-         direction = {0, 1, 0},
-         type = 3,
-         size = {150, 1, 30},
-         max_distance = 0,
-         debug = false
-      })
-
-      for _, hit in pairs(hitlist) do
-         bag.putObject(hit.hit_object)
-      end
-      self.UI.setAttribute(id, "text", "Preview Nations")
-   else
-      for _, obj in pairs(bag.getObjects()) do
-         bag.takeObject({
-            position = nationsCfg[obj.name].pos,
-            rotation = nationsCfg[obj.name].rot,
-            smooth = false,
-            guid = obj.guid
-         }).lock()
-      end
-      self.UI.setAttribute(id, "text", "CleanUp Preview")
-   end
 end
 
 function onObjectDrop(player_color, dropped_object)
@@ -473,16 +444,16 @@ end
   game board
 ]]
 nationsCfg = {
-   Britons = {pos = { - 55.75, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{ - 6.82, 2.09, 9.51}, { - 6.48, 2.09, 6.91}, { - 7.75, 2.09, 5.05}}},
-   Carthaginians = {pos = { - 27.90, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{7.57, 2.09, - 22.99}, {10.78, 2.09, - 28.01}, {12.84, 2.09, - 30.09}}},
-   Egyptians = {pos = { - 0.03, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{35.56, 2.09, - 31.97}, {37.36, 2.09, - 30.46}, {39.64, 2.09, - 29.36}}},
-   Gauls = {pos = {27.83, 1.06, - 87.57}, rot = {0.00, 180.00, 0.00}, starter = {{ - 3.22, 2.09, - 0.39}, {2.11, 2.09, 1.01}, {0.78, 2.09, 3.92}}},
-   Germanics = {pos = {55.69, 1.06, - 87.58}, rot = {0.00, 180.00, 0.00}, starter = {{7.29, 2.09, 10.23}, {12.81, 2.09, 9.35}}},
-   Greek = {pos = { - 55.75, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{25.70, 2.09, - 15.49}, {30.17, 2.09, - 13.19}, {32.37, 2.09, - 13.74}}},
-   Iberians = {pos = { - 27.90, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{ - 9.98, 2.09, - 20.07}, { - 5.20, 2.09, - 18.61}, { - 3.51, 2.09, - 14.39}}},
-   Norsemen = {pos = { - 0.03, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{7.64, 2.09, 22.32}, {12.84, 2.09, 22.79}, {13.22, 2.09, 18.91}}},
-   Romans = {pos = {27.83, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{9.96, 2.09, - 11.35}, {15.16, 2.09, - 13.43}}},
-   Slavs = {pos = {55.69, 1.06, - 107.23}, rot = {0.00, 180.00, 0.00}, starter = {{29.73, 2.09, 10.79}, {28.17, 2.09, 6.55}, {31.63, 2.09, 4.86}, {32.20, 2.09, 8.39}}}
+   Britons = {homes = {{ - 6.82, 2.09, 9.51}, { - 6.48, 2.09, 6.91}, { - 7.75, 2.09, 5.05}}},
+   Carthaginians = {homes = {{7.57, 2.09, - 22.99}, {10.78, 2.09, - 28.01}, {12.84, 2.09, - 30.09}}},
+   Egyptians = {homes = {{35.56, 2.09, - 31.97}, {37.36, 2.09, - 30.46}, {39.64, 2.09, - 29.36}}},
+   Gauls = {homes = {{ - 3.22, 2.09, - 0.39}, {2.11, 2.09, 1.01}, {0.78, 2.09, 3.92}}},
+   Germanics = {homes = {{7.29, 2.09, 10.23}, {12.81, 2.09, 9.35}}},
+   Greek = {homes = {{25.70, 2.09, - 15.49}, {30.17, 2.09, - 13.19}, {32.37, 2.09, - 13.74}}},
+   Iberians = {homes = {{ - 9.98, 2.09, - 20.07}, { - 5.20, 2.09, - 18.61}, { - 3.51, 2.09, - 14.39}}},
+   Norsemen = {homes = {{7.64, 2.09, 22.32}, {12.84, 2.09, 22.79}, {13.22, 2.09, 18.91}}},
+   Romans = {homes = {{9.96, 2.09, - 11.35}, {15.16, 2.09, - 13.43}}},
+   Slavs = {homes = {{29.73, 2.09, 10.79}, {28.17, 2.09, 6.55}, {31.63, 2.09, 4.86}, {32.20, 2.09, 8.39}}}
 }
 
 --[[
