@@ -1,6 +1,7 @@
 selected = ""
 duration = ""
 mapGuid = "223852"
+barbarianBagGuid = "a4e39b"
 playerSelected = true
 
 function onload(save_state)
@@ -103,6 +104,7 @@ function gameSetup(player, value, id)
    for k, v in pairs(numbers) do
       Wait.condition(function() setupPlayer(k - 1, v, (duration ~= "normal") and true or false, #numbers, mapCfg[selected].nations) end, function() return playerSelected end)
    end
+   Wait.condition(function() setupNonPlayerBarbarians(mapCfg[selected].nations) end, function() return playerSelected end)
 
    setupMap(selected)
    show("", "menu")
@@ -123,7 +125,7 @@ function setupMap(selected)
       fur = getObjectFromGUID("e6aa2f"),
       spices = getObjectFromGUID("6ef5fd"),
       food = getObjectFromGUID("4704ee"),
-      barbarian = getObjectFromGUID("a4e39b")
+      barbarian = getObjectFromGUID(barbarianBagGuid)
    }
    if selected ~= "five" then
       for k, v in pairs(mapCfg[selected]) do
@@ -309,6 +311,19 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
          )
       end,
    1)
+end
+
+function setupNonPlayerBarbarians(availableNations)
+   local bag = getObjectFromGUID(barbarianBagGuid)
+   for nation, available in pairs(availableNations) do
+      if available then
+         for _, v in pairs(nationsCfg[nation].homes) do
+            bag.shuffle()
+            bag.takeObject({position = v, rotation = {0, 180, 180}, smooth = false})
+         end
+      end
+   end
+   bag.destruct()
 end
 
 function getSelectedNation(matPos)
