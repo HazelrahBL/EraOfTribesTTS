@@ -85,43 +85,43 @@
     },
     {
       "Name": "Britons",
-      "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+      "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
     },
     {
       "Name": "Carthaginians",
-      "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+      "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
     },
     {
       "Name": "Egyptians",
-      "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+      "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
     },
     {
       "Name": "Gauls",
-      "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+      "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
     },
     {
       "Name": "Germanics",
-      "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+      "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
     },
     {
       "Name": "Greek",
-      "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+      "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
     },
     {
       "Name": "Iberians",
-      "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+      "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
     },
     {
       "Name": "Norsemen",
-      "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+      "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
     },
     {
       "Name": "Romans",
-      "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+      "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
     },
     {
       "Name": "Slavs",
-      "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+      "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
     }
   ],
   "LuaScript": "selected = \"\"\r\nduration = \"\"\r\nmapGuid = \"223852\"\r\nbarbarianBagGuid = \"a4e39b\"\r\nnextStage = true\r\n\r\nfunction onload(save_state)\r\n   for _, obj in pairs(getAllObjects()) do\r\n      if obj.getDescription() == \"uninteractable\" then\r\n         obj.interactable = false\r\n      end\r\n   end\r\n   Player.White.changeColor(\"Red\")\r\nend\r\n\r\nfunction showGameSetup(obj, player_clicker_color, alt_click)\r\n   show(Player[player_clicker_color], \"menu\")\r\nend\r\n\r\nfunction showPreview(obj, player_clicker_color, alt_click)\r\n   show(Player[player_clicker_color], \"PreView\")\r\nend\r\n\r\nfunction changePage(player, value, id)\r\n   show(player, value:sub(1, 2), id)\r\n   show(player, value:sub(4, 5), id)\r\nend\r\n\r\nfunction show(player, value, id)\r\n   if player == \"\" then\r\n      self.UI.setAttribute(value, \"visibility\", \"\")\r\n      self.UI.setAttribute(value, \"active\", \"false\")\r\n      return\r\n   end\r\n   local opened = self.UI.getAttribute(value, \"visibility\")\r\n   if opened == nil then opened = \"\" end\r\n   if opened:find(player.color) then\r\n      opened = opened:gsub(\"|\" .. player.color, \"\")\r\n      opened = opened:gsub(player.color .. \"|\", \"\")\r\n      opened = opened:gsub(player.color, \"\")\r\n      self.UI.setAttribute(value, \"visibility\", opened)\r\n      if opened == \"\" then\r\n         self.UI.setAttribute(value, \"active\", \"false\")\r\n      end\r\n   else\r\n      if opened == \"\" then\r\n         self.UI.setAttribute(value, \"active\", \"true\")\r\n         self.UI.setAttribute(value, \"visibility\", player.color)\r\n      else\r\n         self.UI.setAttribute(value, \"visibility\", opened .. \"|\" .. player.color)\r\n      end\r\n   end\r\nend\r\n\r\nfunction checkMap(player, value, id)\r\n   if selected ~= \"\" and selected ~= value then\r\n      self.UI.setAttribute(selected, \"outline\", \"#00000000\")\r\n   end\r\n   self.UI.setAttribute(value, \"outline\", \"#000000\")\r\n   selected = value\r\nend\r\n\r\nfunction checkDuration(player, value, id)\r\n   duration = id\r\nend\r\n\r\nfunction checkPlayer(player, value, id)\r\n   playerAreaCfg[id].playing = not playerAreaCfg[id].playing\r\nend\r\n\r\nfunction gameSetup(player, value, id)\r\n   local players = {}\r\n   local numbers = {}\r\n   for k, v in pairs(playerAreaCfg) do\r\n      if v.playing == true then\r\n         table.insert(players, k)\r\n      end\r\n   end\r\n\r\n   if #players < 1 then\r\n      broadcastToAll(\"Select min. 1 Player first!\", {1, 0, 0})\r\n      return\r\n   end\r\n   if duration == \"\" then\r\n      broadcastToAll(\"Select a Duration first!\", {1, 0, 0})\r\n      return\r\n   end\r\n   if selected == \"\" then\r\n      broadcastToAll(\"Select a Map Setup first!\", {1, 0, 0})\r\n      return\r\n   end\r\n\r\n   if mapCfg[selected].url then\r\n      getObjectFromGUID(mapGuid).setCustomObject({image = mapCfg[selected].url})\r\n      getObjectFromGUID(mapGuid).reload()\r\n   end\r\n\r\n   for i = 1, #players do\r\n      local ran = math.random(#players)\r\n      table.insert(numbers, players[ran])\r\n      table.remove(players, ran)\r\n   end\r\n\r\n   for k, v in pairs(numbers) do\r\n      Wait.condition(function() setupPlayer(k - 1, v, (duration ~= \"normal\") and true or false, #numbers, mapCfg[selected].nations) end, function() return nextStage end)\r\n   end\r\n   Wait.condition(function() setupNonPlayerBarbarians(mapCfg[selected].nations) end, function() return nextStage end)\r\n   Wait.condition(function() setupMap(selected) end, function() return nextStage end)\r\n\r\n   show(\"\", \"menu\")\r\n   getObjectFromGUID(mapGuid).setDescription(selected)\r\nend\r\n\r\nfunction setupMap(selected)\r\n   local bags = {\r\n      boarders = getObjectFromGUID(\"acc51c\"),\r\n      horse = getObjectFromGUID(\"2fc48c\"),\r\n      ore = getObjectFromGUID(\"b6abb2\"),\r\n      gold = getObjectFromGUID(\"0655d1\"),\r\n      cloth = getObjectFromGUID(\"5acf4a\"),\r\n      wine = getObjectFromGUID(\"31353f\"),\r\n      beer = getObjectFromGUID(\"1efdad\"),\r\n      diamonds = getObjectFromGUID(\"b1e503\"),\r\n      ivory = getObjectFromGUID(\"4b543b\"),\r\n      fur = getObjectFromGUID(\"e6aa2f\"),\r\n      spices = getObjectFromGUID(\"6ef5fd\"),\r\n      food = getObjectFromGUID(\"4704ee\"),\r\n      barbarian = getObjectFromGUID(barbarianBagGuid)\r\n   }\r\n   if selected ~= \"five\" then\r\n      for k, v in pairs(mapCfg[selected]) do\r\n         if k ~= \"nations\" then\r\n            bags.boarders.takeObject({position = v.pos, rotation = v.rot, smooth = false}).lock()\r\n         end\r\n      end\r\n   end\r\n   for k, v in pairs(tokenCfg) do\r\n      for _, pos in pairs(v) do\r\n         bags[k].shuffle()\r\n         bags[k].takeObject({position = pos, rotation = (k == \"food\") and {0, 180, 0} or {0, 180, 180}, smooth = false})\r\n      end\r\n      if k ~= \"food\" and k ~= \"barbarian\" then\r\n         bags[k].destruct()\r\n      end\r\n   end\r\n   broadcastToAll(\"Choose one card to hold on, then a nation.\", {0, 1, 0})\r\nend\r\n\r\nfunction setupPlayer(player, color, long, playerNumber, availableNations)\r\n   nextStage = false\r\n   local bag = getObjectFromGUID(playerAreaCfg[color].guid)\r\n   local matPos = playerAreaCfg[color].pos\r\n   local coin1 = getObjectFromGUID(\"52539a\")\r\n   local coin3 = getObjectFromGUID(\"ce49c7\")\r\n   local deck = getObjectFromGUID(\"3cfcd2\")\r\n   local influence = {start = {x = - 40.75, y = 2.35, z = 35.57}, step = -1.62}\r\n   local order = {start = {x = - 24.78, y = 2.34, z = - 32.62}, step = 2.45}\r\n   local leaderBA = {start = {x = -11.30, y = 3.09, z = 29.50}, step = 1}\r\n   local leaderAT = {start = {x = 14.00, y = 3.05, z = 27.90}, step = 1}\r\n   local rotations = {\r\n      Vasalls = {0.00, 0.00, 0.00},\r\n      Town = {0.00, 90.00, 0.00},\r\n      Leader = {0.00, 180.00, 0.00},\r\n      Marker = {0.00, 0.00, 0.00},\r\n      Board = {0.00, 180.00, 0.00},\r\n      Britons = {0.00, 180.00, 0.00},\r\n      Chooser = {0.00, 180.00, 0.00},\r\n      VictoryParade = {\r\n         (long == true) and victoryParadeCfg[playerNumber].long[player + 1].rot[1] or victoryParadeCfg[playerNumber].short[player + 1].rot[1],\r\n         (long == true) and victoryParadeCfg[playerNumber].long[player + 1].rot[2] or victoryParadeCfg[playerNumber].short[player + 1].rot[2],\r\n         (long == true) and victoryParadeCfg[playerNumber].long[player + 1].rot[3] or victoryParadeCfg[playerNumber].short[player + 1].rot[3]\r\n      }\r\n   }\r\n   local positions = {\r\n      Vasalls = {{x = 7.69, y = 0.7, z = 7.3}, lock = true},\r\n      Moral = {{46.27, 1.81 + 3, 22.07}},\r\n      Era = {{ - 18.78, 1.81 + 3, 32.20}},\r\n      Farming = {{ - 29.44, 1.81 + 3, 6.57}},\r\n      Culture = {{ - 27.76, 1.81 + 3, - 11.03}},\r\n      Navigation = {{ - 32.06, 1.81 + 3, - 15.62}},\r\n      Commerce = {{ - 44.80, 1.81 + 3, - 13.99}},\r\n      Mechanics = {{ - 44.67, 1.81 + 3, 6.69}},\r\n      Architecture = {{ - 41.44, 1.81 + 3, 7.89}},\r\n      Town = {\r\n         {x = 12.75, y = 0.08, z = -7.45}, {x = 10.13, y = 0.08, z = -7.45}, {x = 7.49, y = 0.08, z = -7.45}, {x = 4.8, y = 0.08, z = -7.45},\r\n         {x = 2.28, y = 0.08, z = -7.45}, {x = -0.37, y = 0.08, z = -7.45}, {x = -3.15, y = 0.08, z = -7.45}, {x = -5.79, y = 0.08, z = -7.45}\r\n      },\r\n      Leader = {\r\n         {leaderAT.start.x, leaderAT.start.y, leaderAT.start.z + player * leaderAT.step},\r\n         {leaderBA.start.x, leaderBA.start.y, leaderBA.start.z + player * leaderBA.step},\r\n         {x = 11.25, y = 1.47, z = 16}, {x = 11.25, y = 1.47, z = 13}\r\n      },\r\n      Board = {{x = 0, y = 0, z = 16.5}, lock = true},\r\n      Chooser = {{x = 0, y = 0, z = 0}, lock = true},\r\n      Order = {{order.start.x + player * order.step, order.start.y, order.start.z}},\r\n      Influence = {{influence.start.x + player * influence.step, influence.start.y, influence.start.z}},\r\n      Coins = {\r\n        {x = -4, y = 0.09, z = 19},\r\n        {x = -4, y = 0.09, z = 16},\r\n        {x = -4, y = 0.09, z = 13},\r\n        {x = -1, y = 0.09, z = 16},\r\n        {x = -1, y = 0.09, z = 13}\r\n      },\r\n      VictoryParade = {\r\n         {\r\n            (long == true) and victoryParadeCfg[playerNumber].long[player + 1].pos.x or victoryParadeCfg[playerNumber].short[player + 1].pos.x,\r\n            (long == true) and victoryParadeCfg[playerNumber].long[player + 1].pos.y or victoryParadeCfg[playerNumber].short[player + 1].pos.y,\r\n            (long == true) and victoryParadeCfg[playerNumber].long[player + 1].pos.z or victoryParadeCfg[playerNumber].short[player + 1].pos.z\r\n         }\r\n      }\r\n   }\r\n\r\n   for _, obj in pairs(bag.getObjects()) do\r\n      if obj.name == \"Chooser\" then\r\n         playerAreaCfg[color].Chooser = obj.guid\r\n         local objPos = positions[obj.name][#positions[obj.name]]\r\n         local pos = (objPos.x ~= nil) and {matPos.x + objPos.x, matPos.y + objPos.y, matPos.z + objPos.z} or objPos\r\n         bag.takeObject({\r\n            position = pos,\r\n            rotation = rotations[obj.name],\r\n            smooth = false,\r\n            guid = obj.guid\r\n         }).setLock((positions[obj.name].lock == true) and true or false)\r\n      end\r\n   end\r\n   deck.shuffle()\r\n   deck.deal((player == (playerNumber - 1)) and 4 or 2, color)\r\n\r\n   Wait.frames(function()\r\n      local chooser = getObjectFromGUID(playerAreaCfg[color].Chooser)\r\n      local vasallFrame = 0\r\n      Wait.condition(\r\n         function()\r\n            local nations = {\"Britons\", \"Carthaginians\", \"Egyptians\", \"Gauls\", \"Germanics\", \"Greek\", \"Iberians\", \"Norsemen\", \"Romans\", \"Slavs\"}\r\n            for _, nation in pairs(nations) do\r\n               if not availableNations[nation] then\r\n                  chooser.UI.setAttribute(nation, \"color\", \"#303030F0\")\r\n                  Global.UI.setAttribute(nation, \"color\", \"#303030\")\r\n               end\r\n            end\r\n\r\n            Wait.condition(\r\n               function()\r\n                  for i, obj in pairs(bag.getObjects()) do\r\n                     Wait.frames(\r\n                        function()\r\n                           if positions[obj.name] then\r\n                              if not (obj.name == \"Leader\" and #positions[obj.name] == 1 and not long) then\r\n                                 local objPos = positions[obj.name][#positions[obj.name]]\r\n                                 local pos = (objPos.x ~= nil) and {matPos.x + objPos.x, matPos.y + objPos.y, matPos.z + objPos.z} or objPos\r\n                                 bag.takeObject({\r\n                                    position = pos,\r\n                                    rotation = rotations[obj.name],\r\n                                    smooth = false,\r\n                                    guid = obj.guid\r\n                                 }).setLock((positions[obj.name].lock == true) and true or false)\r\n                                 table.remove(positions[obj.name])\r\n                                 if obj.name == \"Town\" then\r\n                                    table.insert(playerAreaCfg[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + 0.74})\r\n                                    table.insert(playerAreaCfg[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 0.27})\r\n                                    table.insert(playerAreaCfg[color].Vasall.positions, {matPos.x + objPos.x + - 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 1.28})\r\n                                 elseif obj.name == \"Vasalls\" then\r\n                                    playerAreaCfg[color].Vasall.obj = obj.guid\r\n                                    vasallFrame = i\r\n                                 end\r\n                              end\r\n                           end\r\n                        end,\r\n                     i)\r\n                  end\r\n\r\n                  for _,v in pairs(positions.Coins) do\r\n                    coin1.takeObject({position = {matPos.x + v.x, matPos.y + v.y, matPos.z + v.z}, rotation = {0, 180, 0}, smooth = false})\r\n                  end\r\n\r\n                  Wait.frames(function()\r\n                     local vasalls = getObjectFromGUID(playerAreaCfg[color].Vasall.obj)\r\n                     Wait.condition(\r\n                        function()\r\n                           local nationSelected = \"\"\r\n                           Wait.condition(\r\n                              function()\r\n                                 nationSelected = getSelectedNation(matPos)\r\n                                 for _, v in pairs(nationsCfg[nationSelected].homes) do\r\n                                    vasalls.takeObject({position = v, smooth = false})\r\n                                 end\r\n                                 mapCfg[selected].nations[nationSelected] = false\r\n                                 nextStage = true\r\n                              end,\r\n                              function()\r\n                                 if getSelectedNation(matPos) ~= nil then return true else return false end\r\n                              end\r\n                           )\r\n                           for _, v in pairs(playerAreaCfg[color].Vasall.positions) do\r\n                              vasalls.takeObject({position = v, smooth = false})\r\n                           end\r\n                        end,\r\n                        function()\r\n                           vasalls = getObjectFromGUID(playerAreaCfg[color].Vasall.obj)\r\n                           return checkLoaded(vasalls)\r\n                        end\r\n                     )\r\n                  end, vasallFrame + 1)\r\n\r\n               end,\r\n               function()\r\n                  if chooser == nil then return true else return false end\r\n               end)\r\n            end,\r\n            function() return checkLoaded(chooser) end\r\n         )\r\n      end,\r\n   1)\r\nend\r\n\r\nfunction setupNonPlayerBarbarians(availableNations)\r\n   nextStage = false\r\n   local bag = getObjectFromGUID(barbarianBagGuid)\r\n   for nation, available in pairs(availableNations) do\r\n      if available then\r\n         for _, v in pairs(nationsCfg[nation].homes) do\r\n            bag.shuffle()\r\n            bag.takeObject({position = v, rotation = {0, 180, 180}, smooth = false})\r\n         end\r\n      end\r\n   end\r\n   bag.destruct()\r\n   nextStage = true\r\nend\r\n\r\nfunction getSelectedNation(matPos)\r\n   local hitlist = Physics.cast({\r\n      origin = matPos,\r\n      direction = {0, 1, 0},\r\n      type = 3,\r\n      size = {1, 1, 1},\r\n      max_distance = 0,\r\n      debug = false\r\n   })\r\n\r\n   for _, hit in pairs(hitlist) do\r\n      if mapCfg[selected].nations[hit.hit_object.getName()] then\r\n         return hit.hit_object.getName()\r\n      end\r\n   end\r\n   return nil\r\nend\r\n\r\nfunction onObjectDrop(player_color, dropped_object)\r\n   local token = {\r\n      Farming = {\"Add two new food tokens.\", \"Add two new food tokens.\", \"Add two new food tokens.\\nYou are now allowed to have two vasalls in one area.\", \"Add three new food tokens.\"},\r\n      Culture = {\"Get one influence and two moral.\", \"Get two influence and +1 for Bread&Circuses.\", \"Get two influence and +2 (now 3) for Bread&Circuses.\", \"Get four influence.\"},\r\n      Navigation = {\r\n         \"Movement with fleet is 2. Fleet costs 2 Thalers.\\nYou get a free fleet. Place it immediately.\", \"Movement with fleet is 4. Fleet costs 3 Thalers.\\nYou get a free fleet. Place it immediately.\",\r\n         \"Movement with fleet is 6. Fleet costs 4 Thalers.\\nYou get a free fleet. Place it immediately.\", \"Movement with fleet is 10. Fleet costs 6 Thalers.\\nYou get a free fleet. Place it immediately.\"\r\n      },\r\n      Commerce = {\"Get +1 for Trade.\", \"Get +2 (now 3) for Trade.\", \"Get +3 (now 6) for Trade.\", \"Get +5 (now 11) for Trade.\"},\r\n      Mechanics = {\r\n         \"Movement with vasalls is 1. Army costs 1 Thaler.\\nYou get a free Army. Place it in your regular Army area.\", \"Movement with vasalls is 1. Army costs 2 Thalers.\\nYou get a free Army. Place it in your regular Army area.\",\r\n         \"Movement with vasalls is 2. Army costs 3 Thalers.\\nYou get a free Army. Place it in your regular Army area.\", \"Movement with vasalls is 3. Army costs 4 Thalers.\\nYou get a free Army. Place it in your regular Army area.\"\r\n      },\r\n      Architecture = {\"You are allowed to have 2 towns.\", \"You are allowed to have 4 towns.\", \"You are allowed to have 6 towns.\", \"You are allowed to have 8 towns.\"}\r\n   }\r\n\r\n   local extra = {\r\n      Commerce = {\r\n         \"c156fc\", \"c60f98\", \"4cb3ec\", \"300ddd\"\r\n      },\r\n      Culture = {\r\n         false, \"8220d8\", \"8cf20a\", \"8cf20a\"\r\n      },\r\n      Farming = {\r\n         \"4704ee\", \"4704ee\", \"4704ee\", \"4704ee\"\r\n      }\r\n   }\r\n\r\n   local positions = {\r\n      Commerce = {\r\n         Yellow = { - 48.94, 1.58, - 54.14},\r\n         Blue = { - 8.97, 1.58, - 54.14},\r\n         Red = {31.02, 1.58, - 54.14},\r\n         Green = {71.00, 1.58, - 54.14}\r\n      },\r\n      Culture = {\r\n         Yellow = { - 53.75, 1.58, - 63.52},\r\n         Blue = { - 13.73, 1.58, - 63.52},\r\n         Red = {26.26, 1.58, - 63.52},\r\n         Green = {66.24, 1.58, - 63.52}\r\n      },\r\n      Farming = {\r\n         Yellow = { - 70.00, 5, - 53.52},\r\n         Blue = { - 30.00, 5, - 53.52},\r\n         Red = {10.00, 5, - 53.52},\r\n         Green = {50.00, 5, - 53.52}\r\n      }\r\n   }\r\n\r\n   if token[dropped_object.getName()] then\r\n      broadcastToAll(token[dropped_object.getName()][getRing(dropped_object.getPosition())], player_color)\r\n   end\r\n\r\n   if extra[dropped_object.getName()] then\r\n      if extra[dropped_object.getName()][getRing(dropped_object.getPosition())] then\r\n         local hitlist = Physics.cast({\r\n            origin = positions[dropped_object.getName()][dropped_object.getDescription()],\r\n            direction = {0, 1, 0},\r\n            type = 3,\r\n            size = {1, 1, 1},\r\n            max_distance = 0,\r\n            debug = true\r\n         })\r\n\r\n         for _, hit in pairs(hitlist) do\r\n            if hit.hit_object.getName() == \"Bread\" or hit.hit_object.getName() == \"Trade\" then\r\n               hit.hit_object.destruct()\r\n            end\r\n         end\r\n         if dropped_object.getName() == \"Farming\" then\r\n            getObjectFromGUID(extra[dropped_object.getName()][getRing(dropped_object.getPosition())]).takeObject({\r\n               position = positions[dropped_object.getName()][dropped_object.getDescription()], smooth = false\r\n            })\r\n            getObjectFromGUID(extra[dropped_object.getName()][getRing(dropped_object.getPosition())]).takeObject({\r\n               position = positions[dropped_object.getName()][dropped_object.getDescription()], smooth = false\r\n            })\r\n         else\r\n            getObjectFromGUID(extra[dropped_object.getName()][getRing(dropped_object.getPosition())]).takeObject({\r\n               position = positions[dropped_object.getName()][dropped_object.getDescription()], smooth = false\r\n            }).lock()\r\n         end\r\n      end\r\n   end\r\nend\r\n\r\n\r\nfunction getDistance(pos)\r\n   local center = {x = -36.95, y = 1.61, z = -3.65}\r\n   return math.sqrt(math.abs(pos.x - center.x)^2 + math.abs(pos.z - center.z)^2)\r\nend\r\n\r\nfunction getRing(pos)\r\n   local rings = {\r\n      {min = 8.5, max = 12},\r\n      {min = 6.3, max = 8.5},\r\n      {min = 4, max = 6.3},\r\n      {min = 0, max = 4}\r\n   }\r\n   local distance = getDistance(pos)\r\n   for k, v in pairs(rings) do\r\n      if distance < v.max and distance >= v.min then\r\n         return k\r\n      end\r\n   end\r\nend\r\n\r\nfunction checkLoaded(obj)\r\n   if obj ~= nil then\r\n      if not obj.loading_custom and not obj.spawning then\r\n         return true\r\n      end\r\n   end\r\n   return false\r\nend\r\n\r\n--[[\r\n  Data table containing starting locations of the tribes (nations) on the main\r\n  game board\r\n]]\r\nnationsCfg = {\r\n   Britons =      {homes = {{- 8.04, 2.09,   8.79}, {- 5.18, 2.09,   7.69}, {- 7.75, 2.09,   5.04}}},\r\n   Carthaginians ={homes = {{  7.57, 2.09, -22.99}, { 10.78, 2.09, -28.01}, { 12.84, 2.09, -30.09}}},\r\n   Egyptians =    {homes = {{ 35.56, 2.09, -31.97}, { 37.36, 2.09, -30.46}, { 40.05, 2.09, -29.36}}},\r\n   Gauls =        {homes = {{- 3.22, 2.09, - 0.39}, {  2.11, 2.09,   1.01}, {  0.78, 2.09,   3.92}}},\r\n   Germanics =    {homes = {{  7.78, 2.09,  10.27}, { 12.81, 2.09,   9.35}}},\r\n   Greek =        {homes = {{ 26.34, 2.09, -15.49}, { 29.19, 2.09, -13.19}, { 31.50, 2.09, -11.00}}},\r\n   Iberians =     {homes = {{- 9.98, 2.09, -20.40}, {- 5.56, 2.09, -19.00}, {- 4.00, 2.09, -15.26}}},\r\n   Norsemen =     {homes = {{  7.64, 2.09,  22.32}, { 12.84, 2.09,  22.79}, { 13.22, 2.09,  18.91}}},\r\n   Romans =       {homes = {{  9.96, 2.09, -11.35}, { 15.16, 2.09, -13.43}}},\r\n   Slavs =        {homes = {{ 29.36, 2.09,  10.56}, { 33.45, 2.09,   8.44}, { 31.63, 2.09,   4.86}}}\r\n}\r\n\r\n--[[\r\n  Data table containing information and location data of individual player's\r\n  playing area and hand\r\n]]\r\nplayerAreaCfg = {\r\n   Yellow = {pos = {x = -60.00, y = 1.48, z = -60.00}, guid = \"e5df01\", Vasall = {positions = {}}, Chooser = \"\", playing = false},\r\n   Blue =   {pos = {x = -20.00, y = 1.48, z = -60.00}, guid = \"98f2d4\", Vasall = {positions = {}}, Chooser = \"\", playing = false},\r\n   Red =    {pos = {x =  20.00, y = 1.48, z = -60.00}, guid = \"2df374\", Vasall = {positions = {}}, Chooser = \"\", playing = false},\r\n   Green =  {pos = {x =  60.00, y = 1.48, z = -60.00}, guid = \"9103f6\", Vasall = {positions = {}}, Chooser = \"\", playing = false}\r\n}\r\n\r\n--[[\r\n  Data table containing initial location of the Victory Parade tokens per\r\n  section 0.6.5 of the rulebook\r\n]]\r\nvictoryParadeCfg = {\r\n   {\r\n      short = {\r\n         {pos = {x = 3.07, y = 2.53, z = -35.61}, rot = {0.00, 180.00, 0.00}}\r\n      },\r\n      long = {\r\n         {pos = {x = -3.13, y = 2.53, z = 35.42}, rot = {0.00, 0.00, 0.00}}\r\n      }\r\n   },\r\n   {\r\n      short = {\r\n         {pos = {x = 21.71, y = 2.53, z = -35.62}, rot = {0.00, 180.00, 0.00}},\r\n         {pos = {x = 24.71, y = 2.53, z = -35.62}, rot = {0.00, 180.00, 0.00}}\r\n      },\r\n      long = {\r\n         {pos = {x = -35.08, y = 2.53, z = 35.62}, rot = {0.00, 0.00, 0.00}},\r\n         {pos = {x = -38.08, y = 2.53, z = 35.62}, rot = {0.00, 0.00, 0.00}}\r\n      }\r\n   },\r\n   {\r\n      short = {\r\n         {pos = {x = 41.63, y = 2.53, z = -35.11}, rot = {0.00, 180.00, 0.00}},\r\n         {pos = {x = 43.30, y = 2.53, z = -36.02}, rot = {0.00, 180.00, 0.00}},\r\n         {pos = {x = 45.03, y = 2.53, z = -35.11}, rot = {0.00, 180.00, 0.00}}\r\n      },\r\n      long = {\r\n         {pos = {x = -50.32, y = 2.53, z = 22.53}, rot = {0.00, 270.00, 0.00}},\r\n         {pos = {x = -51.23, y = 2.53, z = 20.86}, rot = {0.00, 270.00, 0.00}},\r\n         {pos = {x = -50.33, y = 2.53, z = 19.14}, rot = {0.00, 270.00, 0.00}}\r\n      }\r\n   },\r\n   {\r\n      short = {\r\n         {pos = {x = 50.30, y = 2.53, z = -29.85}, rot = {0.00, 90.00, 0.00}},\r\n         {pos = {x = 51.21, y = 2.53, z = -28.73}, rot = {0.00, 90.00, 0.00}},\r\n         {pos = {x = 50.30, y = 2.53, z = -26.99}, rot = {0.00, 90.00, 0.00}},\r\n         {pos = {x = 51.21, y = 2.53, z = -25.79}, rot = {0.00, 90.00, 0.00}}\r\n      },\r\n      long = {\r\n         {pos = {x = -50.29, y = 2.53, z = 1.98}, rot = {0.00, 270.00, 0.00}},\r\n         {pos = {x = -51.20, y = 2.53, z = 0.87}, rot = {0.00, 270.00, 0.00}},\r\n         {pos = {x = -50.29, y = 2.53, z = -0.88}, rot = {0.00, 270.00, 0.00}},\r\n         {pos = {x = -51.20, y = 2.53, z = -2.07}, rot = {0.00, 270.00, 0.00}}\r\n      }\r\n   }\r\n}\r\n\r\n--[[\r\n  Data table containing information on how to configure the map per section\r\n  0.3 of the rulebook\r\n]]\r\nmapCfg = {\r\n   two1 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276236656/33E104A77B34947B976A6E46BADE8DE0AE2152BD/\",\r\n      nations = {Carthaginians = true, Iberians = true, Romans = true},\r\n      {pos = {-18.77, 1.88, - 4.25}, rot = {0, 180, 0}},\r\n      {pos = {-13.96, 1.88, - 1.42}, rot = {0, 120, 0}},\r\n      {pos = {- 8.89, 1.88,   1.40}, rot = {0, 180, 0}},\r\n      {pos = {- 3.73, 1.88, - 1.57}, rot = {0, 240, 0}},\r\n      {pos = {  0.85, 1.88, - 4.25}, rot = {0, 180, 0}},\r\n      {pos = {  5.51, 1.88, - 1.49}, rot = {0, 120, 0}},\r\n      {pos = { 10.67, 1.88,   1.37}, rot = {0, 180, 0}},\r\n      {pos = { 15.71, 1.88, - 1.50}, rot = {0, 240, 0}},\r\n      {pos = { 20.43, 1.88, - 4.25}, rot = {0, 180, 0}},\r\n      {pos = { 25.52, 1.88, - 7.25}, rot = {0, 240, 0}},\r\n      {pos = { 25.52, 1.88, -13.10}, rot = {0, 120, 0}},\r\n      {pos = { 25.52, 1.88, -18.54}, rot = {0, 240, 0}},\r\n      {pos = { 25.52, 1.88, -24.27}, rot = {0, 300, 0}},\r\n      {pos = { 25.19, 1.88, -30.10}, rot = {0, 240, 0}}\r\n\r\n   },\r\n   two2 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276235706/B4A77F6728C34E042AA78C946796FDE4B6A55822/\",\r\n      nations = {Britons = true, Gauls = true, Iberians = true},\r\n      {pos = {   5.98, 1.88,  26.50}, rot = {0,  60, 0}},\r\n      {pos = {   6.08, 1.88,  20.72}, rot = {0, 120, 0}},\r\n      {pos = {   5.98, 1.88,  15.36}, rot = {0,  60, 0}},\r\n      {pos = {   6.08, 1.88,   9.41}, rot = {0, 120, 0}},\r\n      {pos = {   5.98, 1.88,   4.08}, rot = {0,  60, 0}},\r\n      {pos = {   6.08, 1.88, - 1.75}, rot = {0, 120, 0}},\r\n      {pos = {   5.98, 1.88, - 7.34}, rot = {0,  60, 0}},\r\n      {pos = {   6.08, 1.88, -13.05}, rot = {0, 120, 0}},\r\n      {pos = {   5.98, 1.88, -18.50}, rot = {0,  60, 0}},\r\n      {pos = {   6.08, 1.88, -24.40}, rot = {0, 120, 0}},\r\n      {pos = {   5.98, 1.88, -29.70}, rot = {0,  60, 0}}\r\n   },\r\n   two3 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807909065896467/1C24B0F7E11D1DCC0F56F639D2C3F61182B6EEED/\",\r\n      nations = {Britons = true, Gauls = true, Norsemen = true, Germanics = true, Slavs = true},\r\n      {pos = { -18.60, 1.88, - 4.85}, rot = {0,   0, 0}},\r\n      {pos = { -13.50, 1.88, - 1.90}, rot = {0, 300, 0}},\r\n      {pos = { - 8.78, 1.88,   0.80}, rot = {0,   0, 0}},\r\n      {pos = { - 4.25, 1.88, - 1.90}, rot = {0,  60, 0}},\r\n      {pos = {   0.88, 1.88, - 4.43}, rot = {0,   0, 0}},\r\n      {pos = {   6.00, 1.88, - 1.90}, rot = {0, 300, 0}},\r\n      {pos = {  10.51, 1.88,   0.80}, rot = {0,   0, 0}},\r\n      {pos = {  15.25, 1.88, - 1.90}, rot = {0,  60, 0}},\r\n      {pos = {  20.35, 1.88, - 4.85}, rot = {0,   0, 0}},\r\n      {pos = {  25.50, 1.88, - 1.90}, rot = {0, 300, 0}},\r\n      {pos = {  29.95, 1.88,   0.80}, rot = {0,   0, 0}}\r\n   },\r\n   two4 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276237838/4B31E56E6A14D06006972731B158BB84999395C6/\",\r\n      nations = {Romans = true, Carthaginians = true, Egyptians = true, Greek = true},\r\n      {pos = { - 4.36, 1.88, -24.38}, rot = {0,  60, 0}},\r\n      {pos = { - 4.31, 1.88, -18.46}, rot = {0, 120, 0}},\r\n      {pos = {   0.75, 1.88, -15.52}, rot = {0,   0, 0}},\r\n      {pos = {   5.48, 1.88, -12.75}, rot = {0, 300, 0}},\r\n      {pos = {   5.40, 1.88, - 7.46}, rot = {0,  60, 0}},\r\n      {pos = {   5.48, 1.88, - 1.55}, rot = {0, 120, 0}},\r\n      {pos = {  10.65, 1.88,   1.36}, rot = {0,   0, 0}},\r\n      {pos = {  15.64, 1.88, - 1.55}, rot = {0,  60, 0}},\r\n      {pos = {  20.41, 1.88, - 4.41}, rot = {0,   0, 0}},\r\n      {pos = {  25.00, 1.88, - 1.55}, rot = {0, 300, 0}},\r\n      {pos = {  29.95, 1.88,   1.40}, rot = {0,   0, 0}}\r\n   },\r\n   two5 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276238957/3D36DA677568EBAC02635212F30F2402434E662D/\",\r\n      nations = {Slavs = true, Egyptians = true, Greek = true},\r\n      {pos = {  15.30, 1.88,  26.75}, rot = {0, 300, 0}},\r\n      {pos = {  15.30, 1.88,  20.70}, rot = {0,  60, 0}},\r\n      {pos = {  15.63, 1.88,  15.38}, rot = {0, 300, 0}},\r\n      {pos = {  15.30, 1.88,   9.30}, rot = {0,  60, 0}},\r\n      {pos = {  15.30, 1.88,   4.15}, rot = {0, 300, 0}},\r\n      {pos = {  15.30, 1.88, - 1.95}, rot = {0,  60, 0}},\r\n      {pos = {  15.30, 1.88, - 7.20}, rot = {0, 300, 0}},\r\n      {pos = {  15.30, 1.88, -13.25}, rot = {0,  60, 0}},\r\n      {pos = {  15.30, 1.88, -18.40}, rot = {0, 300, 0}},\r\n      {pos = {  15.30, 1.88, -24.50}, rot = {0,  60, 0}},\r\n      {pos = {  20.35, 1.88, -27.40}, rot = {0,   0, 0}},\r\n      {pos = {  25.00, 1.88, -30.15}, rot = {0,  60, 0}}\r\n   },\r\n   two6 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276240885/B88B81A4F83BC1036DC632F50B3225145DC4F041/\",\r\n      nations = {Britons = true, Gauls = true, Norsemen = true, Germanics = true},\r\n      {pos = { -18.64, 1.88, - 4.83}, rot = {0,   0, 0}},\r\n      {pos = { -14.02, 1.88, - 7.51}, rot = {0,  60, 0}},\r\n      {pos = { - 8.90, 1.88, -10.45}, rot = {0,   0, 0}},\r\n      {pos = { - 4.12, 1.88, -12.89}, rot = {0,  60, 0}},\r\n      {pos = {   0.80, 1.88, -16.10}, rot = {0,   0, 0}},\r\n      {pos = {   5.98, 1.88, -13.13}, rot = {0, 300, 0}},\r\n      {pos = {  10.49, 1.88, -10.03}, rot = {0,   0, 0}},\r\n      {pos = {  15.80, 1.88, - 7.40}, rot = {0, 300, 0}},\r\n      {pos = {  20.33, 1.88, - 4.85}, rot = {0,   0, 0}},\r\n      {pos = {  25.50, 1.88, - 1.90}, rot = {0, 300, 0}},\r\n      {pos = {  25.50, 1.88,   4.10}, rot = {0,  60, 0}},\r\n      {pos = {  25.50, 1.88,   9.40}, rot = {0, 300, 0}},\r\n      {pos = {  25.50, 1.88,  15.35}, rot = {0,  60, 0}},\r\n      {pos = {  25.50, 1.88,  20.70}, rot = {0, 300, 0}},\r\n      {pos = {  25.50, 1.88,  26.60}, rot = {0,  60, 0}}\r\n   },\r\n   three1 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276233569/3CC3673DF4494D07E95A419F65C72E767B40CDBA/\",\r\n      nations = {Norsemen = true, Germanics = true, Britons = true, Gauls = true, Iberians = true, Carthaginians = true},\r\n      {pos = {  15.72, 1.88,  26.30}, rot = {0, 300, 0}},\r\n      {pos = {  15.72, 1.88,  21.01}, rot = {0,  60, 0}},\r\n      {pos = {  15.72, 1.88,  15.00}, rot = {0, 300, 0}},\r\n      {pos = {  15.72, 1.88,   9.75}, rot = {0,  60, 0}},\r\n      {pos = {  15.72, 1.88,   3.75}, rot = {0, 300, 0}},\r\n      {pos = {  15.72, 1.88, - 1.50}, rot = {0,  60, 0}},\r\n      {pos = {  15.72, 1.88, - 7.60}, rot = {0, 300, 0}},\r\n      {pos = {  15.72, 1.88, -12.75}, rot = {0,  60, 0}},\r\n      {pos = {  15.72, 1.88, -18.90}, rot = {0, 120, 0}},\r\n      {pos = {  15.72, 1.88, -24.00}, rot = {0,  60, 0}},\r\n      {pos = {  15.72, 1.88, -30.20}, rot = {0, 300, 0}}\r\n   },\r\n   three2 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276234028/8DF8D8954C8B57456FBB9EEF10D06FF8959C13D2/\",\r\n      nations = {Romans = true, Carthaginians = true, Egyptians = true, Greek = true, Gauls = true, Iberians = true},\r\n      {pos = { -23.80, 1.88,   4.10}, rot = {0, 300, 0}},\r\n      {pos = { -18.59, 1.88,   7.05}, rot = {0,   0, 0}},\r\n      {pos = { -13.50, 1.88,   4.10}, rot = {0,  60, 0}},\r\n      {pos = { - 8.78, 1.88,   1.40}, rot = {0,   0, 0}},\r\n      {pos = { - 4.03, 1.88,   4.10}, rot = {0, 300, 0}},\r\n      {pos = {   0.88, 1.88,   7.05}, rot = {0,   0, 0}},\r\n      {pos = {   5.90, 1.88,   4.10}, rot = {0,  60, 0}},\r\n      {pos = {  10.51, 1.88,   1.40}, rot = {0,   0, 0}},\r\n      {pos = {  15.30, 1.88,   4.10}, rot = {0, 300, 0}},\r\n      {pos = {  20.35, 1.88,   7.05}, rot = {0,   0, 0}},\r\n      {pos = {  25.47, 1.88,   4.10}, rot = {0,  60, 0}},\r\n      {pos = {  29.95, 1.88,   1.40}, rot = {0,   0, 0}}\r\n   },\r\n   three3 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276235149/BE780901C4A12C3762F480A027144A52F0A001BC/\",\r\n      nations = {Britons = true, Gauls = true, Norsemen = true, Germanics = true, Slavs = true},\r\n      {pos = { -18.73, 1.88, - 4.90}, rot = {0,   0, 0}},\r\n      {pos = { -14.05, 1.88, - 7.55}, rot = {0,  60, 0}},\r\n      {pos = { - 8.95, 1.88, -10.55}, rot = {0,   0, 0}},\r\n      {pos = { - 3.75, 1.88, - 7.55}, rot = {0, 300, 0}},\r\n      {pos = {   0.75, 1.88, - 4.51}, rot = {0,   0, 0}},\r\n      {pos = {   5.45, 1.88, - 7.55}, rot = {0,  60, 0}},\r\n      {pos = {  10.47, 1.88, -10.05}, rot = {0,   0, 0}},\r\n      {pos = {  15.75, 1.88, - 7.55}, rot = {0, 300, 0}},\r\n      {pos = {  20.45, 1.88, - 4.90}, rot = {0,   0, 0}},\r\n      {pos = {  25.00, 1.88, - 7.55}, rot = {0,  60, 0}},\r\n      {pos = {  30.15, 1.88, -10.40}, rot = {0,   0, 0}},\r\n      {pos = {  35.30, 1.88, - 7.55}, rot = {0, 300, 0}},\r\n      {pos = {  35.30, 1.88, - 1.65}, rot = {0,  60, 0}}\r\n   },\r\n   three4 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276234612/532DB5E06EA8C990FB89A31BC08EF72C21CE0C6B/\",\r\n      nations = {Slavs = true, Egyptians = true, Greek = true, Carthaginians = true, Norsemen = true, Germanics = true, Romans = true},\r\n      {pos = { - 4.25, 1.88,  20.65}, rot = {0,  60, 0}},\r\n      {pos = {   0.85, 1.88,  17.65}, rot = {0,   0, 0}},\r\n      {pos = {   5.50, 1.88,  15.00}, rot = {0,  60, 0}},\r\n      {pos = {   5.50, 1.88,   9.79}, rot = {0, 300, 0}},\r\n      {pos = {   5.50, 1.88,   3.70}, rot = {0,  60, 0}},\r\n      {pos = {   5.50, 1.88, - 1.55}, rot = {0, 300, 0}},\r\n      {pos = {   5.50, 1.88, - 7.55}, rot = {0,  60, 0}},\r\n      {pos = {   5.50, 1.88, -12.80}, rot = {0, 300, 0}},\r\n      {pos = {   0.71, 1.88, -15.50}, rot = {0, 180, 0}},\r\n      {pos = { - 4.25, 1.88, -18.45}, rot = {0, 120, 0}},\r\n      {pos = { - 4.25, 1.88, -24.50}, rot = {0,  60, 0}},\r\n      {pos = { - 4.25, 1.88, -29.65}, rot = {0, 300, 0}}\r\n   },\r\n   four1 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276232002/76FA69364DE36EA72495589101B270026D8023D4/\",\r\n      nations = {Carthaginians = true, Egyptians = true, Gauls = true, Germanics = true, Greek = true, Iberians = true, Romans = true, Slavs = true},\r\n      {pos = { -23.75, 1.88,   4.15}, rot = {0, 300, 0}},\r\n      {pos = { -18.65, 1.88,   7.00}, rot = {0,   0, 0}},\r\n      {pos = { -13.60, 1.88,   4.15}, rot = {0,  60, 0}},\r\n      {pos = { - 8.85, 1.88,   1.40}, rot = {0,   0, 0}},\r\n      {pos = { - 4.25, 1.88,   4.15}, rot = {0, 300, 0}},\r\n      {pos = { - 4.25, 1.88,   9.35}, rot = {0,  60, 0}},\r\n      {pos = { - 4.25, 1.88,  15.35}, rot = {0, 300, 0}},\r\n      {pos = {   0.85, 1.88,  18.25}, rot = {0,   0, 0}},\r\n      {pos = {   5.95, 1.88,  15.35}, rot = {0,  60, 0}},\r\n      {pos = {  10.65, 1.88,  12.60}, rot = {0,   0, 0}},\r\n      {pos = {  15.53, 1.88,  15.30}, rot = {0, 300, 0}},\r\n      {pos = {  20.38, 1.88,  18.25}, rot = {0,   0, 0}},\r\n      {pos = {  25.10, 1.88,  21.20}, rot = {0, 300, 0}}\r\n   },\r\n   four2 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276231397/61E3C0BD4BEACE1F927331106997974815D31AB7/\",\r\n      nations = {Britons = true, Carthaginians = true, Gauls = true, Germanics = true, Iberians = true, Norsemen = true, Romans = true},\r\n      {pos = {  25.20, 1.88, -30.05}, rot = {0,  60, 0}},\r\n      {pos = {  25.55, 1.88, -24.45}, rot = {0, 300, 0}},\r\n      {pos = {  25.55, 1.88, -18.45}, rot = {0,  60, 0}},\r\n      {pos = {  25.55, 1.88, -13.15}, rot = {0, 300, 0}},\r\n      {pos = {  25.55, 1.88, - 7.35}, rot = {0,  60, 0}},\r\n      {pos = {  25.55, 1.88, - 1.85}, rot = {0, 300, 0}},\r\n      {pos = {  25.55, 1.88,   3.92}, rot = {0,  60, 0}},\r\n      {pos = {  25.55, 1.88,   9.35}, rot = {0, 300, 0}},\r\n      {pos = {  25.55, 1.88,  15.25}, rot = {0,  60, 0}},\r\n      {pos = {  25.55, 1.88,  20.65}, rot = {0, 300, 0}},\r\n      {pos = {  25.55, 1.88,  26.60}, rot = {0,  60, 0}}\r\n   },\r\n   four3 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1005933395527573250/A1C6D5D5B352ABBB79B7C79BBDABB12E35EC4754\",\r\n      nations = {Carthaginians = true, Egyptians = true, Gauls = true, Germanics = true, Greek = true, Norsemen = true, Romans = true, Slavs = true},\r\n      {pos = { - 4.30, 1.88,  20.70}, rot = {0,  60, 0}},\r\n      {pos = { - 4.30, 1.88,  15.35}, rot = {0, 120, 0}},\r\n      {pos = { - 4.30, 1.88,   9.30}, rot = {0,  60, 0}},\r\n      {pos = { - 4.30, 1.88,   4.05}, rot = {0, 300, 0}},\r\n      {pos = { - 8.80, 1.88,   1.40}, rot = {0,   0, 0}},\r\n      {pos = { -14.00, 1.88, - 1.50}, rot = {0, 300, 0}},\r\n      {pos = { -14.00, 1.88, - 7.55}, rot = {0,  60, 0}},\r\n      {pos = { - 8.80, 1.88, -10.50}, rot = {0,   0, 0}},\r\n      {pos = { - 4.15, 1.88, -12.90}, rot = {0,  60, 0}},\r\n      {pos = { - 4.30, 1.88, -18.55}, rot = {0, 300, 0}},\r\n      {pos = { - 4.30, 1.88, -24.35}, rot = {0,  60, 0}},\r\n      {pos = { - 4.30, 1.88, -29.75}, rot = {0, 300, 0}}\r\n   },\r\n   four4 = {\r\n      url = \"http://cloud-3.steamusercontent.com/ugc/1004807852276233028/E93961DA05BE8401D1144AD6FDB060EB222FC35C/\",\r\n      nations = {Britons = true, Gauls = true, Germanics = true, Greek = true, Norsemen = true, Romans = true, Slavs = true},\r\n      {pos = { -18.65, 1.88, - 4.85}, rot = {0,   0, 0}},\r\n      {pos = { -14.10, 1.88, - 7.45}, rot = {0,  60, 0}},\r\n      {pos = { - 8.95, 1.88, -10.50}, rot = {0,   0, 0}},\r\n      {pos = { - 4.10, 1.88, -12.93}, rot = {0,  60, 0}},\r\n      {pos = {   0.85, 1.88, -16.15}, rot = {0,   0, 0}},\r\n      {pos = {   5.45, 1.88, -18.75}, rot = {0,  60, 0}},\r\n      {pos = {  10.60, 1.88, -21.75}, rot = {0,   0, 0}},\r\n      {pos = {  15.25, 1.88, -24.45}, rot = {0,  60, 0}},\r\n      {pos = {  20.30, 1.88, -27.40}, rot = {0,   0, 0}},\r\n      {pos = {  24.90, 1.88, -30.00}, rot = {0,  60, 0}},\r\n      {pos = {  34.85, 1.88, -29.50}, rot = {0, 300, 0}},\r\n      {pos = {  35.25, 1.88, -24.22}, rot = {0,  60, 0}},\r\n      {pos = {  35.25, 1.88, -18.75}, rot = {0, 300, 0}},\r\n      {pos = {  35.25, 1.88, -12.80}, rot = {0,  60, 0}},\r\n      {pos = {  35.25, 1.88, - 7.55}, rot = {0, 300, 0}},\r\n      {pos = {  35.25, 1.88, - 1.55}, rot = {0,  60, 0}},\r\n      {pos = {  35.25, 1.88,   3.75}, rot = {0, 300, 0}}\r\n   },\r\n   five = {\r\n      nations = {Britons = true, Carthaginians = true, Egyptians = true, Gauls = true, Germanics = true, Greek = true, Iberians = true, Norsemen = true, Romans = true, Slavs = true}\r\n   }\r\n}\r\n\r\n--[[\r\n  Data table with the initial locations of all tokens that are placed on the map\r\n at the begining of the game per section 0.4 of the rulebook\r\n]]\r\ntokenCfg = {\r\n   food = {\r\n      { -35.00, 2.50, -27.40},\r\n      { -19.93, 2.50, -21.43},\r\n      { -13.40, 2.50, -20.48},\r\n      { - 8.48, 2.50, -24.96},\r\n      { -10.12, 2.50, -17.37},\r\n      { - 5.11, 2.50, -13.93},\r\n      { - 9.29, 2.50, - 6.25},\r\n      { - 7.54, 2.50, - 1.86},\r\n      { - 4.93, 2.50, - 5.47},\r\n      {   1.85, 2.50, - 9.24},\r\n      {   2.80, 2.50, -12.29},\r\n      {   3.13, 2.50, -20.09},\r\n      {   1.38, 2.50, -22.81},\r\n      {   9.27, 2.50, -23.65},\r\n      {  11.99, 2.50, -25.39},\r\n      {  13.00, 2.50, - 6.87},\r\n      {  12.83, 2.50, -11.44},\r\n      {  20.56, 2.50, - 7.40},\r\n      {  19.51, 2.50, -12.48},\r\n      {  21.21, 2.50, -16.62},\r\n      {  25.83, 2.50, -28.48},\r\n      {  28.92, 2.50, -26.12},\r\n      {  36.11, 2.50, -33.62},\r\n      {  37.09, 2.50, -28.39},\r\n      {  42.50, 2.50, -26.30},\r\n      {  44.08, 2.50, -21.60},\r\n      {  32.23, 2.50, -17.42},\r\n      {  29.18, 2.50, -11.75},\r\n      {  37.89, 2.50, -10.42},\r\n      {  31.71, 2.50, - 8.14},\r\n      {  34.81, 2.50, - 4.20},\r\n      {  47.91, 2.50, - 5.56},\r\n      {  28.51, 2.50,  13.97},\r\n      {  22.58, 2.50,  23.08},\r\n      {  22.77, 2.50,   4.71},\r\n      {  18.71, 2.50,  10.40},\r\n      {  11.14, 2.50,  21.12},\r\n      {  11.87, 2.50,  16.29},\r\n      {  13.93, 2.50,  15.18},\r\n      {   9.63, 2.50,  13.93},\r\n      {   9.44, 2.50,   9.00},\r\n      {   9.45, 2.50,   2.73},\r\n      {   3.01, 2.50,   4.66},\r\n      {   0.73, 2.50,  11.13},\r\n      {   1.31, 2.50,  22.93},\r\n      { - 6.54, 2.50,   2.85},\r\n      { - 4.84, 2.50,   6.42},\r\n      { -10.86, 2.50,  10.42},\r\n      { - 9.85, 2.50,  14.04},\r\n      { -30.20, 2.50,  28.67},\r\n      { -20.60, 2.50,  12.68}\r\n   },\r\n   beer = {\r\n      {  24.65, 2.50,   2.23},\r\n      {  14.34, 2.50,   6.35},\r\n      {  15.11, 2.50,  18.40},\r\n      { -17.18, 2.50,  14.78}\r\n   },\r\n   ivory = {\r\n      {   3.50, 2.50, -25.02},\r\n      {   9.39, 2.50, -30.38},\r\n      {  38.23, 2.50, -33.22},\r\n      { -38.87, 2.50,  27.07},\r\n   },\r\n   spices = {\r\n      {  48.65, 2.50, -20.68},\r\n      { -13.58, 2.50, -16.47},\r\n      {  21.86, 2.50, -11.31}\r\n   },\r\n   diamonds = {\r\n      { -40.11, 2.50, -28.58},\r\n      {   7.18, 2.50, -25.63},\r\n      {  32.88, 2.50, -19.67}\r\n   },\r\n   wine = {\r\n      {   6.26, 2.50,   6.28},\r\n      { - 2.53, 2.50,   1.26},\r\n      { - 6.43, 2.50, -17.43},\r\n      {   1.35, 2.50, - 5.82},\r\n      {   8.09, 2.50, - 7.64},\r\n      {  39.58, 2.50, - 6.59},\r\n      {  43.79, 2.50, -23.98}\r\n   },\r\n   fur = {\r\n      {  25.96, 2.50,   6.34},\r\n      {  29.79, 2.50,  21.64},\r\n      {  18.52, 2.50, - 3.00},\r\n      {  17.00, 2.50,  25.68},\r\n      { - 8.51, 2.50,  17.73}\r\n   },\r\n   gold = {\r\n      { -39.87, 2.50, -32.51},\r\n      {  -6.47, 2.50, -27.34},\r\n      {  28.39, 2.50, -20.22},\r\n      {  27.87, 2.50, - 3.93},\r\n      { - 8.05, 2.50, -12.07},\r\n      {   4.95, 2.50,  23.66}\r\n   },\r\n   cloth = {\r\n      {  48.54, 2.50, -24.68},\r\n      { - 9.46, 2.50,   4.58},\r\n      {  18.48, 2.50, -14.38}\r\n   },\r\n   horse = {\r\n      {  42.66, 2.50, -32.66},\r\n      {  31.10, 2.50,  15.14},\r\n      {  18.68, 2.50,   7.84},\r\n      { -10.37, 2.50, -14.64}\r\n   },\r\n   ore = {\r\n      {  41.85, 2.50, -20.08},\r\n      {  10.83, 2.50,  6.42},\r\n      { - 8.20, 2.50,  11.10}\r\n   },\r\n   barbarian = {\r\n      { -39.39, 1.68, -26.25},\r\n      { -38.12, 1.68, -33.06},\r\n      { -35.15, 1.68, -33.18},\r\n      {  45.70, 1.68, -24.35},\r\n      {  45.70, 1.68, -20.50},\r\n      {  45.40, 1.68, - 6.24},\r\n      {  43.12, 1.68, - 2.84},\r\n      {  46.01, 1.68, -27.24}\r\n   }\r\n}",
@@ -11202,7 +11202,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -11250,7 +11250,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -11298,7 +11298,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -11346,7 +11346,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -11394,7 +11394,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -11442,7 +11442,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -11490,7 +11490,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -11538,7 +11538,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -11586,7 +11586,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -11634,7 +11634,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -15573,7 +15573,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -15621,7 +15621,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -15669,7 +15669,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -15717,7 +15717,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -15765,7 +15765,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -15813,7 +15813,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -15861,7 +15861,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -15909,7 +15909,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -15957,7 +15957,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -16005,7 +16005,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -19944,7 +19944,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -19992,7 +19992,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -20040,7 +20040,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -20088,7 +20088,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -20136,7 +20136,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -20184,7 +20184,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -20232,7 +20232,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -20280,7 +20280,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -20328,7 +20328,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -20376,7 +20376,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -24315,7 +24315,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -24363,7 +24363,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -24411,7 +24411,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -24459,7 +24459,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -24507,7 +24507,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -24555,7 +24555,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -24603,7 +24603,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -24651,7 +24651,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -24699,7 +24699,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -24747,7 +24747,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -30043,7 +30043,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30091,7 +30091,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30139,7 +30139,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30187,7 +30187,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30235,7 +30235,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30283,7 +30283,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30331,7 +30331,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30379,7 +30379,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30427,7 +30427,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30475,7 +30475,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30540,43 +30540,43 @@
       "CustomUIAssets": [
         {
           "Name": "Britons",
-          "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+          "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
         },
         {
           "Name": "Carthaginians",
-          "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+          "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
         },
         {
           "Name": "Egyptians",
-          "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+          "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
         },
         {
           "Name": "Gauls",
-          "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+          "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
         },
         {
           "Name": "Germanics",
-          "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+          "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
         },
         {
           "Name": "Greek",
-          "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+          "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
         },
         {
           "Name": "Iberians",
-          "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+          "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
         },
         {
           "Name": "Norsemen",
-          "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+          "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
         },
         {
           "Name": "Romans",
-          "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+          "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
         },
         {
           "Name": "Slavs",
-          "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+          "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
         }
       ],
       "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
@@ -30615,7 +30615,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30663,7 +30663,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30711,7 +30711,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30759,7 +30759,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30807,7 +30807,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30855,7 +30855,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30903,7 +30903,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30951,7 +30951,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -30999,7 +30999,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -31047,7 +31047,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -31134,7 +31134,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -31182,7 +31182,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31230,7 +31230,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31278,7 +31278,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31326,7 +31326,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31374,7 +31374,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31422,7 +31422,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31470,7 +31470,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31518,7 +31518,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31566,7 +31566,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31629,43 +31629,43 @@
               "CustomUIAssets": [
                 {
                   "Name": "Britons",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
                 },
                 {
                   "Name": "Carthaginians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
                 },
                 {
                   "Name": "Egyptians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
                 },
                 {
                   "Name": "Gauls",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
                 },
                 {
                   "Name": "Germanics",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
                 },
                 {
                   "Name": "Greek",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
                 },
                 {
                   "Name": "Iberians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
                 },
                 {
                   "Name": "Norsemen",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
                 },
                 {
                   "Name": "Romans",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
                 },
                 {
                   "Name": "Slavs",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
                 }
               ],
               "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
@@ -31706,7 +31706,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -31754,7 +31754,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31802,7 +31802,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31850,7 +31850,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31898,7 +31898,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31946,7 +31946,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -31994,7 +31994,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32042,7 +32042,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32090,7 +32090,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32153,43 +32153,43 @@
               "CustomUIAssets": [
                 {
                   "Name": "Britons",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
                 },
                 {
                   "Name": "Carthaginians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
                 },
                 {
                   "Name": "Egyptians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
                 },
                 {
                   "Name": "Gauls",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
                 },
                 {
                   "Name": "Germanics",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
                 },
                 {
                   "Name": "Greek",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
                 },
                 {
                   "Name": "Iberians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
                 },
                 {
                   "Name": "Norsemen",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
                 },
                 {
                   "Name": "Romans",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
                 },
                 {
                   "Name": "Slavs",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
                 }
               ],
               "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
@@ -32228,7 +32228,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32278,7 +32278,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -32326,7 +32326,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32374,7 +32374,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32422,7 +32422,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32470,7 +32470,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32518,7 +32518,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32566,7 +32566,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32614,7 +32614,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32677,43 +32677,43 @@
               "CustomUIAssets": [
                 {
                   "Name": "Britons",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
                 },
                 {
                   "Name": "Carthaginians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
                 },
                 {
                   "Name": "Egyptians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
                 },
                 {
                   "Name": "Gauls",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
                 },
                 {
                   "Name": "Germanics",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
                 },
                 {
                   "Name": "Greek",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
                 },
                 {
                   "Name": "Iberians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
                 },
                 {
                   "Name": "Norsemen",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
                 },
                 {
                   "Name": "Romans",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
                 },
                 {
                   "Name": "Slavs",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
                 }
               ],
               "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
@@ -32752,7 +32752,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32800,7 +32800,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32850,7 +32850,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -32898,7 +32898,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32946,7 +32946,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -32994,7 +32994,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33042,7 +33042,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33090,7 +33090,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33138,7 +33138,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33186,7 +33186,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33249,43 +33249,43 @@
               "CustomUIAssets": [
                 {
                   "Name": "Britons",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
                 },
                 {
                   "Name": "Carthaginians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
                 },
                 {
                   "Name": "Egyptians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
                 },
                 {
                   "Name": "Gauls",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
                 },
                 {
                   "Name": "Germanics",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
                 },
                 {
                   "Name": "Greek",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
                 },
                 {
                   "Name": "Iberians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
                 },
                 {
                   "Name": "Norsemen",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
                 },
                 {
                   "Name": "Romans",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
                 },
                 {
                   "Name": "Slavs",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
                 }
               ],
               "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
@@ -33324,7 +33324,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33372,7 +33372,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33422,7 +33422,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -33470,7 +33470,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33518,7 +33518,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33566,7 +33566,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33614,7 +33614,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33662,7 +33662,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33710,7 +33710,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33758,7 +33758,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33821,43 +33821,43 @@
               "CustomUIAssets": [
                 {
                   "Name": "Britons",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
                 },
                 {
                   "Name": "Carthaginians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
                 },
                 {
                   "Name": "Egyptians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
                 },
                 {
                   "Name": "Gauls",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
                 },
                 {
                   "Name": "Germanics",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
                 },
                 {
                   "Name": "Greek",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
                 },
                 {
                   "Name": "Iberians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
                 },
                 {
                   "Name": "Norsemen",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
                 },
                 {
                   "Name": "Romans",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
                 },
                 {
                   "Name": "Slavs",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
                 }
               ],
               "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
@@ -33896,7 +33896,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33944,7 +33944,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -33994,7 +33994,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -34042,7 +34042,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34090,7 +34090,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34138,7 +34138,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34186,7 +34186,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34234,7 +34234,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34282,7 +34282,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34330,7 +34330,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34378,7 +34378,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34441,43 +34441,43 @@
               "CustomUIAssets": [
                 {
                   "Name": "Britons",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
                 },
                 {
                   "Name": "Carthaginians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
                 },
                 {
                   "Name": "Egyptians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
                 },
                 {
                   "Name": "Gauls",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
                 },
                 {
                   "Name": "Germanics",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
                 },
                 {
                   "Name": "Greek",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
                 },
                 {
                   "Name": "Iberians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
                 },
                 {
                   "Name": "Norsemen",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
                 },
                 {
                   "Name": "Romans",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
                 },
                 {
                   "Name": "Slavs",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
                 }
               ],
               "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
@@ -34516,7 +34516,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34566,7 +34566,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -34614,7 +34614,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34662,7 +34662,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34710,7 +34710,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34758,7 +34758,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34806,7 +34806,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34854,7 +34854,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34902,7 +34902,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -34950,7 +34950,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35013,43 +35013,43 @@
               "CustomUIAssets": [
                 {
                   "Name": "Britons",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
                 },
                 {
                   "Name": "Carthaginians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
                 },
                 {
                   "Name": "Egyptians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
                 },
                 {
                   "Name": "Gauls",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
                 },
                 {
                   "Name": "Germanics",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
                 },
                 {
                   "Name": "Greek",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
                 },
                 {
                   "Name": "Iberians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
                 },
                 {
                   "Name": "Norsemen",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
                 },
                 {
                   "Name": "Romans",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
                 },
                 {
                   "Name": "Slavs",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
                 }
               ],
               "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
@@ -35088,7 +35088,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35138,7 +35138,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -35186,7 +35186,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35234,7 +35234,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35282,7 +35282,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35330,7 +35330,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35378,7 +35378,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35426,7 +35426,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35474,7 +35474,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35522,7 +35522,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35570,7 +35570,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35633,43 +35633,43 @@
               "CustomUIAssets": [
                 {
                   "Name": "Britons",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
                 },
                 {
                   "Name": "Carthaginians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
                 },
                 {
                   "Name": "Egyptians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
                 },
                 {
                   "Name": "Gauls",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
                 },
                 {
                   "Name": "Germanics",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
                 },
                 {
                   "Name": "Greek",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
                 },
                 {
                   "Name": "Iberians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
                 },
                 {
                   "Name": "Norsemen",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
                 },
                 {
                   "Name": "Romans",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
                 },
                 {
                   "Name": "Slavs",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
                 }
               ],
               "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
@@ -35710,7 +35710,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -35758,7 +35758,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35806,7 +35806,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35854,7 +35854,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35902,7 +35902,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35950,7 +35950,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -35998,7 +35998,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36046,7 +36046,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36109,43 +36109,43 @@
               "CustomUIAssets": [
                 {
                   "Name": "Britons",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
                 },
                 {
                   "Name": "Carthaginians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
                 },
                 {
                   "Name": "Egyptians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
                 },
                 {
                   "Name": "Gauls",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
                 },
                 {
                   "Name": "Germanics",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
                 },
                 {
                   "Name": "Greek",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
                 },
                 {
                   "Name": "Iberians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
                 },
                 {
                   "Name": "Norsemen",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
                 },
                 {
                   "Name": "Romans",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
                 },
                 {
                   "Name": "Slavs",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
                 }
               ],
               "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
@@ -36184,7 +36184,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36232,7 +36232,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36282,7 +36282,7 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/",
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/",
             "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
@@ -36330,7 +36330,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36378,7 +36378,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36426,7 +36426,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36474,7 +36474,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36522,7 +36522,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36570,7 +36570,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36618,7 +36618,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36666,7 +36666,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36714,7 +36714,7 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomImage": {
-                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/",
+                "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/",
                 "ImageSecondaryURL": "",
                 "ImageScalar": 1.0,
                 "WidthScale": 0.0,
@@ -36777,43 +36777,43 @@
               "CustomUIAssets": [
                 {
                   "Name": "Britons",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397954111/A8E164DCFDDC1A143CA6FE4EEF402EC206BE44CB/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530841687/93388EF67A421B4E09699148819730100C6FE5CA/"
                 },
                 {
                   "Name": "Carthaginians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397973056/1A9C94FE103858F8550D94E33922222C6FACB6E1/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530842678/D71D3F7AA3BD4EF8FC7A285A9B9754C0F2D59B6C/"
                 },
                 {
                   "Name": "Egyptians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397978429/F35C6A4DBE6769418498D0EAF182F28111B96885/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843112/87AD083236C1AB5DDE7CDD1C77A9E17191879A1C/"
                 },
                 {
                   "Name": "Gauls",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397989152/A517E8F1A7F059CFC23F7FD709D8E6DBB3C84A58/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933395530843799/8ED99F8A7A1254F1E1E61A2ECD6148BE5D752560/"
                 },
                 {
                   "Name": "Germanics",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816397998920/234778C0E15D4B75C9C6188E5E51111DA9BCFDD3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262141/71AFB093DDE33FA8FCCC64FD63A904B88E23D98F/"
                 },
                 {
                   "Name": "Greek",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398002993/CECF047566AA4502DD57F691E6588D63A63F409C/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984262532/12672FF2D93F5E2F7A10F8FF34DCED363A5F0D62/"
                 },
                 {
                   "Name": "Iberians",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398011835/4B9F772B500D42A0752E87AF91EB2344AA9CE483/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263084/F4156F0812331A141146811D1C70BA50BABD4E5E/"
                 },
                 {
                   "Name": "Norsemen",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398026679/46F52830EE91872A239352FAFA8E370C4981E7F4/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263469/29C1CFC0141829F6A93E05B8CAA72DC5D87F977E/"
                 },
                 {
                   "Name": "Romans",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398030550/B1CC5B78CE947C0BCB46EDE691C5106CBFFBCE6F/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984263849/FBD3BEB27E51C92914CDE02D083CD58D6CBDDE7B/"
                 },
                 {
                   "Name": "Slavs",
-                  "URL": "http://cloud-3.steamusercontent.com/ugc/941719816398033603/D2C4F1A9814ED1D015FBE6B9172B4244689BE2B3/"
+                  "URL": "http://cloud-3.steamusercontent.com/ugc/1005933590984264266/E167FBD8847EE71A6FA0B7BE165D6DA7ED4B049F/"
                 }
               ],
               "LuaScript": "function onLoad(save_state)\r\n   self.setRotation({0, 0, 0})\r\nend\r\n\r\nfunction select(player, value, id)\r\n\r\n   if self.UI.getAttribute(id, \"color\") == \"#303030\" then return end\r\n\r\n   local nations = {Britons = 2, Carthaginians = 3, Egyptians = 4, Gauls = 5, Germanics = 6, Greek = 7, Iberians = 8, Norsemen = 9, Romans = 10, Slavs = 11}\r\n\r\n   if self.UI.getAttribute(id, \"outline\") == \"#00000000\" then\r\n      for nation, _ in pairs(nations) do\r\n         self.UI.setAttribute(nation, \"outline\", \"#00000000\")\r\n      end\r\n      self.UI.setAttribute(id, \"outline\", \"#00FF00\")\r\n      broadcastToColor(id .. \" is selected. Click again to confirm.\", player.color, {1, 1, 1})\r\n   else\r\n      self.setState(nations[id]).setRotation({0.00, 180.00, 0.00})\r\n   end\r\nend\r\n\r\n\r\n-- color=\"#303030\"",
