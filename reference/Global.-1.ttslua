@@ -347,18 +347,42 @@ end
 
 function onObjectDrop(player_color, dropped_object)
    local token = {
-      Farming = {"Add two new food tokens.", "Add two new food tokens.", "Add two new food tokens.\nYou are now allowed to have two vasalls in one area.", "Add three new food tokens."},
-      Culture = {"Get one influence and two moral.", "Get two influence and +1 for Bread&Circuses.", "Get two influence and +2 (now 3) for Bread&Circuses.", "Get four influence."},
+      Farming = {
+         "Added two new food tokens.",
+         "Added one new food token.\nYou are now allowed to have two vasalls in one area.",
+         "Added two new food tokens.",
+         "Added three new food tokens."
+      },
+      Culture = {
+         "Get one influence and two moral.",
+         "Get two influence. Added a +1 token for Bread & Circuses.",
+         "Get two influence. Replaceed +1 token with +3 token for Bread & Circuses.",
+         "Get four influence."
+      },
       Navigation = {
-         "Movement with fleet is 2. Fleet costs 2 Thalers.\nYou get a free fleet. Place it immediately.", "Movement with fleet is 4. Fleet costs 3 Thalers.\nYou get a free fleet. Place it immediately.",
-         "Movement with fleet is 6. Fleet costs 4 Thalers.\nYou get a free fleet. Place it immediately.", "Movement with fleet is 10. Fleet costs 6 Thalers.\nYou get a free fleet. Place it immediately."
+         "Movement with fleet is 2. Fleet costs 2 Thalers.\nYou get a free fleet. Place it immediately.",
+         "Movement with fleet is 4. Fleet costs 3 Thalers.\nYou get a free fleet. Place it immediately.",
+         "Movement with fleet is 6. Fleet costs 4 Thalers.\nYou get a free fleet. Place it immediately.",
+         "Movement with fleet is 10. Fleet costs 6 Thalers.\nYou get a free fleet. Place it immediately."
       },
-      Commerce = {"Get +1 for Trade.", "Get +2 (now 3) for Trade.", "Get +3 (now 6) for Trade.", "Get +5 (now 11) for Trade."},
+      Commerce = {
+         "Added +1 token for Trade.",
+         "Replaced +1 token with +3 token for Trade.",
+         "Replaced +3 token with +6 token for Trade.",
+         "Replaced +6 token with +11 token for Trade."
+      },
       Mechanics = {
-         "Movement with vasalls is 1. Army costs 1 Thaler.\nYou get a free Army. Place it in your regular Army area.", "Movement with vasalls is 1. Army costs 2 Thalers.\nYou get a free Army. Place it in your regular Army area.",
-         "Movement with vasalls is 2. Army costs 3 Thalers.\nYou get a free Army. Place it in your regular Army area.", "Movement with vasalls is 3. Army costs 4 Thalers.\nYou get a free Army. Place it in your regular Army area."
+         "Movement with vasalls is 1. You may build Regular Armies for 1 Thaler.\nYou get a free Regular Army. Place it in your Regular Army area.",
+         "Movement with vasalls is 1. Regular Armies cost 2 Thalers.\nYou get a free Regular Army. Place it in your Regular Army area.",
+         "Movement with vasalls is 2. Regular Armies cost 3 Thalers.\nYou get a free Regular Army. Place it in your Regular Army area.",
+         "Movement with vasalls is 3. Regular Armies cost 4 Thalers.\nYou get a free Regular Army. Place it in your Regular Army area."
       },
-      Architecture = {"You are allowed to have 2 towns.", "You are allowed to have 4 towns.", "You are allowed to have 6 towns.", "You are allowed to have 8 towns."}
+      Architecture = {
+         "You are allowed to have 2 towns.",
+         "You are allowed to have 4 towns.",
+         "You are allowed to have 6 towns.",
+         "You are allowed to have 8 towns."
+      }
    }
 
    local extra = {
@@ -394,14 +418,17 @@ function onObjectDrop(player_color, dropped_object)
       }
    }
 
-   if token[dropped_object.getName()] then
-      broadcastToAll(token[dropped_object.getName()][getRing(dropped_object.getPosition())], player_color)
-   end
+   local name = dropped_object.getName()
+   local desc = dropped_object.getDescription()
+   local ring = getRing(dropped_object.getPosition())
 
-   if extra[dropped_object.getName()] then
-      if extra[dropped_object.getName()][getRing(dropped_object.getPosition())] then
+   if token[name] then
+      broadcastToAll(token[name][ring], player_color)
+   end
+   if extra[name] then
+      if extra[name][ring] then
          local hitlist = Physics.cast({
-            origin = positions[dropped_object.getName()][dropped_object.getDescription()],
+            origin = positions[name][desc],
             direction = {0, 1, 0},
             type = 3,
             size = {1, 1, 1},
@@ -414,16 +441,23 @@ function onObjectDrop(player_color, dropped_object)
                hit.hit_object.destruct()
             end
          end
-         if dropped_object.getName() == "Farming" then
-            getObjectFromGUID(extra[dropped_object.getName()][getRing(dropped_object.getPosition())]).takeObject({
-               position = positions[dropped_object.getName()][dropped_object.getDescription()], smooth = false
+         if name == "Farming" then
+            getObjectFromGUID(extra[name][ring]).takeObject({
+               position = positions[name][desc], smooth = false
             })
-            getObjectFromGUID(extra[dropped_object.getName()][getRing(dropped_object.getPosition())]).takeObject({
-               position = positions[dropped_object.getName()][dropped_object.getDescription()], smooth = false
-            })
+            if ring ~= 2 then
+               getObjectFromGUID(extra[name][ring]).takeObject({
+                  position = positions[name][desc], smooth = false
+               })
+            end
+            if ring == 4 then
+               getObjectFromGUID(extra[name][ring]).takeObject({
+                  position = positions[name][desc], smooth = false
+               })
+            end
          else
-            getObjectFromGUID(extra[dropped_object.getName()][getRing(dropped_object.getPosition())]).takeObject({
-               position = positions[dropped_object.getName()][dropped_object.getDescription()], smooth = false
+            getObjectFromGUID(extra[name][ring]).takeObject({
+               position = positions[name][desc], smooth = false
             }).lock()
          end
       end
@@ -432,16 +466,16 @@ end
 
 
 function getDistance(pos)
-   local center = {x = -36.95, y = 1.61, z = -3.65}
+   local center = {x = -36.86, y = 1.61, z = -3.80}
    return math.sqrt(math.abs(pos.x - center.x)^2 + math.abs(pos.z - center.z)^2)
 end
 
 function getRing(pos)
    local rings = {
-      {min = 8.5, max = 12},
-      {min = 6.3, max = 8.5},
-      {min = 4, max = 6.3},
-      {min = 0, max = 4}
+      {min =  8.3, max = 10.4},
+      {min =  6.0, max =  8.3},
+      {min =  3.8, max =  6.0},
+      {min =  0.0, max =  3.8}
    }
    local distance = getDistance(pos)
    for k, v in pairs(rings) do
