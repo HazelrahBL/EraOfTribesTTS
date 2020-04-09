@@ -3,7 +3,7 @@
   "GameMode": "Era of Tribes",
   "Gravity": 0.5,
   "PlayArea": 0.5,
-  "Date": "3/29/2020 8:45:29 AM",
+  "Date": "4/8/2020 7:56:02 PM",
   "Table": "Table_None",
   "Sky": "Sky_Regal",
   "SkyURL": "http://cloud-3.steamusercontent.com/ugc/861734447427622808/DB9EEA3B7977B0D4912A0C4C3A76E36FC3A6062E/",
@@ -719,12 +719,13 @@
         110,
         111,
         112,
-        113
+        113,
+        114
       ],
       "CustomDeck": {
         "1": {
-          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/941718808792818582/3BFCCFED3E25067D3317BAAE51AE828FA91B436C/",
-          "BackURL": "http://cloud-3.steamusercontent.com/ugc/941718808792824105/29CBAC142602945D1D42BCE06522F1D4FE2F4635/",
+          "FaceURL": "http://cloud-3.steamusercontent.com/ugc/1004807909066451569/D7B638FCF0E47C8E08D6525F0693A18533EE2FCE/",
+          "BackURL": "http://cloud-3.steamusercontent.com/ugc/1004807909066450552/2193CD303F7C9D50CE3C6B2EC79B6EABBBB02A05/",
           "NumWidth": 5,
           "NumHeight": 3,
           "BackIsHidden": true,
@@ -764,23 +765,13 @@
           "Sticky": true,
           "Tooltip": true,
           "GridProjection": false,
-          "HideWhenFaceDown": true,
           "Hands": true,
           "CardID": 100,
           "SidewaysCard": false,
-          "CustomDeck": {
-            "1": {
-              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/941718808792818582/3BFCCFED3E25067D3317BAAE51AE828FA91B436C/",
-              "BackURL": "http://cloud-3.steamusercontent.com/ugc/941718808792824105/29CBAC142602945D1D42BCE06522F1D4FE2F4635/",
-              "NumWidth": 5,
-              "NumHeight": 3,
-              "BackIsHidden": true,
-              "UniqueBack": false
-            }
-          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
+          "ContainedObjects": [],
           "GUID": "f23d36"
         },
         {
@@ -812,23 +803,13 @@
           "Sticky": true,
           "Tooltip": true,
           "GridProjection": false,
-          "HideWhenFaceDown": true,
           "Hands": true,
           "CardID": 101,
           "SidewaysCard": false,
-          "CustomDeck": {
-            "1": {
-              "FaceURL": "http://cloud-3.steamusercontent.com/ugc/941718808792818582/3BFCCFED3E25067D3317BAAE51AE828FA91B436C/",
-              "BackURL": "http://cloud-3.steamusercontent.com/ugc/941718808792824105/29CBAC142602945D1D42BCE06522F1D4FE2F4635/",
-              "NumWidth": 5,
-              "NumHeight": 3,
-              "BackIsHidden": true,
-              "UniqueBack": false
-            }
-          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
+          "ContainedObjects": [],
           "GUID": "ef38b2"
         },
         {
@@ -1286,6 +1267,44 @@
           "LuaScriptState": "",
           "ContainedObjects": [],
           "GUID": "f23d36"
+        },
+        {
+          "Name": "Card",
+          "Transform": {
+            "posX": -26.4647,
+            "posY": 1.57928264,
+            "posZ": 57.90431,
+            "rotX": -1.234581E-08,
+            "rotY": 179.947266,
+            "rotZ": 180.0,
+            "scaleX": 3.31518054,
+            "scaleY": 1.0,
+            "scaleZ": 3.31518054
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "Hands": true,
+          "CardID": 114,
+          "SidewaysCard": false,
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "ContainedObjects": [],
+          "GUID": "4ef157"
         }
       ],
       "GUID": "3cfcd2"
@@ -37221,5 +37240,5 @@
       "id": 11
     }
   },
-  "VersionNumber": "v12.2.3"
+  "VersionNumber": "v12.3.5"
 }
