@@ -37866,6 +37866,54 @@
         }
       ],
       "GUID": "0fe5ff"
+    },
+    {
+      "Name": "Custom_Tile",
+      "Transform": {
+        "posX": 65.0,
+        "posY": 1.48149931,
+        "posZ": 56.0,
+        "rotX": 2.773651E-09,
+        "rotY": 180.0024,
+        "rotZ": -2.09512514E-08,
+        "scaleX": 12.0,
+        "scaleY": 1.0,
+        "scaleZ": 12.0
+      },
+      "Nickname": "Sequence of a Round",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomImage": {
+        "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1004808076814083147/ADBEFF28388B941EA44DF6936711F307DB3F1E63/",
+        "ImageSecondaryURL": "",
+        "ImageScalar": 1.0,
+        "WidthScale": 0.0,
+        "CustomTile": {
+          "Type": 0,
+          "Thickness": 0.2,
+          "Stackable": false,
+          "Stretch": true
+        }
+      },
+      "XmlUI": "",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "GUID": "f431b1"
     }
   ],
   "DecalPallet": [],
