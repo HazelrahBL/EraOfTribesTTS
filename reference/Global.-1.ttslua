@@ -223,7 +223,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
       end
    end
    deck.shuffle()
-   deck.deal((player == (playerNumber - 1)) and 4 or 2, color)
+   deck.deal(2, color)
 
    Wait.frames(function()
       local chooser = getObjectFromGUID(playerAreaCfg[color].Chooser)
