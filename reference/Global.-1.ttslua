@@ -161,7 +161,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
       Town = {0.00, 90.00, 0.00},
       Leader = {0.00, 180.00, 0.00},
       Marker = {0.00, 0.00, 0.00},
-      Board = {0.00, 180.00, 0.00},
+      Organizer = {0.00, 180.00, 0.00},
       Britons = {0.00, 180.00, 0.00},
       Chooser = {0.00, 180.00, 0.00},
       VictoryParade = {
@@ -189,7 +189,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
          {leaderBA.start.x, leaderBA.start.y, leaderBA.start.z + player * leaderBA.step},
          {x = 11.25, y = 1.47, z = 16}, {x = 11.25, y = 1.47, z = 13}
       },
-      Board = {{x = 0, y = 0, z = 16.5}, lock = true},
+      Organizer = {{x = 0, y = 0, z = 16.5}, lock = true},
       Chooser = {{x = 0, y = 0, z = 0}, lock = true},
       Order = {{order.start.x + player * order.step, order.start.y, order.start.z}},
       Influence = {{influence.start.x + player * influence.step, influence.start.y, influence.start.z}},
