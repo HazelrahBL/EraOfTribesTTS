@@ -9131,9 +9131,9 @@
     {
       "Name": "Custom_Model_Bag",
       "Transform": {
-        "posX": -4.72012568,
+        "posX": 16.56,
         "posY": 1.44747818,
-        "posZ": 41.5776024,
+        "posZ": 38.71,
         "rotX": 9.4246036E-07,
         "rotY": 179.978912,
         "rotZ": -5.94218648E-07,
@@ -37201,6 +37201,202 @@
         }
       ],
       "GUID": "26c710"
+    },
+    {
+      "Name": "Custom_Model_Infinite_Bag",
+      "Transform": {
+        "posX": -4.72,
+        "posY": 1.44747794,
+        "posZ": 41.58,
+        "rotX": -1.019406E-06,
+        "rotY": 174.999908,
+        "rotZ": -9.994271E-07,
+        "scaleX": 2.2,
+        "scaleY": 4.4,
+        "scaleZ": 2.2
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "MaterialIndex": -1,
+      "MeshIndex": -1,
+      "CustomMesh": {
+        "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+        "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076813792196/C613C6E3EC7354F448883D79D5AAEFA2A4EC3D5E/",
+        "NormalURL": "",
+        "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 7,
+        "CastShadows": true
+      },
+      "XmlUI": "",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "ContainedObjects": [
+        {
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": 7.839103,
+            "posY": 1.71116173,
+            "posZ": 41.7004967,
+            "rotX": 0.0202300344,
+            "rotY": 359.919,
+            "rotZ": 359.977539,
+            "scaleX": 0.8,
+            "scaleY": 1.0,
+            "scaleZ": 0.8
+          },
+          "Nickname": "Partisans",
+          "Description": "+1",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.388235271,
+            "g": 0.399999976,
+            "b": 0.41568625
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1004808076813792196/C613C6E3EC7354F448883D79D5AAEFA2A4EC3D5E/",
+            "ImageSecondaryURL": "",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "41930b"
+        }
+      ],
+      "GUID": "c731e8"
+    },
+    {
+      "Name": "Custom_Model_Infinite_Bag",
+      "Transform": {
+        "posX": -1.68,
+        "posY": 1.45,
+        "posZ": 41.58,
+        "rotX": 3.18055472E-15,
+        "rotY": 175.000015,
+        "rotZ": -1.01778562E-06,
+        "scaleX": 2.2,
+        "scaleY": 4.4,
+        "scaleZ": 2.2
+      },
+      "Nickname": "",
+      "Description": "",
+      "GMNotes": "",
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "MaterialIndex": -1,
+      "MeshIndex": -1,
+      "CustomMesh": {
+        "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+        "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076813836075/14037BA2EF5E8402E828CB12AFC62955B3A13F1A/",
+        "NormalURL": "",
+        "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 7,
+        "CastShadows": true
+      },
+      "XmlUI": "",
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "ContainedObjects": [
+        {
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": 7.839103,
+            "posY": 1.71116173,
+            "posZ": 41.7004967,
+            "rotX": 0.0202300344,
+            "rotY": 359.919,
+            "rotZ": 359.977539,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Partisans",
+          "Description": "+2",
+          "GMNotes": "",
+          "ColorDiffuse": {
+            "r": 0.388235271,
+            "g": 0.399999976,
+            "b": 0.41568625
+          },
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "http://cloud-3.steamusercontent.com/ugc/1004808076813836075/14037BA2EF5E8402E828CB12AFC62955B3A13F1A/",
+            "ImageSecondaryURL": "",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "XmlUI": "",
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "GUID": "41930b"
+        }
+      ],
+      "GUID": "0fe5ff"
     }
   ],
   "DecalPallet": [],
