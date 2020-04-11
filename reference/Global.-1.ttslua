@@ -112,6 +112,7 @@ function gameSetup(player, value, id)
 end
 
 function setupMap(selected)
+   local barbarian_marker = getObjectFromGUID("6b7550")
    local bags = {
       boarders = getObjectFromGUID("acc51c"),
       horse = getObjectFromGUID("2fc48c"),
@@ -143,6 +144,7 @@ function setupMap(selected)
          bags[k].destruct()
       end
    end
+   barbarian_marker.setPosition({-47.72, 1.60, 24.74})
    broadcastToAll("Choose one card to hold on, then a nation.", {0, 1, 0})
 end
 
