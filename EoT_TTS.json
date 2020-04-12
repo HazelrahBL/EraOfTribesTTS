@@ -263,7 +263,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Table Leg SW",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -306,7 +306,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Table Leg NW",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -349,7 +349,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Table Leg NE",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -392,7 +392,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Table Leg SE",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -471,7 +471,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Table Edge S",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -514,7 +514,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Table Edge W",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -557,7 +557,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Table Edge N",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -600,7 +600,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Table Edge E",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -643,7 +643,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.5
       },
-      "Nickname": "",
+      "Nickname": "floor",
       "Description": "uninteractable",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -686,7 +686,7 @@
         "scaleY": 1.0,
         "scaleZ": 3.31518054
       },
-      "Nickname": "",
+      "Nickname": "Influence Cards",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -749,7 +749,7 @@
             "scaleY": 1.0,
             "scaleZ": 3.31518054
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -763,7 +763,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 100,
@@ -787,7 +787,7 @@
             "scaleY": 1.0,
             "scaleZ": 3.31518054
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -801,7 +801,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 101,
@@ -825,7 +825,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -839,7 +839,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 102,
@@ -863,7 +863,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -877,7 +877,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 103,
@@ -901,7 +901,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -915,7 +915,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 104,
@@ -939,7 +939,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -953,7 +953,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 105,
@@ -977,7 +977,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -991,7 +991,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 106,
@@ -1015,7 +1015,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -1029,7 +1029,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 107,
@@ -1053,7 +1053,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -1067,7 +1067,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 108,
@@ -1091,7 +1091,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -1105,7 +1105,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 109,
@@ -1129,7 +1129,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -1143,7 +1143,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 110,
@@ -1167,7 +1167,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -1181,7 +1181,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 111,
@@ -1205,7 +1205,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -1219,7 +1219,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 112,
@@ -1243,7 +1243,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -1257,7 +1257,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 113,
@@ -1281,7 +1281,7 @@
             "scaleY": 1.0,
             "scaleZ": 3.31518054
           },
-          "Nickname": "",
+          "Nickname": "Influence Card",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -1295,7 +1295,7 @@
           "IgnoreFoW": false,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "Hands": true,
           "CardID": 114,
@@ -1322,7 +1322,7 @@
         "scaleY": 1.0,
         "scaleZ": 9.82
       },
-      "Nickname": "",
+      "Nickname": "Battle Board",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -1370,7 +1370,7 @@
         "scaleY": 3.44999671,
         "scaleZ": 3.44999671
       },
-      "Nickname": "",
+      "Nickname": "Attack Die",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -1465,7 +1465,7 @@
         "scaleY": 3.44999671,
         "scaleZ": 3.44999671
       },
-      "Nickname": "",
+      "Nickname": "Defence Die",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -1560,7 +1560,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Food +1 Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -1607,8 +1607,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -1655,8 +1655,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -1703,8 +1703,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -1751,8 +1751,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -1799,8 +1799,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -1847,8 +1847,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -1895,8 +1895,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -1943,8 +1943,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -1991,8 +1991,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2039,8 +2039,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2087,8 +2087,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2135,8 +2135,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2183,8 +2183,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2231,8 +2231,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2279,8 +2279,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2327,8 +2327,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2375,8 +2375,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2423,8 +2423,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2471,8 +2471,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2519,8 +2519,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2567,8 +2567,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2615,8 +2615,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2663,8 +2663,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2711,8 +2711,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2759,8 +2759,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2807,8 +2807,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2855,8 +2855,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2903,8 +2903,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2951,8 +2951,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -2999,8 +2999,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3047,8 +3047,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3095,8 +3095,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3143,8 +3143,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3191,8 +3191,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3239,8 +3239,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3287,8 +3287,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3335,8 +3335,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3383,8 +3383,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3431,8 +3431,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3479,8 +3479,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3527,8 +3527,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3575,8 +3575,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3623,8 +3623,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3671,8 +3671,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3719,8 +3719,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3767,8 +3767,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3815,8 +3815,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3863,8 +3863,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3911,8 +3911,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -3959,8 +3959,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4007,8 +4007,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4055,8 +4055,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4103,8 +4103,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4151,8 +4151,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4199,8 +4199,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4247,8 +4247,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4295,8 +4295,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4343,8 +4343,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4391,8 +4391,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4439,8 +4439,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.5731706,
@@ -4490,7 +4490,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Horse Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -4537,7 +4537,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Horse",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -4585,7 +4585,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Horse",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -4633,7 +4633,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Horse",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -4681,7 +4681,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Horse",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -4732,7 +4732,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Ore Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -4779,7 +4779,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Ore",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -4827,7 +4827,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Ore",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -4875,7 +4875,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Ore",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -4926,7 +4926,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Beer Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -4973,7 +4973,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Beer",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5021,7 +5021,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Beer",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5069,7 +5069,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Beer",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5117,7 +5117,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Beer",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5168,7 +5168,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Silver Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -5215,7 +5215,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Silver",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5263,7 +5263,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Silver",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5311,7 +5311,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Silver",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5362,7 +5362,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Ivory Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -5409,7 +5409,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Ivory",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5457,7 +5457,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Ivory",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5505,7 +5505,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Ivory",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5553,7 +5553,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Ivory",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5604,7 +5604,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Fur Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -5651,7 +5651,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Fur",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5699,7 +5699,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Fur",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5747,7 +5747,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Fur",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5795,7 +5795,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Fur",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5843,7 +5843,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Fur",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5894,7 +5894,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Spices Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -5941,7 +5941,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Fur",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -5989,7 +5989,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Fur",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6037,7 +6037,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Fur",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6088,7 +6088,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Gold Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -6135,7 +6135,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Gold",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6183,7 +6183,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Gold",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6231,7 +6231,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Gold",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6279,7 +6279,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Gold",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6327,7 +6327,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Gold",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6375,7 +6375,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Gold",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6426,7 +6426,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Cloth Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -6473,7 +6473,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Cloth",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6521,7 +6521,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Cloth",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6569,7 +6569,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Cloth",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6620,7 +6620,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Wine Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -6667,7 +6667,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Wine",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6715,7 +6715,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Wine",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6763,7 +6763,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Wine",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6811,7 +6811,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Wine",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6859,7 +6859,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Wine",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6907,7 +6907,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Wine",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -6955,7 +6955,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "Wine",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -7006,7 +7006,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Food +3 Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -7053,8 +7053,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+3",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.468640924,
@@ -7101,8 +7101,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+3",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.468640924,
@@ -7149,8 +7149,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+3",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.468640924,
@@ -7197,8 +7197,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+3",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.468640924,
@@ -7245,8 +7245,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+3",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.468640924,
@@ -7293,8 +7293,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+3",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.468640924,
@@ -7341,8 +7341,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+3",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.468640924,
@@ -7389,8 +7389,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+3",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.468640924,
@@ -7437,8 +7437,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+3",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.468640924,
@@ -7485,8 +7485,8 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "Food",
+          "Description": "+3",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.468640924,
@@ -7536,7 +7536,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "ThalerBag01",
+      "Nickname": "1 Thaler Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -7583,7 +7583,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "1 Thaler Coin",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -7634,7 +7634,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "ThalerBag05",
+      "Nickname": "5 Thaler Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -7681,7 +7681,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.66
           },
-          "Nickname": "",
+          "Nickname": "5 Thaler Coin",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -7732,7 +7732,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "ThalerBag10",
+      "Nickname": "10 Thaler Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -7779,7 +7779,7 @@
             "scaleY": 1.0,
             "scaleZ": 2.0
           },
-          "Nickname": "",
+          "Nickname": "10 Thaler Coin",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -7830,7 +7830,7 @@
         "scaleY": 11.3255281,
         "scaleZ": 26.3320084
       },
-      "Nickname": "",
+      "Nickname": "Leader Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -7877,7 +7877,7 @@
             "scaleY": 11.3255281,
             "scaleZ": 26.3320084
           },
-          "Nickname": "",
+          "Nickname": "Grey Leader",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -7923,7 +7923,7 @@
             "scaleY": 11.3255281,
             "scaleZ": 26.3320084
           },
-          "Nickname": "",
+          "Nickname": "Grey Leader",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -7969,7 +7969,7 @@
             "scaleY": 11.3255281,
             "scaleZ": 26.3320084
           },
-          "Nickname": "",
+          "Nickname": "Grey Leader",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8015,7 +8015,7 @@
             "scaleY": 11.3255281,
             "scaleZ": 26.3320084
           },
-          "Nickname": "",
+          "Nickname": "Grey Leader",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8061,7 +8061,7 @@
             "scaleY": 11.3255281,
             "scaleZ": 26.3320084
           },
-          "Nickname": "",
+          "Nickname": "Grey Leader",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8107,7 +8107,7 @@
             "scaleY": 11.3255281,
             "scaleZ": 26.3320084
           },
-          "Nickname": "",
+          "Nickname": "Grey Leader",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8153,7 +8153,7 @@
             "scaleY": 11.3255281,
             "scaleZ": 26.3320084
           },
-          "Nickname": "",
+          "Nickname": "Grey Leader",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8199,7 +8199,7 @@
             "scaleY": 11.3255281,
             "scaleZ": 26.3320084
           },
-          "Nickname": "",
+          "Nickname": "Grey Leader",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8248,7 +8248,7 @@
         "scaleY": 1.02,
         "scaleZ": 1.02
       },
-      "Nickname": "",
+      "Nickname": "Militia / Barbarian Cube Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -8295,7 +8295,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Militia / Barbarian Cube",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8354,7 +8354,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Militia / Barbarian Cube",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8413,7 +8413,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Militia / Barbarian Cube",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8472,7 +8472,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Militia / Barbarian Cube",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8531,7 +8531,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Militia / Barbarian Cube",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8590,7 +8590,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Militia / Barbarian Cube",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8649,7 +8649,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Militia / Barbarian Cube",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8708,7 +8708,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Militia / Barbarian Cube",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8783,7 +8783,7 @@
         "scaleY": 1.02,
         "scaleZ": 1.02
       },
-      "Nickname": "",
+      "Nickname": "Roman Legion Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -8830,7 +8830,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Roman Legion",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8889,7 +8889,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Roman Legion",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -8948,7 +8948,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Roman Legion",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9007,7 +9007,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Roman Legion",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9066,7 +9066,7 @@
             "scaleY": 1.02,
             "scaleZ": 1.02
           },
-          "Nickname": "",
+          "Nickname": "Roman Legion",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9141,7 +9141,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Barbarian Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -9188,7 +9188,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9236,7 +9236,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9284,7 +9284,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9332,7 +9332,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9380,7 +9380,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9428,7 +9428,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9476,7 +9476,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9524,7 +9524,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9572,7 +9572,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9620,7 +9620,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9668,7 +9668,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9716,7 +9716,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9764,7 +9764,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9812,7 +9812,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9860,7 +9860,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9908,7 +9908,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -9956,7 +9956,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10004,7 +10004,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10052,7 +10052,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10100,7 +10100,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10148,7 +10148,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10196,7 +10196,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10244,7 +10244,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10292,7 +10292,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10340,7 +10340,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10388,7 +10388,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10436,7 +10436,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10484,7 +10484,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10532,7 +10532,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10580,7 +10580,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10628,7 +10628,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10676,7 +10676,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10724,7 +10724,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10772,7 +10772,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10820,7 +10820,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10868,7 +10868,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10916,7 +10916,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -10964,7 +10964,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -11012,7 +11012,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -11060,7 +11060,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Barbarian",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -11149,7 +11149,7 @@
             "scaleZ": 9.82
           },
           "Nickname": "Chooser",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.297908038,
@@ -11203,7 +11203,7 @@
                 "scaleZ": 9.819404
               },
               "Nickname": "Germanics",
-              "Description": "",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -11251,7 +11251,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Greek",
-              "Description": "",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -11299,7 +11299,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Iberians",
-              "Description": "",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -11347,7 +11347,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Norsemen",
-              "Description": "",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -11395,7 +11395,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Romans",
-              "Description": "",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -11443,7 +11443,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Slavs",
-              "Description": "",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -11491,7 +11491,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Egyptians",
-              "Description": "",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.21960777,
@@ -11539,7 +11539,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Britons",
-              "Description": "",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.219607711,
@@ -11587,7 +11587,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Gauls",
-              "Description": "",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.21960777,
@@ -11635,7 +11635,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Carthaginians",
-              "Description": "",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.219607741,
@@ -11973,7 +11973,7 @@
             "scaleZ": 34.92881
           },
           "Nickname": "VictoryParade",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12019,7 +12019,7 @@
             "scaleZ": 1.52499926
           },
           "Nickname": "Order",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12088,7 +12088,7 @@
             "scaleZ": 1.52499926
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12157,7 +12157,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12203,7 +12203,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12249,7 +12249,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12295,7 +12295,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12341,7 +12341,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12406,7 +12406,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12471,7 +12471,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12536,7 +12536,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12601,7 +12601,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12666,7 +12666,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12731,7 +12731,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12796,7 +12796,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12861,7 +12861,7 @@
             "scaleZ": 6.152628
           },
           "Nickname": "Organizer",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.29790923,
@@ -12923,7 +12923,7 @@
             "scaleZ": 1.22
           },
           "Nickname": "Vasalls",
-          "Description": "",
+          "Description": "Blue",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.117999978,
@@ -12979,8 +12979,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -12993,7 +12993,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13048,8 +13048,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13062,7 +13062,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13117,8 +13117,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13131,7 +13131,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13186,8 +13186,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13200,7 +13200,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13255,8 +13255,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13269,7 +13269,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13324,8 +13324,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13338,7 +13338,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13393,8 +13393,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13407,7 +13407,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13462,8 +13462,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13476,7 +13476,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13531,8 +13531,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13545,7 +13545,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13600,8 +13600,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13614,7 +13614,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13669,8 +13669,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13683,7 +13683,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13738,8 +13738,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13752,7 +13752,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13807,8 +13807,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13821,7 +13821,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13876,8 +13876,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13890,7 +13890,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -13945,8 +13945,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -13959,7 +13959,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14014,8 +14014,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14028,7 +14028,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14083,8 +14083,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14097,7 +14097,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14152,8 +14152,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14166,7 +14166,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14221,8 +14221,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14235,7 +14235,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14290,8 +14290,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14304,7 +14304,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14359,8 +14359,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14373,7 +14373,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14428,8 +14428,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14442,7 +14442,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14497,8 +14497,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14511,7 +14511,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14566,8 +14566,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14580,7 +14580,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14635,8 +14635,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14649,7 +14649,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14704,8 +14704,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14718,7 +14718,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14773,8 +14773,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14787,7 +14787,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14842,8 +14842,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14856,7 +14856,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14911,8 +14911,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14925,7 +14925,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -14980,8 +14980,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -14994,7 +14994,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -15049,8 +15049,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -15063,7 +15063,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -15118,8 +15118,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -15132,7 +15132,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -15187,8 +15187,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -15201,7 +15201,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -15256,8 +15256,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -15270,7 +15270,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -15325,8 +15325,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -15339,7 +15339,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -15394,8 +15394,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Blue",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.117999978,
@@ -15408,7 +15408,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -15520,7 +15520,7 @@
             "scaleZ": 9.82
           },
           "Nickname": "Chooser",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.297908038,
@@ -15574,7 +15574,7 @@
                 "scaleZ": 9.819404
               },
               "Nickname": "Germanics",
-              "Description": "",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -15622,7 +15622,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Greek",
-              "Description": "",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -15670,7 +15670,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Iberians",
-              "Description": "",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -15718,7 +15718,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Norsemen",
-              "Description": "",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -15766,7 +15766,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Romans",
-              "Description": "",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -15814,7 +15814,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Slavs",
-              "Description": "",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -15862,7 +15862,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Egyptians",
-              "Description": "",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.21960777,
@@ -15910,7 +15910,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Britons",
-              "Description": "",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.219607711,
@@ -15958,7 +15958,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Gauls",
-              "Description": "",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.21960777,
@@ -16006,7 +16006,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Carthaginians",
-              "Description": "",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.219607741,
@@ -16308,7 +16308,7 @@
             "scaleZ": 6.152628
           },
           "Nickname": "Organizer",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.29790923,
@@ -16370,7 +16370,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -16416,7 +16416,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -16481,7 +16481,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -16546,7 +16546,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -16611,7 +16611,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -16676,7 +16676,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -16741,7 +16741,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -16806,7 +16806,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -16871,7 +16871,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -16936,7 +16936,7 @@
             "scaleZ": 1.52499926
           },
           "Nickname": "Order",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -17005,7 +17005,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -17051,7 +17051,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -17097,7 +17097,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -17143,7 +17143,7 @@
             "scaleZ": 1.52499926
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -17212,7 +17212,7 @@
             "scaleZ": 34.92881
           },
           "Nickname": "VictoryParade",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -17258,7 +17258,7 @@
             "scaleZ": 1.22
           },
           "Nickname": "Vasalls",
-          "Description": "",
+          "Description": "Red",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.7647059,
@@ -17314,8 +17314,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -17328,7 +17328,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -17383,8 +17383,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -17397,7 +17397,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -17452,8 +17452,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -17466,7 +17466,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -17521,8 +17521,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -17535,7 +17535,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -17590,8 +17590,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -17604,7 +17604,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -17659,8 +17659,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -17673,7 +17673,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -17728,8 +17728,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -17742,7 +17742,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -17797,8 +17797,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -17811,7 +17811,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -17866,8 +17866,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -17880,7 +17880,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -17935,8 +17935,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -17949,7 +17949,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18004,8 +18004,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18018,7 +18018,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18073,8 +18073,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18087,7 +18087,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18142,8 +18142,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18156,7 +18156,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18211,8 +18211,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18225,7 +18225,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18280,8 +18280,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18294,7 +18294,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18349,8 +18349,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18363,7 +18363,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18418,8 +18418,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18432,7 +18432,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18487,8 +18487,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18501,7 +18501,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18556,8 +18556,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18570,7 +18570,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18625,8 +18625,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18639,7 +18639,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18694,8 +18694,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18708,7 +18708,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18763,8 +18763,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18777,7 +18777,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18832,8 +18832,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18846,7 +18846,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18901,8 +18901,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18915,7 +18915,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -18970,8 +18970,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -18984,7 +18984,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19039,8 +19039,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19053,7 +19053,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19108,8 +19108,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19122,7 +19122,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19177,8 +19177,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19191,7 +19191,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19246,8 +19246,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19260,7 +19260,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19315,8 +19315,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19329,7 +19329,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19384,8 +19384,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19398,7 +19398,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19453,8 +19453,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19467,7 +19467,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19522,8 +19522,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19536,7 +19536,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19591,8 +19591,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19605,7 +19605,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19660,8 +19660,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19674,7 +19674,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19729,8 +19729,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Red",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.7647059,
@@ -19743,7 +19743,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -19891,7 +19891,7 @@
             "scaleZ": 9.82
           },
           "Nickname": "Chooser",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.297908038,
@@ -19945,7 +19945,7 @@
                 "scaleZ": 9.819404
               },
               "Nickname": "Germanics",
-              "Description": "",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -19993,7 +19993,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Greek",
-              "Description": "",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -20041,7 +20041,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Iberians",
-              "Description": "",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -20089,7 +20089,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Norsemen",
-              "Description": "",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -20137,7 +20137,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Romans",
-              "Description": "",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -20185,7 +20185,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Slavs",
-              "Description": "",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -20233,7 +20233,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Egyptians",
-              "Description": "",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.21960777,
@@ -20281,7 +20281,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Britons",
-              "Description": "",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.219607711,
@@ -20329,7 +20329,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Gauls",
-              "Description": "",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.21960777,
@@ -20377,7 +20377,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Carthaginians",
-              "Description": "",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.219607741,
@@ -20679,7 +20679,7 @@
             "scaleZ": 6.152628
           },
           "Nickname": "Organizer",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.29790923,
@@ -20741,7 +20741,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -20806,7 +20806,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -20871,7 +20871,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -20917,7 +20917,7 @@
             "scaleZ": 1.52499926
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -20986,7 +20986,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21032,7 +21032,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21097,7 +21097,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21162,7 +21162,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21227,7 +21227,7 @@
             "scaleZ": 34.92881
           },
           "Nickname": "VictoryParade",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21273,7 +21273,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21319,7 +21319,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21384,7 +21384,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21449,7 +21449,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21514,7 +21514,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21560,7 +21560,7 @@
             "scaleZ": 1.22
           },
           "Nickname": "Vasalls",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -21616,8 +21616,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -21630,7 +21630,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -21685,8 +21685,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -21699,7 +21699,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -21754,8 +21754,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -21768,7 +21768,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -21823,8 +21823,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -21837,7 +21837,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -21892,8 +21892,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -21906,7 +21906,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -21961,8 +21961,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -21975,7 +21975,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22030,8 +22030,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22044,7 +22044,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22099,8 +22099,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22113,7 +22113,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22168,8 +22168,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22182,7 +22182,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22237,8 +22237,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22251,7 +22251,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22306,8 +22306,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22320,7 +22320,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22375,8 +22375,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22389,7 +22389,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22444,8 +22444,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22458,7 +22458,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22513,8 +22513,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22527,7 +22527,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22582,8 +22582,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22596,7 +22596,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22651,8 +22651,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22665,7 +22665,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22720,8 +22720,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22734,7 +22734,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22789,8 +22789,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22803,7 +22803,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22858,8 +22858,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22872,7 +22872,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22927,8 +22927,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -22941,7 +22941,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -22996,8 +22996,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23010,7 +23010,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23065,8 +23065,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23079,7 +23079,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23134,8 +23134,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23148,7 +23148,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23203,8 +23203,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23217,7 +23217,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23272,8 +23272,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23286,7 +23286,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23341,8 +23341,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23355,7 +23355,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23410,8 +23410,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23424,7 +23424,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23479,8 +23479,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23493,7 +23493,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23548,8 +23548,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23562,7 +23562,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23617,8 +23617,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23631,7 +23631,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23686,8 +23686,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23700,7 +23700,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23755,8 +23755,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23769,7 +23769,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23824,8 +23824,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23838,7 +23838,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23893,8 +23893,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23907,7 +23907,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -23962,8 +23962,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -23976,7 +23976,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -24031,8 +24031,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Yellow",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.8,
@@ -24045,7 +24045,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -24117,7 +24117,7 @@
             "scaleZ": 1.52499926
           },
           "Nickname": "Order",
-          "Description": "",
+          "Description": "Yellow",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.8,
@@ -24262,7 +24262,7 @@
             "scaleZ": 9.82
           },
           "Nickname": "Chooser",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.297908038,
@@ -24316,7 +24316,7 @@
                 "scaleZ": 9.819404
               },
               "Nickname": "Germanics",
-              "Description": "",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -24364,7 +24364,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Greek",
-              "Description": "",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -24412,7 +24412,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Iberians",
-              "Description": "",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -24460,7 +24460,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Norsemen",
-              "Description": "",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -24508,7 +24508,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Romans",
-              "Description": "",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -24556,7 +24556,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Slavs",
-              "Description": "",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.2196078,
@@ -24604,7 +24604,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Egyptians",
-              "Description": "",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.21960777,
@@ -24652,7 +24652,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Britons",
-              "Description": "",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.219607711,
@@ -24700,7 +24700,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Gauls",
-              "Description": "",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.21960777,
@@ -24748,7 +24748,7 @@
                 "scaleZ": 9.82
               },
               "Nickname": "Carthaginians",
-              "Description": "",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.219607741,
@@ -25050,7 +25050,7 @@
             "scaleZ": 6.152628
           },
           "Nickname": "Organizer",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.29790923,
@@ -25112,7 +25112,7 @@
             "scaleZ": 1.52499926
           },
           "Nickname": "Influence",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25181,7 +25181,7 @@
             "scaleZ": 1.52499926
           },
           "Nickname": "Order",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25250,7 +25250,7 @@
             "scaleZ": 34.92881
           },
           "Nickname": "VictoryParade",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.094117485,
@@ -25296,7 +25296,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25361,7 +25361,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25426,7 +25426,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25491,7 +25491,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25556,7 +25556,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25621,7 +25621,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25686,7 +25686,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25751,7 +25751,7 @@
             "scaleZ": 0.6375001
           },
           "Nickname": "Town",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25816,7 +25816,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25862,7 +25862,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25908,7 +25908,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941176042,
@@ -25954,7 +25954,7 @@
             "scaleZ": 26.3320084
           },
           "Nickname": "Leader",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.094117485,
@@ -26000,7 +26000,7 @@
             "scaleZ": 1.22
           },
           "Nickname": "Vasalls",
-          "Description": "",
+          "Description": "Green",
           "GMNotes": "",
           "ColorDiffuse": {
             "r": 0.0941174254,
@@ -26056,8 +26056,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26070,7 +26070,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26125,8 +26125,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26139,7 +26139,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26194,8 +26194,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26208,7 +26208,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26263,8 +26263,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26277,7 +26277,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26332,8 +26332,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26346,7 +26346,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26401,8 +26401,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26415,7 +26415,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26470,8 +26470,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26484,7 +26484,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26539,8 +26539,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26553,7 +26553,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26608,8 +26608,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26622,7 +26622,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26677,8 +26677,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26691,7 +26691,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26746,8 +26746,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26760,7 +26760,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26815,8 +26815,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26829,7 +26829,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26884,8 +26884,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26898,7 +26898,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -26953,8 +26953,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -26967,7 +26967,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27022,8 +27022,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27036,7 +27036,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27091,8 +27091,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27105,7 +27105,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27160,8 +27160,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27174,7 +27174,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27229,8 +27229,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27243,7 +27243,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27298,8 +27298,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27312,7 +27312,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27367,8 +27367,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27381,7 +27381,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27436,8 +27436,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27450,7 +27450,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27505,8 +27505,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27519,7 +27519,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27574,8 +27574,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27588,7 +27588,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27643,8 +27643,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27657,7 +27657,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27712,8 +27712,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27726,7 +27726,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27781,8 +27781,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27795,7 +27795,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27850,8 +27850,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27864,7 +27864,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27919,8 +27919,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -27933,7 +27933,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -27988,8 +27988,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -28002,7 +28002,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -28057,8 +28057,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -28071,7 +28071,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -28126,8 +28126,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -28140,7 +28140,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -28195,8 +28195,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -28209,7 +28209,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -28264,8 +28264,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -28278,7 +28278,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -28333,8 +28333,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -28347,7 +28347,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -28402,8 +28402,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941176042,
@@ -28416,7 +28416,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -28471,8 +28471,8 @@
                 "scaleY": 1.02000022,
                 "scaleZ": 1.02000022
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "Vassal",
+              "Description": "Green",
               "GMNotes": "",
               "ColorDiffuse": {
                 "r": 0.0941174254,
@@ -28485,7 +28485,7 @@
               "IgnoreFoW": false,
               "Autoraise": true,
               "Sticky": true,
-              "Tooltip": true,
+              "Tooltip": false,
               "GridProjection": false,
               "HideWhenFaceDown": false,
               "Hands": false,
@@ -28595,7 +28595,7 @@
         "scaleY": 1.0,
         "scaleZ": 36.46
       },
-      "Nickname": "",
+      "Nickname": "MainBoard",
       "Description": "five",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -28809,7 +28809,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Barbarian Marker",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -28857,7 +28857,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.66
       },
-      "Nickname": "",
+      "Nickname": "Battle Strength",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -28905,7 +28905,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.66
       },
-      "Nickname": "",
+      "Nickname": "Battle Moral",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -28953,7 +28953,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.66
       },
-      "Nickname": "",
+      "Nickname": "Battle Mechanics",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29001,7 +29001,7 @@
         "scaleY": 3.39999747,
         "scaleZ": 3.39999747
       },
-      "Nickname": "",
+      "Nickname": "Norsemen Raid Die",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29088,7 +29088,7 @@
         "scaleY": 1.0,
         "scaleZ": 4.1
       },
-      "Nickname": "",
+      "Nickname": "Tabletop Surface",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29102,7 +29102,7 @@
       "IgnoreFoW": false,
       "Autoraise": true,
       "Sticky": true,
-      "Tooltip": true,
+      "Tooltip": false,
       "GridProjection": true,
       "HideWhenFaceDown": false,
       "Hands": false,
@@ -29144,7 +29144,7 @@
         "scaleY": 0.592420161,
         "scaleZ": 0.592420161
       },
-      "Nickname": "",
+      "Nickname": "Boundary Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29201,7 +29201,7 @@
             "scaleY": 0.592420161,
             "scaleZ": 0.592420161
           },
-          "Nickname": "",
+          "Nickname": "Boundary",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -29255,7 +29255,7 @@
             "AngularDrag": 0.1,
             "UseGravity": true
           },
-          "GUID": "0d26b3"
+          "GUID": "f70aa2"
         }
       ],
       "PhysicsMaterial": {
@@ -29286,7 +29286,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Game Setup Button",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29300,7 +29300,7 @@
       "IgnoreFoW": false,
       "Autoraise": true,
       "Sticky": true,
-      "Tooltip": true,
+      "Tooltip": false,
       "GridProjection": false,
       "HideWhenFaceDown": false,
       "Hands": false,
@@ -29332,7 +29332,7 @@
         "scaleY": 0.592420161,
         "scaleZ": 0.592420161
       },
-      "Nickname": "",
+      "Nickname": "Boundary (Floating under table)",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29401,7 +29401,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Bread +1 Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29499,7 +29499,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Bread +3 Token Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29597,7 +29597,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Trade Token +1 Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29695,7 +29695,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Trade Token +3 Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29793,7 +29793,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Trade Token +6 Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29891,7 +29891,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Trade Token +11 Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -29990,7 +29990,7 @@
         "scaleZ": 9.82
       },
       "Nickname": "Chooser",
-      "Description": "",
+      "Description": "Under the table on the left",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.297907978,
@@ -30526,7 +30526,7 @@
         "scaleZ": 9.82
       },
       "Nickname": "Chooser",
-      "Description": "",
+      "Description": "Under the Table on the right",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.297908247,
@@ -31098,7 +31098,7 @@
         "scaleZ": 1.0
       },
       "Nickname": "Nations",
-      "Description": "",
+      "Description": "Extra Under the board between the players",
       "GMNotes": "",
       "ColorDiffuse": {
         "r": 0.7058823,
@@ -36857,7 +36857,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Preview Nations",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -36871,7 +36871,7 @@
       "IgnoreFoW": false,
       "Autoraise": true,
       "Sticky": true,
-      "Tooltip": true,
+      "Tooltip": false,
       "GridProjection": false,
       "HideWhenFaceDown": false,
       "Hands": false,
@@ -36903,7 +36903,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Candle NW",
       "Description": "uninteractable",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -36917,7 +36917,7 @@
       "IgnoreFoW": false,
       "Autoraise": true,
       "Sticky": true,
-      "Tooltip": true,
+      "Tooltip": false,
       "GridProjection": false,
       "HideWhenFaceDown": false,
       "Hands": false,
@@ -36946,7 +36946,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Candle SW",
       "Description": "uninteractable",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -36960,7 +36960,7 @@
       "IgnoreFoW": false,
       "Autoraise": true,
       "Sticky": true,
-      "Tooltip": true,
+      "Tooltip": false,
       "GridProjection": false,
       "HideWhenFaceDown": false,
       "Hands": false,
@@ -36989,7 +36989,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Candle NE",
       "Description": "uninteractable",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -37003,7 +37003,7 @@
       "IgnoreFoW": false,
       "Autoraise": true,
       "Sticky": true,
-      "Tooltip": true,
+      "Tooltip": false,
       "GridProjection": false,
       "HideWhenFaceDown": false,
       "Hands": false,
@@ -37032,7 +37032,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Candle SE",
       "Description": "uninteractable",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -37046,7 +37046,7 @@
       "IgnoreFoW": false,
       "Autoraise": true,
       "Sticky": true,
-      "Tooltip": true,
+      "Tooltip": false,
       "GridProjection": false,
       "HideWhenFaceDown": false,
       "Hands": false,
@@ -37075,7 +37075,7 @@
         "scaleY": 1.0,
         "scaleZ": 8.0
       },
-      "Nickname": "",
+      "Nickname": "Rule Book",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -37089,7 +37089,7 @@
       "IgnoreFoW": false,
       "Autoraise": true,
       "Sticky": true,
-      "Tooltip": true,
+      "Tooltip": false,
       "GridProjection": false,
       "HideWhenFaceDown": false,
       "Hands": false,
@@ -37164,7 +37164,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.33
           },
-          "Nickname": "",
+          "Nickname": "Treaty",
           "Description": "",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -37215,7 +37215,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Historical Battlefield +1 Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -37262,7 +37262,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.8
           },
-          "Nickname": "Partisans",
+          "Nickname": "Historical Battlefield",
           "Description": "+1",
           "GMNotes": "",
           "ColorDiffuse": {
@@ -37313,7 +37313,7 @@
         "scaleY": 4.4,
         "scaleZ": 2.2
       },
-      "Nickname": "",
+      "Nickname": "Historical Battlefield Marker +2 Bag",
       "Description": "",
       "GMNotes": "",
       "ColorDiffuse": {
@@ -37360,7 +37360,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "Partisans",
+          "Nickname": "Historical Battlefield",
           "Description": "+2",
           "GMNotes": "",
           "ColorDiffuse": {
