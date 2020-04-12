@@ -11672,7 +11672,7 @@
           }
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 69.17913,
             "posY": 1.68166375,
@@ -11680,9 +11680,9 @@
             "rotX": -1.20875429E-05,
             "rotY": 0.00335824327,
             "rotZ": 8.292312E-06,
-            "scaleX": 1.64999962,
-            "scaleY": 1.64999962,
-            "scaleZ": 1.64999962
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Moral",
           "Description": "Blue",
@@ -11702,13 +11702,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "1ef275"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 68.3148651,
             "posY": 1.71642923,
@@ -11716,9 +11736,9 @@
             "rotX": -0.00205429853,
             "rotY": 0.0213258881,
             "rotZ": 0.00271757529,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Architecture",
           "Description": "Blue",
@@ -11738,13 +11758,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "2172f3"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 70.0923538,
             "posY": 1.71638334,
@@ -11752,9 +11792,9 @@
             "rotX": 6.008496E-06,
             "rotY": 0.00340847531,
             "rotZ": -1.20028762E-05,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Culture",
           "Description": "Blue",
@@ -11774,13 +11814,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "e0d3b3"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 71.804245,
             "posY": 2.165768,
@@ -11788,9 +11848,9 @@
             "rotX": 1.42161962E-05,
             "rotY": 0.009639671,
             "rotZ": 4.00948047E-05,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Farming",
           "Description": "Blue",
@@ -11810,13 +11870,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "dd1184"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 71.97743,
             "posY": 1.716304,
@@ -11824,9 +11904,9 @@
             "rotX": -1.12872949E-05,
             "rotY": 0.00447780965,
             "rotZ": 2.35868083E-05,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Era",
           "Description": "Blue",
@@ -11846,13 +11926,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "dd5813"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 68.05904,
             "posY": 1.71635664,
@@ -11860,9 +11960,9 @@
             "rotX": -7.957926E-07,
             "rotY": -3.00495913E-06,
             "rotZ": 0.007286428,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Commerce",
           "Description": "Blue",
@@ -11882,13 +11982,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "a5ead8"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 67.07924,
             "posY": 1.71640337,
@@ -11896,9 +12016,9 @@
             "rotX": -0.004195534,
             "rotY": 359.981445,
             "rotZ": 0.003344327,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Navigation",
           "Description": "Blue",
@@ -11918,13 +12038,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "7caf23"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 63.241272,
             "posY": 1.71642876,
@@ -11932,9 +12072,9 @@
             "rotX": 5.197385E-07,
             "rotY": 359.983063,
             "rotZ": -5.6526477E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Mechanics",
           "Description": "Blue",
@@ -11954,6 +12094,26 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
@@ -16043,7 +16203,7 @@
           }
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 95.52065,
             "posY": 1.20193636,
@@ -16051,9 +16211,9 @@
             "rotX": 9.249984E-08,
             "rotY": 0.0008136534,
             "rotZ": -5.39377858E-08,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Era",
           "Description": "Red",
@@ -16073,13 +16233,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "3e771b"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 65.3849,
             "posY": 1.71635079,
@@ -16087,9 +16267,9 @@
             "rotX": 1.93703869E-07,
             "rotY": 359.976349,
             "rotZ": -2.42431355E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Farming",
           "Description": "Red",
@@ -16109,13 +16289,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "8542e8"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 65.39352,
             "posY": 1.71635079,
@@ -16123,9 +16323,9 @@
             "rotX": -3.68468875E-07,
             "rotY": 359.990326,
             "rotZ": -3.14322762E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Commerce",
           "Description": "Red",
@@ -16145,13 +16345,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "4449d3"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 69.48329,
             "posY": 1.71635079,
@@ -16159,9 +16379,9 @@
             "rotX": 1.63623383E-06,
             "rotY": 359.982239,
             "rotZ": -7.58993963E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Architecture",
           "Description": "Red",
@@ -16181,13 +16401,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "05cdb3"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 67.47719,
             "posY": 1.7163527,
@@ -16195,9 +16435,9 @@
             "rotX": 2.31493163E-06,
             "rotY": 359.990173,
             "rotZ": -1.17937937E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Mechanics",
           "Description": "Red",
@@ -16217,13 +16457,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "21d511"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 69.72728,
             "posY": 1.71635652,
@@ -16231,9 +16491,9 @@
             "rotX": -2.521592E-07,
             "rotY": 0.0286727939,
             "rotZ": -5.150282E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Navigation",
           "Description": "Red",
@@ -16253,13 +16513,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "4e732e"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 67.4029541,
             "posY": 1.71634924,
@@ -16267,9 +16547,9 @@
             "rotX": 3.117135E-06,
             "rotY": 359.994171,
             "rotZ": 2.63621644E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Culture",
           "Description": "Red",
@@ -16289,6 +16569,26 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
@@ -19802,7 +20102,7 @@
           "GUID": "9c500f"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 2.1196444,
             "posY": 3.74461055,
@@ -19810,9 +20110,9 @@
             "rotX": 359.8058,
             "rotY": 0.01834145,
             "rotZ": 359.846436,
-            "scaleX": 1.64999962,
-            "scaleY": 1.64999962,
-            "scaleZ": 1.64999962
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Moral",
           "Description": "Red",
@@ -19832,6 +20132,26 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
@@ -20414,7 +20734,7 @@
           }
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 71.1381149,
             "posY": 1.71627331,
@@ -20422,9 +20742,9 @@
             "rotX": -1.34963658E-08,
             "rotY": 0.0126570817,
             "rotZ": 2.48123638E-06,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Era",
           "Description": "Yellow",
@@ -20444,13 +20764,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "8c6a44"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 68.5034256,
             "posY": 1.71628046,
@@ -20458,9 +20798,9 @@
             "rotX": 7.804253E-07,
             "rotY": 0.0316458754,
             "rotZ": -2.39075166E-06,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Architecture",
           "Description": "Yellow",
@@ -20480,13 +20820,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "f8258d"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 66.01376,
             "posY": 1.71628046,
@@ -20494,9 +20854,9 @@
             "rotX": -1.39649288E-07,
             "rotY": 359.970978,
             "rotZ": 1.22663309E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Mechanics",
           "Description": "Yellow",
@@ -20516,13 +20876,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "c6f223"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 64.05755,
             "posY": 1.71627331,
@@ -20530,9 +20910,9 @@
             "rotX": 1.48652975E-06,
             "rotY": 359.982971,
             "rotZ": -4.90113E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Commerce",
           "Description": "Yellow",
@@ -20552,13 +20932,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "50ff0d"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 66.20846,
             "posY": 1.71627319,
@@ -20566,9 +20966,9 @@
             "rotX": -1.4958232E-06,
             "rotY": -0.004762801,
             "rotZ": -5.010795E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Culture",
           "Description": "Yellow",
@@ -20588,13 +20988,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "9b7ced"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 68.4931641,
             "posY": 1.71628821,
@@ -20602,9 +21022,9 @@
             "rotX": -4.34301228E-06,
             "rotY": 359.9745,
             "rotZ": -7.59124669E-06,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Navigation",
           "Description": "Yellow",
@@ -20624,13 +21044,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "947218"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 64.18423,
             "posY": 1.71627319,
@@ -20638,9 +21078,9 @@
             "rotX": 2.91292417E-06,
             "rotY": 359.992065,
             "rotZ": -3.59992249E-08,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Farming",
           "Description": "Yellow",
@@ -20660,6 +21100,26 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
@@ -24173,7 +24633,7 @@
           "GUID": "9dbf95"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": -5.811063,
             "posY": 3.74402118,
@@ -24181,9 +24641,9 @@
             "rotX": 359.784851,
             "rotY": 359.994141,
             "rotZ": 359.785645,
-            "scaleX": 1.64999962,
-            "scaleY": 1.64999962,
-            "scaleZ": 1.64999962
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Moral",
           "Description": "Yellow",
@@ -24203,6 +24663,26 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
@@ -24785,7 +25265,7 @@
           }
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 98.3782043,
             "posY": 1.19949675,
@@ -24793,9 +25273,9 @@
             "rotX": -1.87330926E-07,
             "rotY": 0.007241722,
             "rotZ": 6.44103E-08,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Era",
           "Description": "Green",
@@ -24815,13 +25295,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "7d2147"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 64.5278,
             "posY": 1.71623874,
@@ -24829,9 +25329,9 @@
             "rotX": -2.0644994E-10,
             "rotY": 0.000808831654,
             "rotZ": -4.992252E-10,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Culture",
           "Description": "Green",
@@ -24851,13 +25351,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "3705f4"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 62.3912849,
             "posY": 1.71623874,
@@ -24865,9 +25385,9 @@
             "rotX": 1.18444518E-07,
             "rotY": 0.009277516,
             "rotZ": -1.31205544E-08,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Farming",
           "Description": "Green",
@@ -24887,13 +25407,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "7746eb"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 66.63032,
             "posY": 1.716239,
@@ -24901,9 +25441,9 @@
             "rotX": 1.01452326E-06,
             "rotY": 0.009882478,
             "rotZ": -1.10450515E-06,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Navigation",
           "Description": "Green",
@@ -24923,13 +25463,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "4e7eb4"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 66.6062851,
             "posY": 1.71623874,
@@ -24937,9 +25497,9 @@
             "rotX": 2.10138623E-07,
             "rotY": 0.01974805,
             "rotZ": -2.50527978E-06,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Architecture",
           "Description": "Green",
@@ -24959,13 +25519,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "f5ca32"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 64.44269,
             "posY": 1.71623874,
@@ -24973,9 +25553,9 @@
             "rotX": -1.49456378E-06,
             "rotY": 0.0238147881,
             "rotZ": 1.1421195E-07,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Mechanics",
           "Description": "Green",
@@ -24995,13 +25575,33 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
           "GUID": "c9f3aa"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 62.1835976,
             "posY": 1.716239,
@@ -25009,9 +25609,9 @@
             "rotX": -4.05627162E-07,
             "rotY": 0.0116952164,
             "rotZ": 3.12486031E-06,
-            "scaleX": 1.94999933,
-            "scaleY": 1.94999933,
-            "scaleZ": 1.94999933
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Commerce",
           "Description": "Green",
@@ -25031,6 +25631,26 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
@@ -28544,7 +29164,7 @@
           "GUID": "5e94a3"
         },
         {
-          "Name": "backgammon_piece_white",
+          "Name": "Custom_Model",
           "Transform": {
             "posX": 6.405019,
             "posY": 3.71584439,
@@ -28552,9 +29172,9 @@
             "rotX": 359.6815,
             "rotY": 0.03180498,
             "rotZ": 359.84494,
-            "scaleX": 1.64999962,
-            "scaleY": 1.64999962,
-            "scaleZ": 1.64999962
+            "scaleX": 1.7,
+            "scaleY": 6.0,
+            "scaleZ": 1.7
           },
           "Nickname": "Moral",
           "Description": "Green",
@@ -28574,6 +29194,26 @@
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/1004808076820645444/A0520C5B831104F534E065F8D5F38AE60A2EB956/",
+            "NormalURL": "",
+            "ColliderURL": "http://cloud-3.steamusercontent.com/ugc/957474211335481697/E8FB3B5A50DF8D2B2DBA5180F912B72FBEF95673/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 4,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 0.875,
+                "g": 0.812880337,
+                "b": 0.7463235
+              },
+              "SpecularIntensity": 0.05,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142843
+            },
+            "CastShadows": true
+          },
           "XmlUI": "",
           "LuaScript": "",
           "LuaScriptState": "",
