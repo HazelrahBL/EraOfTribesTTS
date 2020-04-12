@@ -189,7 +189,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
       Leader = {
          {leaderAT.start.x, leaderAT.start.y, leaderAT.start.z + player * leaderAT.step},
          {leaderBA.start.x, leaderBA.start.y, leaderBA.start.z + player * leaderBA.step},
-         {x = 11.25, y = 1.47, z = 16}, {x = 11.25, y = 1.47, z = 13}
+         {x = 11.35, y = 1.47, z = 16}, {x = 11.35, y = 1.47, z = 13.31}
       },
       Organizer = {{x = 0, y = 0, z = 16.5}, lock = true},
       Chooser = {{x = 0, y = 0, z = 0}, lock = true},
