@@ -159,7 +159,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
    local leaderBA = {start = {x = -11.30, y = 3.09, z = 29.50}, step = 1}
    local leaderAT = {start = {x = 14.00, y = 3.05, z = 27.90}, step = 1}
    local rotations = {
-      Vasalls = {0.00, 0.00, 0.00},
+      Vassals = {0.00, 0.00, 0.00},
       Town = {0.00, 90.00, 0.00},
       Leader = {0.00, 180.00, 0.00},
       Marker = {0.00, 0.00, 0.00},
@@ -173,7 +173,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
       }
    }
    local positions = {
-      Vasalls = {{x = 7.69, y = 0.7, z = 7.3}, lock = true},
+      Vassals = {{x = 7.69, y = 0.7, z = 7.3}, lock = true},
       Moral = {{45.72, 1.81 + 3, 21.95}},
       Era = {{ - 18.78, 1.81 + 3, 32.20}},
       Farming = {{ - 29.45, 1.81 + 3, 6.37}},
@@ -229,7 +229,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
 
    Wait.frames(function()
       local chooser = getObjectFromGUID(playerAreaCfg[color].Chooser)
-      local vasallFrame = 0
+      local VassalFrame = 0
       Wait.condition(
          function()
             local nations = {"Britons", "Carthaginians", "Egyptians", "Gauls", "Germanics", "Greek", "Iberians", "Norsemen", "Romans", "Slavs"}
@@ -257,12 +257,12 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
                                  }).setLock((positions[obj.name].lock == true) and true or false)
                                  table.remove(positions[obj.name])
                                  if obj.name == "Town" then
-                                    table.insert(playerAreaCfg[color].Vasall.positions, {matPos.x + objPos.x + 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + 0.74})
-                                    table.insert(playerAreaCfg[color].Vasall.positions, {matPos.x + objPos.x + 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 0.27})
-                                    table.insert(playerAreaCfg[color].Vasall.positions, {matPos.x + objPos.x + 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 1.28})
-                                 elseif obj.name == "Vasalls" then
-                                    playerAreaCfg[color].Vasall.obj = obj.guid
-                                    vasallFrame = i
+                                    table.insert(playerAreaCfg[color].Vassal.positions, {matPos.x + objPos.x + 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + 0.74})
+                                    table.insert(playerAreaCfg[color].Vassal.positions, {matPos.x + objPos.x + 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 0.27})
+                                    table.insert(playerAreaCfg[color].Vassal.positions, {matPos.x + objPos.x + 1.03, matPos.y + objPos.y + 0.52, matPos.z + objPos.z + - 1.28})
+                                 elseif obj.name == "Vassals" then
+                                    playerAreaCfg[color].Vassal.obj = obj.guid
+                                    VassalFrame = i
                                  end
                               end
                            end
@@ -275,7 +275,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
                   end
 
                   Wait.frames(function()
-                     local vasalls = getObjectFromGUID(playerAreaCfg[color].Vasall.obj)
+                     local Vassals = getObjectFromGUID(playerAreaCfg[color].Vassal.obj)
                      Wait.condition(
                         function()
                            local nationSelected = ""
@@ -283,7 +283,7 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
                               function()
                                  nationSelected = getSelectedNation(matPos)
                                  for _, v in pairs(nationsCfg[nationSelected].homes) do
-                                    vasalls.takeObject({position = v, smooth = false})
+                                    Vassals.takeObject({position = v, smooth = false})
                                  end
                                  mapCfg[selected].nations[nationSelected] = false
                                  nextStage = true
@@ -292,16 +292,16 @@ function setupPlayer(player, color, long, playerNumber, availableNations)
                                  if getSelectedNation(matPos) ~= nil then return true else return false end
                               end
                            )
-                           for _, v in pairs(playerAreaCfg[color].Vasall.positions) do
-                              vasalls.takeObject({position = v, smooth = false})
+                           for _, v in pairs(playerAreaCfg[color].Vassal.positions) do
+                              Vassals.takeObject({position = v, smooth = false})
                            end
                         end,
                         function()
-                           vasalls = getObjectFromGUID(playerAreaCfg[color].Vasall.obj)
-                           return checkLoaded(vasalls)
+                           Vassals = getObjectFromGUID(playerAreaCfg[color].Vassal.obj)
+                           return checkLoaded(Vassals)
                         end
                      )
-                  end, vasallFrame + 1)
+                  end, VassalFrame + 1)
 
                end,
                function()
@@ -351,7 +351,7 @@ function onObjectDrop(player_color, dropped_object)
    local token = {
       Farming = {
          "Added two new food tokens.",
-         "Added one new food token.\nYou are now allowed to have two vasalls in one area.",
+         "Added one new food token.\nYou are now allowed to have two Vassals in one area.",
          "Added two new food tokens.",
          "Added three new food tokens."
       },
@@ -374,10 +374,10 @@ function onObjectDrop(player_color, dropped_object)
          "Replaced +6 token with +11 token for Trade."
       },
       Mechanics = {
-         "Movement with vasalls is 1. You may build Regular Armies for 1 Thaler.\nYou get a free Regular Army. Place it in your Regular Army area.",
-         "Movement with vasalls is 1. Regular Armies cost 2 Thalers.\nYou get a free Regular Army. Place it in your Regular Army area.",
-         "Movement with vasalls is 2. Regular Armies cost 3 Thalers.\nYou get a free Regular Army. Place it in your Regular Army area.",
-         "Movement with vasalls is 3. Regular Armies cost 4 Thalers.\nYou get a free Regular Army. Place it in your Regular Army area."
+         "Movement with Vassals is 1. You may build Regular Armies for 1 Thaler.\nYou get a free Regular Army. Place it in your Regular Army area.",
+         "Movement with Vassals is 1. Regular Armies cost 2 Thalers.\nYou get a free Regular Army. Place it in your Regular Army area.",
+         "Movement with Vassals is 2. Regular Armies cost 3 Thalers.\nYou get a free Regular Army. Place it in your Regular Army area.",
+         "Movement with Vassals is 3. Regular Armies cost 4 Thalers.\nYou get a free Regular Army. Place it in your Regular Army area."
       },
       Architecture = {
          "You are allowed to have 2 towns.",
@@ -518,10 +518,10 @@ nationsCfg = {
   playing area and hand
 ]]
 playerAreaCfg = {
-   Yellow = {pos = {x = -60.00, y = 1.48, z = -60.00}, guid = "e5df01", Vasall = {positions = {}}, Chooser = "", playing = false},
-   Blue =   {pos = {x = -20.00, y = 1.48, z = -60.00}, guid = "98f2d4", Vasall = {positions = {}}, Chooser = "", playing = false},
-   Red =    {pos = {x =  20.00, y = 1.48, z = -60.00}, guid = "2df374", Vasall = {positions = {}}, Chooser = "", playing = false},
-   Green =  {pos = {x =  60.00, y = 1.48, z = -60.00}, guid = "9103f6", Vasall = {positions = {}}, Chooser = "", playing = false}
+   Yellow = {pos = {x = -60.00, y = 1.48, z = -60.00}, guid = "e5df01", Vassal = {positions = {}}, Chooser = "", playing = false},
+   Blue =   {pos = {x = -20.00, y = 1.48, z = -60.00}, guid = "98f2d4", Vassal = {positions = {}}, Chooser = "", playing = false},
+   Red =    {pos = {x =  20.00, y = 1.48, z = -60.00}, guid = "2df374", Vassal = {positions = {}}, Chooser = "", playing = false},
+   Green =  {pos = {x =  60.00, y = 1.48, z = -60.00}, guid = "9103f6", Vassal = {positions = {}}, Chooser = "", playing = false}
 }
 
 --[[
