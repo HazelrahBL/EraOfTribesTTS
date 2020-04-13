@@ -419,23 +419,21 @@ function onObjectDrop(player_color, dropped_object)
       broadcastToAll(token[name][ring], player_color)
    end
    if extra[name] then
-      if extra[name][ring] then
-         local hitlist = Physics.cast({
-            origin = positions[name][desc],
-            direction = {0, 1, 0},
-            type = 3,
-            size = {1, 1, 1},
-            max_distance = 0,
-            debug = true
-         })
-
-         for _, hit in pairs(hitlist) do
-            if hit.hit_object.getName() == "Bread" or hit.hit_object.getName() == "Trade" then
-               hit.hit_object.destruct()
-            end
+      local hitlist = Physics.cast({
+         origin = positions[name][desc],
+         direction = {0, 1, 0},
+         type = 3,
+         size = {1, 1, 1},
+         max_distance = 0
+      })
+      for _, hit in pairs(hitlist) do
+         if hit.hit_object.getName() == "Bread" or hit.hit_object.getName() == "Trade" then
+            hit.hit_object.destruct()
          end
-        getObjectFromGUID(extra[name][ring]).takeObject({
-           position = positions[name][desc], smooth = false
+      end
+      if extra[name][ring] then
+         getObjectFromGUID(extra[name][ring]).takeObject({
+            position = positions[name][desc], smooth = false
         }).lock()
       end
    end
