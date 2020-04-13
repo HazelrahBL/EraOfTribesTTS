@@ -350,10 +350,10 @@ end
 function onObjectDrop(player_color, dropped_object)
    local token = {
       Farming = {
-         "Added two new food tokens.",
-         "Added one new food token.\nYou are now allowed to have two Vassals in one area.",
-         "Added two new food tokens.",
-         "Added three new food tokens."
+         "Add two new food tokens.",
+         "Add one new food token.\nYou are now allowed to have two Vassals in one area.",
+         "Add two new food tokens.",
+         "Add three new food tokens."
       },
       Culture = {
          "Get one influence and two moral.",
@@ -393,9 +393,6 @@ function onObjectDrop(player_color, dropped_object)
       },
       Culture = {
          false, "8220d8", "8cf20a", "8cf20a"
-      },
-      Farming = {
-         "4704ee", "4704ee", "4704ee", "4704ee"
       }
    }
 
@@ -411,12 +408,6 @@ function onObjectDrop(player_color, dropped_object)
          Blue = { - 13.73, 1.58, - 63.52},
          Red = {26.26, 1.58, - 63.52},
          Green = {66.24, 1.58, - 63.52}
-      },
-      Farming = {
-         Yellow = { - 70.00, 5, - 53.52},
-         Blue = { - 30.00, 5, - 53.52},
-         Red = {10.00, 5, - 53.52},
-         Green = {50.00, 5, - 53.52}
       }
    }
 
@@ -443,25 +434,9 @@ function onObjectDrop(player_color, dropped_object)
                hit.hit_object.destruct()
             end
          end
-         if name == "Farming" then
-            getObjectFromGUID(extra[name][ring]).takeObject({
-               position = positions[name][desc], smooth = false
-            })
-            if ring ~= 2 then
-               getObjectFromGUID(extra[name][ring]).takeObject({
-                  position = positions[name][desc], smooth = false
-               })
-            end
-            if ring == 4 then
-               getObjectFromGUID(extra[name][ring]).takeObject({
-                  position = positions[name][desc], smooth = false
-               })
-            end
-         else
-            getObjectFromGUID(extra[name][ring]).takeObject({
-               position = positions[name][desc], smooth = false
-            }).lock()
-         end
+        getObjectFromGUID(extra[name][ring]).takeObject({
+           position = positions[name][desc], smooth = false
+        }).lock()
       end
    end
 end
