@@ -1,7 +1,3 @@
-function onLoad(save_state)
-   self.setRotation({0, 0, 0})
-end
-
 function select(player, value, id)
 
    if self.UI.getAttribute(id, "color") == "#303030" then return end
