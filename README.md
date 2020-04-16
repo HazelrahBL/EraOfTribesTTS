@@ -1,6 +1,8 @@
 Era of Tribes v1.4 - Official Tabletop Simulator Mod
 ======================================================
 
+![Era of Tribes Cover](EoT_Cover.jpeg)
+
 Era of Tribes is a civilization worker-placement strategy game by Arne Lorenz.
 It plays 1-6 players from 14 years+. Your goal is to develop, expand, discover,
 and interact with your fellow players in Europe from the Neolithic period to
