@@ -48,9 +48,44 @@ I haven't really figured this part out yet. If you are interested in helping,
 please contact Arne, he can give you my contact and we can work it out
 together.
 
-
-Reference files
+Contents of this Repository
 ------------------------------
+
+Tabletop Simulator strives to maintain just single file mods, so the mod file
+itself is quite dense. This leads to just a handful of files that need to be
+checked into the repository.
+
+* `EoT_TTS.json` - The main Tabletop Simulator mod file. This can be copied
+  over a save file and then you can play the latest version of the Era of
+  Tribes mod!
+* `EoT_Cover.jpeg` - The beautiful cover of this board game! Isn't it lovely!
+* `EoT_Cover.png` - The older cover of the prototype. We keep it around four
+  sentimental reasons.
+* `README.md` - This file that your reading right now.
+* `reference/` - Individual files which are extraced from `EoT_TTS.json` for
+  easy reading and easy auditing of the history. See the next section for
+  details.
+    * `Chooser.af9065.ttslua` - Lua script for an old version of the Tribes
+      Chooser board. (may delete one of these days)
+    * `Chooser.af9065.xml` - UI definition file for an old version of the
+      Tribes Chooser board. (may delete one of these days).
+    * `Chooser.b2a4d0.ttslua` - Lua script for the current version of the
+      Tribes Chooser board. This copy is locked under the table.
+    * `Chooser.af9065.xml` - UI definition file for the current version of the
+      Tribes Chooser board. This copy is locked under the table.
+    * `Flex Table Control.bd969bd.ttslua` - Lua script for the Flex Table
+      controller hidden under the table.
+    * `Game Setup Button.8b17c5.ttslua` - Lua script for the "Game Setup"
+      button at the top of the table.
+    * `Global.-1.ttslua` - The global Lua script. Most of the script code is
+      contained in this file. Buttons and the like call into functions defined
+      here.
+    * `Global.-1.xml` - Common UI description file, containing code for the
+      "Game Setup" and the "Preview Nations"
+    * `Preview Nations.329cad.ttslua` - Lua script file for the
+      "Preview Nations" button at the top of the screen.
+
+### Reference files
 
 Files in the `/reference` directory are those `ttslua` and `xml` files exported
 to the Atom text editor. The contents is entirely contained within the base
