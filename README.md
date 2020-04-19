@@ -92,6 +92,27 @@ to the Atom text editor. The contents is entirely contained within the base
 `EoT_TTS.json` file, but it is easier to look at the diffs when they are in
 individual files.
 
+Copywrite Notice
+------------------------------
+
+The original Era of Tribes board game is Copywrite © 2019
+
+Black Beacon Games and Arne Lorenz
+Deichstraße 32, 27809 Lemwerder
+arnelorenz@gmx.de
+
+The images and game rules taken from the Era of Tribes board game referenced by
+this Tabletop Simulator mod are reproduced with permission by Arne Lorenz.
+
+The other content and 3D models are original artwork made specially for this
+mod by contributors.
+
+The authors of this mod make no claim to the intelectual property of the Era of
+Tribes board game.
+
+If you want to support the creator of the game then please buy it! Arne lists
+available copies on the BoardGameGeek website.
+
 [1]: https://boardgamegeek.com/boardgame/196354/era-tribes
 [2]: https://www.facebook.com/eraoftribes/
 [3]: https://steamcommunity.com/sharedfiles/filedetails/?id=1701980551
