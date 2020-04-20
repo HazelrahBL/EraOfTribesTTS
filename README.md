@@ -44,9 +44,10 @@ mod to the published version.
 Making Contributions
 ------------------------------
 
-I haven't really figured this part out yet. If you are interested in helping,
-please contact Arne, he can give you my contact and we can work it out
-together.
+If you are interested in helping with the development of the Era of Tribes
+Tabletop Simulator mod, then see [the wiki on GitHub][4].
+
+Also, have a look at the [list of issues on GitHub][5]
 
 Contents of this Repository
 ------------------------------
@@ -116,3 +117,5 @@ available copies on the BoardGameGeek website.
 [1]: https://boardgamegeek.com/boardgame/196354/era-tribes
 [2]: https://www.facebook.com/eraoftribes/
 [3]: https://steamcommunity.com/sharedfiles/filedetails/?id=1701980551
+[4]: https://github.com/HazelrahBL/EraOfTribesTTS/wiki
+[5]: https://github.com/HazelrahBL/EraOfTribesTTS/issues
